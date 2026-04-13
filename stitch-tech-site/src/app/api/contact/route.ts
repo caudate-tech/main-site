@@ -7,13 +7,15 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { name, email, website, budget, services, message } = body;
 
+    const servicesList = Array.isArray(services) ? services : [];
+
     // 1. Save to Database
     const savedMessage = await prisma.contactMessage.create({
       data: {
         name,
         email,
         website,
-        services,
+        services: servicesList,
         message,
       },
     });
@@ -28,7 +30,7 @@ export async function POST(req: Request) {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Website:</strong> ${website || 'N/A'}</p>
         <p><strong>Budget:</strong> ${budget}</p>
-        <p><strong>Services:</strong> ${services.join(', ') || 'None selected'}</p>
+        <p><strong>Services:</strong> ${servicesList.join(', ') || 'None selected'}</p>
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
