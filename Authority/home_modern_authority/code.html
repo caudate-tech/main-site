@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#001a42",
+                    "inverse-on-surface": "#f2f0f0",
+                    "secondary-fixed": "#e5e2e1",
+                    "tertiary-fixed": "#d8e2ff",
+                    "surface": "#fbf9f8",
+                    "on-primary-fixed": "#061d2d",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e4e2e2",
+                    "outline-variant": "#c3c7cc",
+                    "on-surface": "#1b1c1c",
+                    "tertiary": "#000000",
+                    "surface-tint": "#4c6173",
+                    "secondary": "#5f5e5e",
+                    "on-secondary-container": "#636262",
+                    "surface-container": "#efeded",
+                    "on-background": "#1b1c1c",
+                    "inverse-primary": "#b3c9de",
+                    "surface-variant": "#e4e2e2",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-low": "#f5f3f3",
+                    "on-tertiary-container": "#4881e9",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-surface-variant": "#43474c",
+                    "primary": "#000000",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004396",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#aec6ff",
+                    "surface-dim": "#dbdad9",
+                    "primary-container": "#061d2d",
+                    "primary-fixed-dim": "#b3c9de",
+                    "on-primary-fixed-variant": "#34495b",
+                    "inverse-surface": "#303031",
+                    "secondary-container": "#e2dfde",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#71869a",
+                    "outline": "#73777d",
+                    "surface-bright": "#fbf9f8",
+                    "background": "#fbf9f8",
+                    "primary-fixed": "#cfe5fb",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#001a42",
+                    "surface-container-high": "#e9e8e7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fbf9f8;
+            color: #1b1c1c;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="bg-[#fbf9f8] dark:bg-[#051C2C] fixed top-0 w-full z-50 transition-colors duration-300">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-['Noto_Serif'] font-bold tracking-tighter text-[#000000] dark:text-[#fbf9f8]">Caudate Tech</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center space-x-12 font-['Noto_Serif'] font-medium tracking-tight">
+<a class="text-[#000000] dark:text-[#fbf9f8] border-b-2 border-[#061d2d] dark:border-[#fbf9f8] pb-1 hover:text-[#000000] dark:hover:text-[#ffffff] transition-all duration-300" href="#">Services</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:text-[#000000] dark:hover:text-[#ffffff] transition-all duration-300" href="#">Industry</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:text-[#000000] dark:hover:text-[#ffffff] transition-all duration-300" href="#">Case Studies</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:text-[#000000] dark:hover:text-[#ffffff] transition-all duration-300" href="#">About</a>
+</div>
+<div class="flex items-center">
+<button class="bg-primary-container text-on-primary px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-on-primary-fixed-variant transition-all duration-300 scale-95 duration-200 ease-in-out">
+                    Contact Us
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden bg-surface">
+<div class="max-w-screen-2xl mx-auto px-8 w-full editorial-grid">
+<div class="col-span-12 lg:col-span-7 flex flex-col justify-center z-10">
+<p class="text-xs font-label uppercase tracking-[0.2em] text-secondary mb-6">Strategic Intelligence</p>
+<h1 class="text-5xl md:text-7xl font-headline font-bold text-primary leading-[1.1] tracking-tight mb-8">
+                        The architecture of <br/><span class="italic font-normal">intellectual leadership.</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed mb-10">
+                        Caudate Tech partners with the world’s most ambitious institutions to navigate complex technological shifts through rigorous analysis and definitive execution.
+                    </p>
+<div class="flex items-center gap-8">
+<button class="bg-primary-container text-on-primary px-8 py-4 rounded-lg font-medium hover:bg-on-primary-fixed-variant transition-all duration-300">
+                            Our Perspective
+                        </button>
+<a class="font-medium text-primary border-b-2 border-surface-tint pb-1 hover:text-on-primary-fixed-variant transition-all" href="#">Explore Industries</a>
+</div>
+</div>
+<div class="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
+<img class="w-full h-full object-cover grayscale contrast-125 opacity-90" data-alt="Modern architectural glass building reflecting a clear blue sky, emphasizing structural strength, symmetry, and professional corporate atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBYxyLd-yT_sVRP6eSkTx5YkNlpNjMhPZLzfyiIRt4ewbXTlUxmOBTJHnMJNKtQFmb9NIcW9ql7R2hWbzX05uATJFm6tDS9k-utuj1Gop7PIuzAs00BJJKPMH248e2pkQnjkzeANkFl5uMcbbOzt6GVPXeQ6A5rvA303VxVveCMJt9jjfxmHc4IMnpmjDZPls6ztlHPRawZ-_hUdWY5KNmCo_3RJHFmgw7hcmkOCbWkp1cAgUHJW_KuAUZ_C-5uZHYWpp8sRafNwE"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-transparent to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Core Expertise -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="editorial-grid mb-20">
+<div class="col-span-12 lg:col-span-4">
+<h2 class="text-3xl font-headline font-bold text-primary tracking-tight">Core Expertise</h2>
+</div>
+<div class="col-span-12 lg:col-span-8">
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                            We deploy deep vertical expertise and horizontal technological mastery to solve the most pressing challenges in global enterprise. Our approach is characterized by absolute clarity and measurable results.
+                        </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1px bg-outline-variant/20">
+<!-- Expertise Item 1 -->
+<div class="bg-surface-container-lowest p-12 transition-all duration-500 hover:bg-surface">
+<span class="material-symbols-outlined text-4xl text-primary mb-8" data-icon="account_balance">account_balance</span>
+<h3 class="text-xl font-headline font-bold mb-4">Capital Markets Strategy</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">Navigating high-frequency volatility with algorithmic precision and institutional-grade risk management frameworks.</p>
+</div>
+<!-- Expertise Item 2 -->
+<div class="bg-surface-container-lowest p-12 transition-all duration-500 hover:bg-surface">
+<span class="material-symbols-outlined text-4xl text-primary mb-8" data-icon="hub">hub</span>
+<h3 class="text-xl font-headline font-bold mb-4">Autonomous Systems</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">Building the connective tissue for next-generation industrial automation and cognitive supply chain networks.</p>
+</div>
+<!-- Expertise Item 3 -->
+<div class="bg-surface-container-lowest p-12 transition-all duration-500 hover:bg-surface">
+<span class="material-symbols-outlined text-4xl text-primary mb-8" data-icon="shield_with_heart">shield_with_heart</span>
+<h3 class="text-xl font-headline font-bold mb-4">Cyber Resilience</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">Beyond protection: architecting systems that maintain structural integrity under persistent adversarial pressure.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Impact / Dashboard Widget -->
+<section class="py-32 bg-surface">
+<div class="max-w-screen-2xl mx-auto px-8 editorial-grid">
+<div class="col-span-12 lg:col-span-5 mb-12 lg:mb-0">
+<h2 class="text-4xl font-headline font-bold text-primary mb-8">Measureable Impact</h2>
+<p class="text-on-surface-variant mb-12 leading-relaxed">Our work is defined by the value we create. We don't just provide insights; we engineer transitions that redefine industry benchmarks.</p>
+<div class="space-y-6">
+<div class="p-8 bg-gradient-to-b from-surface to-surface-container-low border-l-4 border-primary">
+<div class="text-5xl font-headline font-bold text-primary mb-2">42%</div>
+<div class="text-xs font-label uppercase tracking-widest text-secondary">Efficiency Gains in Global Logistics</div>
+</div>
+<div class="p-8 bg-gradient-to-b from-surface to-surface-container-low border-l-4 border-primary">
+<div class="text-5xl font-headline font-bold text-primary mb-2">$1.2B</div>
+<div class="text-xs font-label uppercase tracking-widest text-secondary">Value Unlocked through Digital Modernization</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-7">
+<div class="relative h-[600px] overflow-hidden rounded-lg group">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Professional meeting in a high-end, minimalist boardroom with soft morning light, team focused on high-quality data visualizations on a large screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4RhMLJtp0ataV4FL3OGotsFYs94MvDNDbcyYr-Wn1VQDp7FmTCsAjJILGIIgWohZU74-MblB-WgBHjm758sbJCpAUx9snhFf-W_PaPKM1dGkbAXRP-NIgzm0SB_H8c_oyBOT6irZzpJORoLt2EGkbFk5YwDBdf09c3O6ndRLQ9BHlB0xVUdBEQ6Xd2xnjRciP_u1_J30kQiLSlgBPE4MzUIf1mAsAZcNcyaLQqcYtvzEeVsB1SJZYdjE8yRGdSgNO_zlh4PX7MfI"/>
+<div class="absolute inset-0 bg-primary-container/20 group-hover:bg-primary-container/10 transition-colors duration-500"></div>
+<div class="absolute bottom-12 left-12 right-12 bg-surface/90 backdrop-blur-md p-8">
+<h4 class="text-2xl font-headline font-bold mb-4">Modernizing the Global Energy Grid</h4>
+<p class="text-on-surface-variant text-sm mb-6">A comprehensive structural overhaul for a Fortune 50 utility provider, implementing real-time predictive load balancing across three continents.</p>
+<a class="text-primary font-bold text-sm inline-flex items-center group/link" href="#">
+                                Read the Case Study 
+                                <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Logo Marquee -->
+<section class="py-20 bg-surface-container-highest/30">
+<div class="max-w-screen-2xl mx-auto px-8">
+<p class="text-center text-[10px] font-label uppercase tracking-[0.4em] text-secondary mb-12">Trusted by Global Institutional Leaders</p>
+<div class="flex flex-wrap justify-center items-center gap-16 opacity-40 grayscale">
+<div class="text-2xl font-bold font-headline tracking-tighter">Vanguardia</div>
+<div class="text-2xl font-bold font-headline tracking-tighter">Meridian</div>
+<div class="text-2xl font-bold font-headline tracking-tighter">Helios GRP</div>
+<div class="text-2xl font-bold font-headline tracking-tighter">Nidus Corp</div>
+<div class="text-2xl font-bold font-headline tracking-tighter">Aetheria</div>
+</div>
+</div>
+</section>
+<!-- Insights -->
+<section class="py-32 bg-surface">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<div>
+<p class="text-xs font-label uppercase tracking-[0.2em] text-secondary mb-4">Intellectual Capital</p>
+<h2 class="text-4xl font-headline font-bold text-primary">Featured Insights</h2>
+</div>
+<a class="text-sm font-medium text-secondary hover:text-primary transition-colors mb-2" href="#">View all publications</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<article class="group">
+<div class="aspect-[16/9] bg-surface-container-low mb-6 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Deep space imagery with glowing nebulae and digital particles, representing artificial intelligence and vast data networks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6NhLxDx9P65LQK2hlxgope1kvwnoamyUArV3RWedFylXZPu9QWnCMmdapC39s2wT-5NRUREfTZbjHGSWNsDJVHuQ_ehAWN8r1wOn-tFMxJD64hGZDg9l_BFFzwp1D6qLs7DuKykP8a8BsZ5zHrDWgtSM4dHCS1Pua_QfDF8-YinK7I6995fRErnCwW3-mWc546042qdnFN0qarZzIFRNAzMuUUlOHilkgqEaeA1rPsqeCn4rZ8CwKsTLrZl0engapb7tXbeg_uXE"/>
+</div>
+<time class="text-xs font-label text-secondary">March 2024</time>
+<h3 class="text-xl font-headline font-bold mt-2 mb-4 group-hover:text-surface-tint transition-colors">The Quantum Transition: Preparing Enterprise Infrastructure</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed line-clamp-3">Why current encryption standards are failing and the immediate steps required for quantum-safe resilience.</p>
+</article>
+<article class="group">
+<div class="aspect-[16/9] bg-surface-container-low mb-6 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Abstract minimalist white architecture with clean lines and sharp shadows, representing clarity in organizational design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjuEpO-FPACW3E0LXLm2uce-dQW2JS7uWI6juQ2bMgb4eYy_BV2sVE6pEUm01hsO7mDuY61HzM4y5hIA0PHsV4TrRaZum9vrOii4gjDHG8FxJb0t780YPcHYzkCu6zK6S8zO_tJDAi94DpVMASz1xYG1BkotQ44XN3N1muEGDInVa9jiYaz68KqdJYWy82XJNETrtWL_bv13z2HodzbCZZpHNS7JMe1M4L-SCX8Ns7cvaYCig-23EO1PDWhJEKygBA7qNOVfpftTI"/>
+</div>
+<time class="text-xs font-label text-secondary">February 2024</time>
+<h3 class="text-xl font-headline font-bold mt-2 mb-4 group-hover:text-surface-tint transition-colors">Cognitive Logistics: The End of Supply Chain Fragility</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed line-clamp-3">A deep dive into how autonomous orchestration is solving the global trade paradox.</p>
+</article>
+<article class="group">
+<div class="aspect-[16/9] bg-surface-container-low mb-6 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Dark computer screen with glowing lines of code and data streams, emphasizing technological complexity and expertise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYqXu8KYsTCnFw3db0byi-O5vMKeq_Eyzlg_deX2bHkXL9YQltHk97UYio4i_LsTARLlDmp2CC7jdrFAzso5BlU2YB9psHvRnRB3Tw4PhXShk8hGsKjxl9y1gzdwNeHU3CxYfnieV4DVqWwleqXAb1JL7wXYuktTXeKgJH-z3QdDin8jRIO5wnLH1Le6vv7PNBeTdzo4uiAvJjWlp4kOI804dmU1y4RfBI2Jb4VsoQ8EzMRFLOIJp82yhBunSqpo6oARRgnplNiYw"/>
+</div>
+<time class="text-xs font-label text-secondary">January 2024</time>
+<h3 class="text-xl font-headline font-bold mt-2 mb-4 group-hover:text-surface-tint transition-colors">The 2024 Corporate Resilience Index</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed line-clamp-3">Mapping the performance of 500 global institutions against emerging technological threats.</p>
+</article>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#e4e2e2] dark:bg-[#061d2d] w-full">
+<div class="flex flex-col md:flex-row justify-between items-start w-full px-12 py-16 max-w-screen-2xl mx-auto">
+<div class="mb-12 md:mb-0">
+<div class="text-lg font-['Noto_Serif'] font-bold text-[#000000] dark:text-[#fbf9f8] mb-6">Caudate Tech</div>
+<p class="text-[#5f5e5e] dark:text-[#e4e2e2] max-w-xs text-sm leading-relaxed">Providing the intellectual and technological framework for global leadership.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12 font-['Inter'] text-sm tracking-wide">
+<div class="flex flex-col space-y-4">
+<span class="font-bold text-primary dark:text-surface mb-2">Platform</span>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">Services</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">Industry</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">Case Studies</a>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="font-bold text-primary dark:text-surface mb-2">Company</span>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">About</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">Privacy Policy</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="font-bold text-primary dark:text-surface mb-2">Connect</span>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">LinkedIn</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">Global Offices</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">Contact</a>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-12 pb-12">
+<div class="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center text-[10px] text-secondary font-label uppercase tracking-widest">
+<span>© 2024 Caudate Tech. All rights reserved. Intellectual Monolith Group.</span>
+<span class="mt-4 md:mt-0">London | New York | Singapore | Zurich</span>
+</div>
+</div>
+</footer>
+</body></html>

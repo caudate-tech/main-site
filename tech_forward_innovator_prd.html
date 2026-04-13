@@ -1,0 +1,197 @@
+# Tech-Forward Innovator
+
+## Product Overview
+
+**The Pitch:** Caudate Tech is a premier consulting and digital marketing agency that bridges the gap between raw data and explosive growth. We deliver cutting-edge digital strategies wrapped in a relentless, future-facing aesthetic that immediately establishes authority.
+
+**For:** Enterprise tech companies and high-growth startups who care about measurable ROI, aggressive market capture, and working with an agency that visually and technically outpaces the competition.
+
+**Device:** desktop
+
+**Design Direction:** A sleek, dynamic, dark-themed design with vibrant cyber-accents. High-contrast, deep charcoal backgrounds interrupted by slashing electric blues and neon purples, communicating precision and speed.
+
+**Inspired by:** Pressfit.ai, Vercel
+
+---
+
+## Screens
+
+- **Home:** Establishes agency authority with a dynamic hero, client roster, and core value propositions.
+- **Services:** Detailed breakdown of consulting and marketing capabilities in a high-tech grid layout.
+- **Case Studies:** Asymmetrical portfolio showcase proving ROI through stark data points and bold visuals.
+- **About Us:** Agency ethos, leadership team, and aggressive growth philosophy.
+- **Contact Us:** Frictionless, high-conversion intake form with floating labels and neon-glow focus states.
+
+---
+
+## Key Flows
+
+**Client Acquisition Flow:** Prospective client seeks validation and initiates contact.
+
+1. User is on **Home** -> sees dynamic hero and marquee of trusted enterprise logos.
+2. User clicks **"See Our Impact"** -> navigates to **Case Studies**, viewing a specific ROI metric.
+3. User clicks **"Start a Project"** -> navigates to **Contact Us** and completes the inquiry form.
+
+---
+
+<details>
+<summary>Design System</summary>
+
+## Color Palette
+
+- **Primary:** `#00F0FF` - Buttons, links, active states, cyber-cyan
+- **Background:** `#090A0F` - Deep abyss charcoal
+- **Surface:** `#12141D` - Cards, navigation, modals
+- **Text:** `#F1F5F9` - Main body text, stark white
+- **Muted:** `#64748B` - Secondary text, grid lines, disabled states
+- **Accent:** `#B026FF` - Neon purple for gradients, secondary highlights
+
+## Typography
+
+Distinctive, geometric, and unapologetically digital.
+
+- **Headings:** `Space Grotesk`, 700, 32-72px
+- **Body:** `Outfit`, 400, 16px
+- **Small text:** `Outfit`, 400, 14px
+- **Buttons:** `Space Grotesk`, 600, 15px, 1px letter-spacing
+
+**Style notes:** Sharp 0px border radius on buttons and cards for a brutalist-tech feel. 1px borders using `#1E293B`. Hover states feature intense `box-shadow` neon glows (`0 0 20px rgba(0, 240, 255, 0.4)`). Backgrounds utilize subtle noise textures over radial gradient meshes.
+
+## Design Tokens
+
+```css
+:root {
+  --color-primary: #00F0FF;
+  --color-background: #090A0F;
+  --color-surface: #12141D;
+  --color-text: #F1F5F9;
+  --color-muted: #64748B;
+  --color-accent: #B026FF;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --radius: 0px;
+  --spacing: 8px;
+}
+```
+
+</details>
+
+---
+
+<details>
+<summary>Screen Specifications</summary>
+
+### Home
+
+**Purpose:** Hook the user, establish tech authority, and drive them to case studies or contact.
+
+**Layout:** Full viewport hero with glowing orb background, client logo ticker strip, 3-column service highlight, bottom CTA.
+
+**Key Elements:**
+- **Hero Title:** `Space Grotesk`, 72px, leading-tight. "Data-Driven. Future-Obsessed."
+- **Primary CTA:** `#00F0FF` background, black text, 0px radius, sharp hover glow.
+- **Client Marquee:** Infinite scroll of greyscale logos that turn full color on hover.
+
+**States:**
+- **Loading:** Entire screen fades in from black, hero text reveals line by line.
+
+**Components:**
+- **Service Highlight Card:** 350x350px, `#12141D` surface, 1px `#1E293B` border, top-left neon icon.
+
+**Interactions:**
+- **Hover Service Card:** Border transitions to `#00F0FF`, slight negative Y-axis translation (-4px), 300ms ease.
+
+### Services
+
+**Purpose:** Detail technical and marketing capabilities.
+
+**Layout:** Sticky left sidebar for navigation, right-side scrolling content blocks.
+
+**Key Elements:**
+- **Nav Sidebar:** Tracks current scroll position, active link glows `#B026FF`.
+- **Service Block:** Large `Space Grotesk` header, 2-column body text, bulleted feature list.
+- **Tech Stack Grid:** Mini-logos of tools used (e.g., AWS, React, Google Ads, HubSpot).
+
+**States:**
+- **Empty:** N/A - static content.
+
+**Components:**
+- **Feature Bullet:** Custom `>` chevron icon in `#00F0FF`, 16px text.
+
+**Interactions:**
+- **Scroll:** Sidebar nav highlights automatically sync with right-side content sections.
+
+### Case Studies
+
+**Purpose:** Prove ROI with hard numbers and visually striking project representations.
+
+**Layout:** Asymmetrical masonry grid, full-width rows alternating with 50/50 splits.
+
+**Key Elements:**
+- **Stat Callout:** Massive 64px numbers (`+340%`) in `#00F0FF` overlaid on dark project images.
+- **Project Title:** Bottom-left aligned inside the card, stark white against a dark gradient overlay.
+- **Filter Bar:** Top sticky bar to filter by "Marketing", "Consulting", "Dev".
+
+**States:**
+- **Loading:** Skeleton pulses in `#12141D` before images lazy-load.
+- **Empty:** "No case studies match this filter." in `#64748B`.
+
+**Components:**
+- **Filter Button:** Transparent background, bottom border only. Active state gets 2px `#00F0FF` bottom border.
+
+**Interactions:**
+- **Hover Case Study:** Image scales up 1.05x inside container, stat callout opacity fades in from 0 to 1.
+
+### About Us
+
+**Purpose:** Humanize the agency while maintaining the high-tech, aggressive branding.
+
+**Layout:** Split-screen mission statement, horizontal timeline, 4-column team grid.
+
+**Key Elements:**
+- **Hero Mission:** "We don't follow trends. We architect them."
+- **Team Card:** Grayscale headshots, stark contrasting text.
+- **Timeline:** Glowing horizontal line spanning the screen with pulsing nodes for key years.
+
+**Components:**
+- **Team Headshot:** 250x300px, CSS `filter: grayscale(100%) contrast(120%)`.
+
+**Interactions:**
+- **Hover Team Card:** Headshot transitions to full color, revealing a `#B026FF` bottom accent border.
+
+### Contact Us
+
+**Purpose:** Frictionless lead generation.
+
+**Layout:** 50/50 split. Left side: large typography and direct email. Right side: dynamic form.
+
+**Key Elements:**
+- **Large Contact Heading:** 64px, "Ready to scale?"
+- **Form Inputs:** No borders except a 1px bottom border `#64748B`. Floating labels.
+- **Submit Button:** Full width, `#B026FF` background transitioning to `#00F0FF` on hover.
+
+**States:**
+- **Loading:** Submit button text changes to "Transmitting..." with a pulsing opacity.
+- **Error:** Bottom border of invalid inputs turns `#EF4444`, shaking animation (300ms).
+- **Success:** Form replaced by a large `#00F0FF` checkmark and "Signal Received."
+
+**Interactions:**
+- **Focus Input:** Bottom border expands and glows `#00F0FF`, label floats to -20px Y.
+
+</details>
+
+---
+
+<details>
+<summary>Build Guide</summary>
+
+**Stack:** HTML + Tailwind CSS v3
+
+**Build Order:**
+1. **Home:** Establishes the core variables, global layout (nav/footer), typography, and the dark/neon aesthetic.
+2. **Contact Us:** Nails down the form UI components, input states, and button micro-interactions crucial for conversion.
+3. **Services:** Builds the complex layout structures (sticky sidebars, typography hierarchy for long-form content).
+4. **Case Studies:** Implements grid layouts, image handling, and complex hover state animations.
+5. **About Us:** Reuses components from Home and Case Studies, adding the timeline and profile cards.
+
+</details>

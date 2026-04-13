@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Inter:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#c5c7c9",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#3b4d00",
+                        "on-surface-variant": "#c5c9b1",
+                        "primary-fixed": "#caf15c",
+                        "surface-bright": "#393939",
+                        "primary-container": "#caf15c",
+                        "on-primary-fixed": "#161f00",
+                        "inverse-primary": "#4f6600",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#546d00",
+                        "on-secondary-container": "#b4b5b5",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-container-high": "#2a2a2a",
+                        "primary": "#ffffff",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "surface-variant": "#353535",
+                        "on-surface": "#e2e2e2",
+                        "on-tertiary": "#2e3133",
+                        "surface-container": "#1f1f1f",
+                        "outline": "#8f937d",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-container-low": "#1b1b1b",
+                        "secondary-fixed": "#e2e2e2",
+                        "outline-variant": "#444937",
+                        "surface-tint": "#aed442",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#353535",
+                        "on-tertiary-container": "#626567",
+                        "tertiary": "#ffffff",
+                        "tertiary-fixed": "#e1e3e5",
+                        "background": "#131313",
+                        "secondary": "#c6c6c7",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "primary-fixed-dim": "#aed442",
+                        "on-secondary": "#2f3131",
+                        "surface": "#131313",
+                        "inverse-on-surface": "#303030",
+                        "on-primary": "#283500",
+                        "inverse-surface": "#e2e2e2",
+                        "on-background": "#e2e2e2",
+                        "tertiary-container": "#e1e3e5",
+                        "secondary-container": "#454747"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Space Grotesk", "monospace"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e2e2e2;
+            font-family: 'Inter', sans-serif;
+        }
+        .resolution-marker {
+            width: 2px;
+            background-color: #caf15c;
+        }
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .text-editorial {
+            font-family: 'Newsreader', serif;
+            letter-spacing: -0.02em;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent dark:bg-[#131313]/70 backdrop-blur-xl flex justify-between items-center px-12 py-8 w-full max-w-full">
+<div class="text-2xl font-black tracking-tighter text-white dark:text-white uppercase">
+            CAUDATE TECH
+        </div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-serif italic tracking-tighter uppercase font-medium text-white/80 hover:text-white transition-colors duration-300" href="#">Strategy</a>
+<a class="font-serif italic tracking-tighter uppercase font-medium text-white/80 hover:text-white transition-colors duration-300" href="#">Expertise</a>
+<a class="font-serif italic tracking-tighter uppercase font-medium text-[#D2FA64] border-b-2 border-[#D2FA64] pb-1" href="#">Case Studies</a>
+<a class="font-serif italic tracking-tighter uppercase font-medium text-white/80 hover:text-white transition-colors duration-300" href="#">Manifesto</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-label uppercase tracking-widest text-xs font-bold hover:bg-white hover:text-black transition-all duration-300 scale-95 hover:scale-100">
+            Start Project
+        </button>
+</nav>
+<main class="pt-48">
+<!-- Hero Section -->
+<section class="px-12 mb-40 relative">
+<div class="absolute left-12 top-0 h-full resolution-marker"></div>
+<div class="pl-12">
+<span class="font-label uppercase tracking-[0.3em] text-primary-container text-xs mb-6 block">Proof of Performance</span>
+<h1 class="text-editorial text-7xl md:text-[9rem] font-medium leading-[0.85] italic text-white max-w-5xl">
+                    Resolution <br/> Through <br/> Evidence.
+                </h1>
+<p class="mt-12 text-on-surface-variant font-body text-xl max-w-xl leading-relaxed">
+                    We don't build features; we engineer outcomes. Explore our curated selection of high-impact transformations where precision meets fluidity.
+                </p>
+</div>
+</section>
+<!-- Case Study 01 - Large Asymmetric -->
+<section class="px-12 mb-64 flex flex-col md:flex-row gap-16 items-start">
+<div class="w-full md:w-3/5 group">
+<div class="relative overflow-hidden aspect-[16/10] bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105" data-alt="Technical architectural diagram of a microservices cloud network with glowing cyan data nodes on a dark high-tech background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ73oWwMELX2NkD8_ePSCZ-78ZdQS8Gkoekj9lNzZwoDNxGCnE9t_nSUjY4F5SHxkeKzbA8iRQMt1RdlWqAz1SG_mopHps7q9twHotbaXzgnXuQztq_ODJk4PdoQxhlkkFH1jK-q0p9_6USSYNlDz0V3EwBjnfKu6e1YQiATCukmqzyDFuC9ZF_U_w1cCkjhstmkVPWvjgH4JuVwX1tckga-0jUmVBtir8u8KRIgGcktx_fSGGe9FM9FAJtWjFcgTncZxN-5k6ZMk"/>
+</div>
+<div class="mt-8 flex justify-between items-end">
+<div>
+<span class="font-label text-primary-container text-xs tracking-widest uppercase">01 / Fintech RE-ARCH</span>
+<h2 class="text-editorial italic text-5xl text-white mt-4">The Quant Systems</h2>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-4xl text-white group-hover:translate-x-4 transition-transform duration-500">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-2/5 pt-12 md:pt-32">
+<div class="border-l-2 border-outline-variant/20 pl-8">
+<div class="mb-12">
+<div class="text-6xl font-black text-white tracking-tighter">420%</div>
+<div class="font-label text-on-surface-variant uppercase text-xs mt-2">Increase in Throughput</div>
+</div>
+<p class="text-on-surface-variant font-body leading-relaxed mb-8">
+                        Redesigning the core transaction engine for a global quantitative trading house. We replaced legacy bottlenecks with a fluid, asynchronous architecture that scaled with zero latency increase.
+                    </p>
+<button class="font-label text-white uppercase text-xs tracking-[0.2em] border-b border-primary-container pb-1 hover:text-primary-container transition-colors">
+                        View Technical Breakdown
+                    </button>
+</div>
+</div>
+</section>
+<!-- Case Study Grid - Bento Style -->
+<section class="px-12 mb-64 grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Project 02 -->
+<div class="md:col-span-7 bg-surface-container-low p-12 flex flex-col justify-between min-h-[600px] relative">
+<div>
+<span class="font-label text-on-surface-variant text-xs tracking-widest uppercase">02 / AI Automation</span>
+<h3 class="text-editorial italic text-4xl text-white mt-4 max-w-sm">Synthetix Intelligence Engine</h3>
+</div>
+<div class="relative w-full h-64 mt-12 mb-12">
+<img class="w-full h-full object-cover" data-alt="Abstract visualization of neural network pathways flowing in fluid motion with shimmering green and white particle light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhjTaC0WZweGberPFxlEPUEF1326Hko9xeqBES1NJvu7MehvRAMeW4ajCh0OROAPwLxQowBnOmW0zF10IWVNu-qcJS772D8hq5pkGAfFJOClEraiXwW_QTaySWmxhSzZtpm-IRkE3-WxyODHwoldGeCc8_iQ6qeoFy98V5YHtHBPkFxz2wKMZ6bAqhL8Ln7aG1mNvYwmlllyzxYd9NjlmYYzzgm_5iqSU8Xil1b-Skupty2PuWzjnezCBlcb4S5_6yZ7mhnT1lsD4"/>
+</div>
+<div class="flex gap-12">
+<div>
+<div class="text-3xl font-bold text-primary-container">-88%</div>
+<div class="font-label text-on-surface-variant uppercase text-[10px]">Operational Latency</div>
+</div>
+<div>
+<div class="text-3xl font-bold text-primary-container">$2.4M</div>
+<div class="font-label text-on-surface-variant uppercase text-[10px]">Annualized Savings</div>
+</div>
+</div>
+</div>
+<!-- Project 03 -->
+<div class="md:col-span-5 flex flex-col gap-8">
+<div class="bg-surface-container-highest p-10 h-1/2 flex flex-col justify-between">
+<div>
+<span class="font-label text-primary-container text-xs tracking-widest uppercase">03 / E-Commerce</span>
+<h3 class="text-editorial italic text-3xl text-white mt-2">LUXE Platform</h3>
+</div>
+<p class="text-on-surface-variant text-sm font-body mt-4">
+                        A high-fidelity headless commerce engine for luxury retail, prioritizing sub-second load times and fluid transitions.
+                    </p>
+<div class="mt-6 flex items-center justify-between">
+<span class="text-2xl font-bold text-white">+114%</span>
+<span class="material-symbols-outlined text-white">north_east</span>
+</div>
+</div>
+<div class="bg-surface-container p-10 h-1/2 group cursor-pointer relative overflow-hidden">
+<div class="absolute inset-0 bg-primary-container/0 group-hover:bg-primary-container/5 transition-colors duration-500"></div>
+<span class="font-label text-on-surface-variant text-xs tracking-widest uppercase">04 / Energy Sector</span>
+<h3 class="text-editorial italic text-3xl text-white mt-2">Grid Master OS</h3>
+<p class="text-on-surface-variant text-sm font-body mt-4">
+                        Predictive maintenance systems for renewable energy grids. Precision data for planetary impact.
+                     </p>
+<div class="mt-6 flex items-center gap-4">
+<div class="h-[2px] w-12 bg-primary-container"></div>
+<span class="font-label text-white text-[10px] uppercase tracking-widest">Case Study Pending</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Editorial Quote -->
+<section class="px-12 mb-64 text-center max-w-4xl mx-auto">
+<h2 class="text-editorial italic text-5xl md:text-6xl text-white leading-tight">
+                "Precision isn't just about small details; it's about the <span class="text-primary-container">unwavering focus</span> on the outcome."
+            </h2>
+<div class="mt-8 font-label text-on-surface-variant uppercase tracking-widest text-xs">— CAUDATE MANIFESTO, SECTION 0.4</div>
+</section>
+<!-- Final Call to Action -->
+<section class="px-12 mb-32">
+<div class="bg-primary-container p-24 text-center">
+<span class="font-label text-on-primary-container uppercase tracking-[0.4em] text-sm block mb-8">Ready to define your resolution?</span>
+<h2 class="text-editorial text-6xl md:text-8xl italic text-on-primary-container mb-12">The Next Chapter Starts Now.</h2>
+<a class="inline-block border-2 border-on-primary-container px-12 py-4 font-label uppercase tracking-widest font-bold text-on-primary-container hover:bg-on-primary-container hover:text-primary-container transition-all" href="#">
+                    Initiate Consultation
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-32 bg-[#0e0e0e] dark:bg-[#0e0e0e] grid grid-cols-1 md:grid-cols-4 gap-16 px-12 py-24 border-t border-white/5">
+<div class="md:col-span-2">
+<div class="text-4xl font-serif italic text-white mb-8">CAUDATE TECH</div>
+<p class="text-white/40 font-body max-w-sm mb-8 leading-relaxed">
+                A technical studio dedicated to the engineering of high-resolution digital experiences. Precision fluidity as standard.
+            </p>
+<div class="font-mono uppercase tracking-widest text-xs text-[#D2FA64]">
+                © 2024 CAUDATE TECH. PRECISION FLUIDITY.
+            </div>
+</div>
+<div>
+<h4 class="font-label uppercase tracking-widest text-white mb-8 text-xs">Network</h4>
+<ul class="space-y-4">
+<li><a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform inline-block" href="#">LinkedIn</a></li>
+<li><a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform inline-block" href="#">Instagram</a></li>
+<li><a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform inline-block" href="#">Clutch</a></li>
+<li><a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform inline-block" href="#">Medium</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label uppercase tracking-widest text-white mb-8 text-xs">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform inline-block" href="#">Privacy</a></li>
+<li><a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform inline-block" href="#">Terms</a></li>
+</ul>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Caudate Tech</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#001a42",
+                    "inverse-on-surface": "#f2f0f0",
+                    "secondary-fixed": "#e5e2e1",
+                    "tertiary-fixed": "#d8e2ff",
+                    "surface": "#fbf9f8",
+                    "on-primary-fixed": "#061d2d",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e4e2e2",
+                    "outline-variant": "#c3c7cc",
+                    "on-surface": "#1b1c1c",
+                    "tertiary": "#000000",
+                    "surface-tint": "#4c6173",
+                    "secondary": "#5f5e5e",
+                    "on-secondary-container": "#636262",
+                    "surface-container": "#efeded",
+                    "on-background": "#1b1c1c",
+                    "inverse-primary": "#b3c9de",
+                    "surface-variant": "#e4e2e2",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-low": "#f5f3f3",
+                    "on-tertiary-container": "#4881e9",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-surface-variant": "#43474c",
+                    "primary": "#000000",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004396",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#aec6ff",
+                    "surface-dim": "#dbdad9",
+                    "primary-container": "#061d2d",
+                    "primary-fixed-dim": "#b3c9de",
+                    "on-primary-fixed-variant": "#34495b",
+                    "inverse-surface": "#303031",
+                    "secondary-container": "#e2dfde",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#71869a",
+                    "outline": "#73777d",
+                    "surface-bright": "#fbf9f8",
+                    "background": "#fbf9f8",
+                    "primary-fixed": "#cfe5fb",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#001a42",
+                    "surface-container-high": "#e9e8e7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif', serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="bg-[#fbf9f8] dark:bg-[#051C2C] transition-colors duration-300 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<a class="text-2xl font-['Noto_Serif'] font-bold tracking-tighter text-[#000000] dark:text-[#fbf9f8]" href="#">Caudate Tech</a>
+<nav class="hidden md:flex items-center space-x-10 font-['Noto_Serif'] font-medium tracking-tight">
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:text-[#000000] dark:hover:text-[#ffffff] transition-all duration-300" href="#">Services</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:text-[#000000] dark:hover:text-[#ffffff] transition-all duration-300" href="#">Industry</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:text-[#000000] dark:hover:text-[#ffffff] transition-all duration-300" href="#">Case Studies</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:text-[#000000] dark:hover:text-[#ffffff] transition-all duration-300" href="#">About</a>
+</nav>
+<button class="bg-primary-container text-on-primary px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-on-primary-fixed-variant transition-all duration-300 scale-95 duration-200 ease-in-out">
+                Contact Us
+            </button>
+</div>
+</header>
+<main class="max-w-screen-2xl mx-auto px-8 pt-20 pb-32">
+<div class="grid grid-cols-12 gap-12 lg:gap-24">
+<!-- Content & Form Section -->
+<div class="col-span-12 lg:col-span-7">
+<header class="mb-16">
+<span class="text-xs font-label uppercase tracking-[0.2em] text-secondary mb-4 block">Inquiry Channel</span>
+<h1 class="text-5xl lg:text-7xl font-headline font-bold text-primary tracking-tight leading-tight">Connect with the monolith.</h1>
+<p class="mt-8 text-xl text-secondary max-w-xl leading-relaxed">
+                        Caudate Tech operates at the intersection of architectural precision and digital intelligence. Share your vision, and our strategy team will provide an initial assessment within 48 hours.
+                    </p>
+</header>
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative group">
+<label class="block text-[0.6875rem] font-label uppercase tracking-widest text-on-surface-variant mb-2">Full Name</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary-container focus:ring-0 transition-colors py-4 px-0 outline-none placeholder:text-outline-variant text-lg" placeholder="e.g. Julian Vane" type="text"/>
+</div>
+<div class="relative group">
+<label class="block text-[0.6875rem] font-label uppercase tracking-widest text-on-surface-variant mb-2">Corporate Email</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary-container focus:ring-0 transition-colors py-4 px-0 outline-none placeholder:text-outline-variant text-lg" placeholder="name@organization.com" type="email"/>
+</div>
+</div>
+<div class="relative group">
+<label class="block text-[0.6875rem] font-label uppercase tracking-widest text-on-surface-variant mb-2">Inquiry Type</label>
+<select class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary-container focus:ring-0 transition-colors py-4 px-0 outline-none text-lg appearance-none">
+<option>Strategic Consultation</option>
+<option>Infrastructure Audit</option>
+<option>Custom Software Development</option>
+<option>Institutional Partnership</option>
+</select>
+</div>
+<div class="relative group">
+<label class="block text-[0.6875rem] font-label uppercase tracking-widest text-on-surface-variant mb-2">Project Brief</label>
+<textarea class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary-container focus:ring-0 transition-colors py-4 px-0 outline-none placeholder:text-outline-variant text-lg resize-none" placeholder="Describe the scope and intellectual objectives..." rows="4"></textarea>
+</div>
+<div class="pt-4">
+<button class="bg-primary-container text-on-primary px-12 py-5 rounded-lg text-lg font-medium hover:bg-on-primary-fixed-variant transition-all duration-300 flex items-center gap-4 group" type="submit">
+                            Submit Inquiry
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Global Offices Sidebar -->
+<aside class="col-span-12 lg:col-span-5 space-y-12">
+<div class="bg-surface-container-low p-12 rounded-xl">
+<h2 class="text-3xl font-headline font-bold mb-10 text-primary">Global Presence</h2>
+<div class="space-y-12">
+<!-- London -->
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<h3 class="text-xl font-headline font-semibold">London (HQ)</h3>
+</div>
+<div class="pl-9 space-y-1">
+<p class="text-secondary leading-relaxed">The Shard, Level 24<br/>32 London Bridge St<br/>London SE1 9SG</p>
+<a class="text-primary font-medium block mt-4 hover:underline decoration-surface-tint underline-offset-4" href="tel:+442079460000">+44 20 7946 0000</a>
+</div>
+</div>
+<!-- New York -->
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<h3 class="text-xl font-headline font-semibold">New York</h3>
+</div>
+<div class="pl-9 space-y-1">
+<p class="text-secondary leading-relaxed">One World Trade Center<br/>Suite 85A<br/>New York, NY 10007</p>
+<a class="text-primary font-medium block mt-4 hover:underline decoration-surface-tint underline-offset-4" href="tel:+12125550198">+1 212 555 0198</a>
+</div>
+</div>
+<!-- Singapore -->
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<h3 class="text-xl font-headline font-semibold">Singapore</h3>
+</div>
+<div class="pl-9 space-y-1">
+<p class="text-secondary leading-relaxed">Marina Bay Financial Centre<br/>Tower 3, Level 41<br/>Singapore 018982</p>
+<a class="text-primary font-medium block mt-4 hover:underline decoration-surface-tint underline-offset-4" href="tel:+6567770000">+65 6777 0000</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Abstract Visual Asset -->
+<div class="relative h-64 w-full rounded-xl overflow-hidden grayscale contrast-125">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="monolithic modern skyscraper with sharp architectural angles and reflecting glass under high contrast sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7ucM8EZweyL_E8CI9Yt5BjjZXYHI1vhlY86l2Sfd67-TiPKwv-X1Fs-cPZIXx3dk4Z-LkOufc6MVSd1_wt0vkvFlZzTNGFsPAPWncmlT874Aas4UiJ-_nNIbhqpXNB6pclrtsIpkUL2gS7sQ5O1eDO1T1movRbtGL3sf_sKClupZ-eJ1KJtU4b1W4bS2tjH_1KGuKU6D4KOVj36FkTGUtore3CvOQRF29_48eClAuBkcFd4fyW9vmU8yJf5p0POHQC7AUW2VvmHo"/>
+<div class="absolute inset-0 bg-primary-container/20 mix-blend-multiply"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="text-[0.6875rem] font-label uppercase tracking-[0.3em]">Architectural Precision</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#e4e2e2] dark:bg-[#061d2d] transition-colors duration-300">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-screen-2xl mx-auto">
+<div class="mb-8 md:mb-0">
+<span class="text-lg font-['Noto_Serif'] font-bold text-[#000000] dark:text-[#fbf9f8]">Caudate Tech</span>
+<p class="font-['Inter'] text-sm tracking-wide text-[#5f5e5e] dark:text-[#e4e2e2] mt-2">© 2024 Caudate Tech. All rights reserved. Intellectual Monolith Group.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Inter'] text-sm tracking-wide">
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">Privacy Policy</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">Terms of Service</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">Cookie Settings</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">LinkedIn</a>
+<a class="text-[#5f5e5e] dark:text-[#e4e2e2] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300" href="#">Global Offices</a>
+</div>
+</div>
+</footer>
+</body></html>

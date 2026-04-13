@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#001a42",
+                    "inverse-on-surface": "#f2f0f0",
+                    "secondary-fixed": "#e5e2e1",
+                    "tertiary-fixed": "#d8e2ff",
+                    "surface": "#fbf9f8",
+                    "on-primary-fixed": "#061d2d",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e4e2e2",
+                    "outline-variant": "#c3c7cc",
+                    "on-surface": "#1b1c1c",
+                    "tertiary": "#000000",
+                    "surface-tint": "#4c6173",
+                    "secondary": "#5f5e5e",
+                    "on-secondary-container": "#636262",
+                    "surface-container": "#efeded",
+                    "on-background": "#1b1c1c",
+                    "inverse-primary": "#b3c9de",
+                    "surface-variant": "#e4e2e2",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-low": "#f5f3f3",
+                    "on-tertiary-container": "#4881e9",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-surface-variant": "#43474c",
+                    "primary": "#000000",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004396",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#aec6ff",
+                    "surface-dim": "#dbdad9",
+                    "primary-container": "#061d2d",
+                    "primary-fixed-dim": "#b3c9de",
+                    "on-primary-fixed-variant": "#34495b",
+                    "inverse-surface": "#303031",
+                    "secondary-container": "#e2dfde",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#71869a",
+                    "outline": "#73777d",
+                    "surface-bright": "#fbf9f8",
+                    "background": "#fbf9f8",
+                    "primary-fixed": "#cfe5fb",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#001a42",
+                    "surface-container-high": "#e9e8e7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fbf9f8;
+            color: #1b1c1c;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 bg-[#fbf9f8] transition-colors duration-300">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<a class="text-2xl font-['Noto_Serif'] font-bold tracking-tighter text-[#000000]" href="#">Caudate Tech</a>
+<!-- Desktop Links -->
+<div class="hidden md:flex space-x-10 items-center font-['Noto_Serif'] font-medium tracking-tight">
+<a class="text-[#5f5e5e] hover:text-[#000000] transition-all duration-300" href="#">Services</a>
+<a class="text-[#5f5e5e] hover:text-[#000000] transition-all duration-300" href="#">Industry</a>
+<a class="text-[#5f5e5e] hover:text-[#000000] transition-all duration-300" href="#">Case Studies</a>
+<a class="text-[#000000] border-b-2 border-[#061d2d] pb-1 transition-all duration-300" href="#">About</a>
+</div>
+<button class="bg-[#061d2d] text-white px-6 py-2.5 rounded-lg font-medium hover:bg-[#34495b] transition-all duration-300 scale-95 duration-200 ease-in-out">
+                Contact Us
+            </button>
+</div>
+</nav>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="max-w-screen-2xl mx-auto px-8 pt-24 pb-32 grid grid-cols-12 gap-8">
+<div class="col-span-12 md:col-span-7">
+<span class="text-label-sm uppercase tracking-[0.1em] text-secondary font-semibold mb-6 block">Our Ethos</span>
+<h1 class="text-6xl md:text-7xl lg:text-8xl serif font-bold tracking-tighter leading-none mb-8 text-primary">
+                    The Architecture of Intellectual Rigor.
+                </h1>
+</div>
+<div class="col-span-12 md:col-span-5 flex items-end">
+<p class="text-xl md:text-2xl font-body text-on-surface-variant leading-relaxed">
+                    At Caudate Tech, we don't just build systems; we engineer the intellectual frameworks that define market leadership in a post-digital era.
+                </p>
+</div>
+</section>
+<!-- Mission & Story: Tonal Layering Asymmetry -->
+<section class="bg-surface-container-low py-32">
+<div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-12 gap-12">
+<div class="col-span-12 md:col-span-4">
+<h2 class="text-4xl serif font-bold text-primary mb-12">Mission &amp; Evolution</h2>
+<div class="space-y-16 relative">
+<!-- Simple Vertical Timeline -->
+<div class="absolute left-0 top-0 bottom-0 w-px bg-outline-variant opacity-30"></div>
+<div class="pl-8 relative">
+<div class="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-primary-container"></div>
+<span class="text-sm font-label text-secondary mb-2 block">2014 — Genesis</span>
+<h3 class="text-xl font-bold mb-4">Founding Philosophy</h3>
+<p class="text-on-surface-variant leading-relaxed">Founded as a boutique consultancy for systemic risk analysis, Caudate Tech was built on the premise that clarity is the ultimate competitive advantage.</p>
+</div>
+<div class="pl-8 relative">
+<div class="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-primary-container"></div>
+<span class="text-sm font-label text-secondary mb-2 block">2019 — Scaling</span>
+<h3 class="text-xl font-bold mb-4">The Monolith Expansion</h3>
+<p class="text-on-surface-variant leading-relaxed">Expanding into algorithmic infrastructure, we became the silent architect behind four of the decade's most resilient financial ecosystems.</p>
+</div>
+<div class="pl-8 relative">
+<div class="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-primary-container"></div>
+<span class="text-sm font-label text-secondary mb-2 block">Present — Authority</span>
+<h3 class="text-xl font-bold mb-4">The Future of Agency</h3>
+<p class="text-on-surface-variant leading-relaxed">Today, we represent the nexus of human strategic intuition and computational precision.</p>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-7 md:col-start-6">
+<div class="aspect-[4/5] bg-surface-container-highest overflow-hidden relative group">
+<img alt="Professional Workspace" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="monochromatic view of a high-end minimalist corporate boardroom with marble floors, floor-to-ceiling windows, and soft morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl_FbXYDmZ4Y3BR_EFTFnYt6crfTDWq_buaG1qK8tIqh34qd2k0Lc_1VyNUNnDGaZpWO_BwL1ydzlPZc6BEyH-WB7JGt7IQYcef2SVzEp__9qtC6PFpIFDqxZwnUD2o6UV4HxbxQ2DbiA4IsRFOp-87N7pNVNLWllCZfPpuyawkhuDxkAK05hD-N3CWa7LnpJthCq2dDSRhud_jaGBW26_O5q4QCca5vT2CuXbRhl91Z9zwWxHOmYv9pyQoti_CLq2K-0XHZYhraU"/>
+<div class="absolute inset-0 bg-primary-container/10"></div>
+</div>
+<div class="mt-8 p-12 bg-surface-container-lowest shadow-sm">
+<p class="text-2xl serif italic text-primary leading-relaxed">
+                            "Knowledge is not merely data processed; it is the structural integrity of the decisions we make in the dark."
+                        </p>
+<div class="mt-6 flex items-center gap-4">
+<div class="h-px w-12 bg-primary-container"></div>
+<span class="text-sm uppercase tracking-widest font-semibold">The Caudate Manifesto</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Leadership: Editorial Grid -->
+<section class="max-w-screen-2xl mx-auto px-8 py-32">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div class="max-w-2xl">
+<span class="text-label-sm uppercase tracking-[0.1em] text-secondary font-semibold mb-4 block">The Council</span>
+<h2 class="text-5xl md:text-6xl serif font-bold text-primary">Executive Leadership</h2>
+</div>
+<p class="text-lg text-on-surface-variant max-w-sm">
+                    A collective of veteran strategists and technologists dedicated to absolute performance.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+<!-- Leader 1 -->
+<div class="group">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high mb-8 relative">
+<img alt="CEO Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="dignified portrait of a senior male executive in a charcoal suit, minimalist studio lighting, high contrast, editorial aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4mEC7IetKyys2yAwPKmdV7ZNZhoAfSrxKDcc0I2UZz3Wd-EL1qVflO62hFCachm5PtAErc_Nm3PcxS61Fyn2lbxVvN6bi0_tOFsUsDAplucZJUBXkkp3z9qOuoOfunfFJk7ytPGgWcCF_hcKGCIh4f6lt09CZVjrtGi5LWGp6UhwRupggJDFFEhwheKGsq_t7fSj9TutZYqPenOIUu5_i2_ueHOjtRMo-XziBnRFCqAzumJwmFa9ZWNxSyK8I7MD54A_qB8pdI_8"/>
+</div>
+<h3 class="text-2xl serif font-bold mb-1">Dr. Julian Thorne</h3>
+<p class="text-sm uppercase tracking-widest text-secondary font-medium mb-6">Chief Executive Officer</p>
+<p class="text-on-surface-variant leading-relaxed">Architect of the 2018 Global Resilience Framework. Former Senior Partner at Blackwood &amp; Associates.</p>
+</div>
+<!-- Leader 2 -->
+<div class="group">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high mb-8 relative">
+<img alt="CTO Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="authoritative portrait of a woman in business attire, clean background, sharp focus, professional editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZt-m7arp3cjy5lJ45apYvw4VJ72Y6ZG6JJJJwjmFA2wtPbOAcyKJbTmOlhwUJPb5pTF2GZJZo0jU18Db-80ULQPu-HanrH3XRWofkbhlGLCyA2FeKOrfwY645aSXzoerB0eiY5WsbyrFzPqd78Qb7QzPBqCxHMgPSLY2DHT7B-Hca0-nUDLkxjPEFro_nk1MxR3cQC3fhGsZA3qqRVUB4s4JxycWplxOV98hIf46UI3w9N_IVuRgRT9Cwq18Qq004QHm2wyqDxmM"/>
+</div>
+<h3 class="text-2xl serif font-bold mb-1">Helena Vask</h3>
+<p class="text-sm uppercase tracking-widest text-secondary font-medium mb-6">Head of Quantitative Systems</p>
+<p class="text-on-surface-variant leading-relaxed">Lead engineer for the Core Protocol. Specializes in multi-threaded heuristic modeling for sovereign funds.</p>
+</div>
+<!-- Leader 3 -->
+<div class="group">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high mb-8 relative">
+<img alt="Strategy Officer Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="candid professional portrait of a male strategist in a modern office setting, soft bokeh background, warm professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ10BrirTSmhvw3TAl5cZvjV-jfSz1xtl_B7oFnTU69ThoYXFdbV_zhFk2eZBENeZ-yviLBebVyTyZdAEwbd72NkerbC-XK4sC7zCHSNXMnupOPwIz4coVtD7QGB2du7DTUYq4GYMcJng_0KwiBRuYCXJo-W3kyNljk82XQs4hp_8QkjMdJ8bfKaqJEXQJ09aXXWQBRvqAf1fLDaSbKeRaW6clW-_J39AygR9R-f3S8ZElBECA1AVzAP3TNF0q57D9_plmTkApwHA"/>
+</div>
+<h3 class="text-2xl serif font-bold mb-1">Marcus Chen</h3>
+<p class="text-sm uppercase tracking-widest text-secondary font-medium mb-6">Director of Strategy</p>
+<p class="text-on-surface-variant leading-relaxed">Pioneer in cognitive organizational design. Former Chief Strategist at Monolith International Group.</p>
+</div>
+</div>
+</section>
+<!-- Values: The "Editorial Link" Style -->
+<section class="bg-primary-container text-surface py-32">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="grid grid-cols-12 gap-8 items-center">
+<div class="col-span-12 lg:col-span-6">
+<h2 class="text-5xl serif font-bold mb-8">Our Governance</h2>
+<div class="space-y-8">
+<div class="group cursor-pointer">
+<h4 class="text-xl font-bold border-b border-outline-variant/20 pb-4 flex justify-between items-center group-hover:border-surface transition-colors">
+                                    01. Intellectual Integrity
+                                    <span class="material-symbols-outlined text-surface/40 group-hover:text-surface">arrow_forward</span>
+</h4>
+</div>
+<div class="group cursor-pointer">
+<h4 class="text-xl font-bold border-b border-outline-variant/20 pb-4 flex justify-between items-center group-hover:border-surface transition-colors">
+                                    02. Radical Transparency
+                                    <span class="material-symbols-outlined text-surface/40 group-hover:text-surface">arrow_forward</span>
+</h4>
+</div>
+<div class="group cursor-pointer">
+<h4 class="text-xl font-bold border-b border-outline-variant/20 pb-4 flex justify-between items-center group-hover:border-surface transition-colors">
+                                    03. Systematic Resilience
+                                    <span class="material-symbols-outlined text-surface/40 group-hover:text-surface">arrow_forward</span>
+</h4>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 lg:col-start-8">
+<div class="p-12 border border-outline-variant/10 rounded-lg">
+<p class="text-lg text-surface-container-highest leading-relaxed mb-8">
+                                "The mark of true technological leadership is the ability to remain invisible until the moment of decisive action. We govern our systems with the same discretion."
+                            </p>
+<a class="text-surface font-bold underline decoration-2 underline-offset-8 hover:opacity-70 transition-all" href="#">Download Annual Ethics Report</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#e4e2e2] text-[#000000]">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-screen-2xl mx-auto">
+<div class="mb-8 md:mb-0">
+<p class="text-lg font-['Noto_Serif'] font-bold text-[#000000] mb-2">Caudate Tech</p>
+<p class="font-['Inter'] text-sm tracking-wide text-[#5f5e5e]">© 2024 Caudate Tech. All rights reserved. Intellectual Monolith Group.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4 font-['Inter'] text-sm tracking-wide">
+<a class="text-[#5f5e5e] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-[#5f5e5e] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-[#5f5e5e] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Cookie Settings</a>
+<a class="text-[#5f5e5e] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-[#5f5e5e] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Global Offices</a>
+</div>
+</div>
+</footer>
+</body></html>

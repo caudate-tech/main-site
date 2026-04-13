@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#8e1115",
+                      "error-container": "#ffdad6",
+                      "surface-tint": "#006a64",
+                      "surface-container": "#e2efff",
+                      "tertiary-container": "#ff746a",
+                      "primary-fixed-dim": "#55dacf",
+                      "inverse-on-surface": "#e8f2ff",
+                      "outline-variant": "#bbc9c7",
+                      "on-tertiary-container": "#74000a",
+                      "surface": "#f7f9ff",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#001d32",
+                      "tertiary": "#b02c2a",
+                      "inverse-primary": "#55dacf",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed": "#ffdad6",
+                      "on-background": "#001d32",
+                      "tertiary-fixed-dim": "#ffb3ac",
+                      "secondary-container": "#c3e0fe",
+                      "secondary-fixed": "#cde5ff",
+                      "on-secondary-fixed-variant": "#2d4962",
+                      "on-tertiary-fixed": "#410003",
+                      "surface-container-low": "#edf4ff",
+                      "secondary-fixed-dim": "#adcae7",
+                      "background": "#f7f9ff",
+                      "surface-container-high": "#d8eaff",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#c0ddfb",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#3c4948",
+                      "primary-fixed": "#76f7eb",
+                      "inverse-surface": "#15334a",
+                      "surface-container-highest": "#cde5ff",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed-variant": "#00504b",
+                      "on-primary-container": "#003e3a",
+                      "on-secondary-container": "#48637d",
+                      "outline": "#6c7a78",
+                      "primary": "#006a64",
+                      "surface-bright": "#f7f9ff",
+                      "on-secondary-fixed": "#001d32",
+                      "surface-variant": "#cde5ff",
+                      "primary-container": "#16b2a8",
+                      "on-primary-fixed": "#00201e",
+                      "secondary": "#45617b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Inter"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .tonal-shift {
+            background-color: #edf4ff;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm shadow-[#001d32]/5">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-[#001d32] tracking-tighter">
+                Caudate Tech
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 hover:text-[#006a64] font-['Inter'] font-bold tracking-tight transition-all duration-300 ease-in-out hover:opacity-80" href="#">Services</a>
+<a class="text-slate-600 hover:text-[#006a64] font-['Inter'] font-bold tracking-tight transition-all duration-300 ease-in-out hover:opacity-80" href="#">Case Studies</a>
+<a class="text-slate-600 hover:text-[#006a64] font-['Inter'] font-bold tracking-tight transition-all duration-300 ease-in-out hover:opacity-80" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-[#006a64] font-bold py-2 px-4 transition-all hover:opacity-80">Get a Quote</button>
+<button class="bg-gradient-to-r from-[#006a64] to-[#16b2a8] text-white px-6 py-2.5 rounded-xl font-bold transition-all duration-300 hover:opacity-90 active:scale-95">Start Project</button>
+</div>
+</div>
+<div class="bg-gradient-to-r from-[#006a64] to-[#16b2a8] h-[2px] w-full absolute bottom-0"></div>
+</nav>
+<main class="pt-24 min-h-screen">
+<!-- Hero Contact Section -->
+<section class="max-w-7xl mx-auto px-8 py-16 lg:py-24">
+<div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+<!-- Left Content: Architectural Authority -->
+<div class="space-y-12">
+<div class="space-y-6">
+<span class="text-primary font-bold uppercase tracking-[0.2em] text-xs">Architecting Growth</span>
+<h1 class="text-6xl md:text-7xl font-black text-on-surface tracking-tighter leading-[0.9]">
+                            Ready to <span class="text-primary">grow</span> your business?
+                        </h1>
+<p class="text-lg text-on-surface-variant max-w-lg leading-relaxed">
+                            We don't just build interfaces; we architect digital ecosystems that scale. Connect with our team to start your transformation.
+                        </p>
+</div>
+<div class="grid sm:grid-cols-2 gap-12 pt-8">
+<div class="space-y-4">
+<h3 class="text-primary font-bold text-sm uppercase tracking-widest">Global Offices</h3>
+<div class="space-y-6">
+<div>
+<p class="font-bold text-on-surface">London Studio</p>
+<p class="text-on-surface-variant text-sm">24 Architectural Square, EC1V 2NX</p>
+</div>
+<div>
+<p class="font-bold text-on-surface">San Francisco</p>
+<p class="text-on-surface-variant text-sm">101 Tech Plaza, SOMA District</p>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-primary font-bold text-sm uppercase tracking-widest">Direct Contact</h3>
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<p class="font-bold text-on-surface">+1 (555) 012-3456</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<p class="font-bold text-on-surface">hello@caudate.tech</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Map Element -->
+<div class="relative h-48 rounded-xl overflow-hidden bg-surface-container shadow-inner">
+<img alt="Stylized map showing office locations" class="w-full h-full object-cover grayscale opacity-50 mix-blend-multiply" data-alt="Minimalist dark monochromatic map visualization with glowing teal dots marking office locations in London and San Francisco" data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeYMjWQcsbDfsJ00Nm_QugK4QBiM1_Myi-bQmLuLaXf-Kq1x7cPvX88YcvLyLvu5jhmCorqeUAyk9OhoRJkQGkyHrMr6tM56HRly4LL2ZH0bTn-Je1sGBUcSnJ3IZa_7XJ4GWifmj2XdhcF3FpfvHR70mNkr2Fi370jVpl2GnMqqd4qm2wfsT0cQHFx_I54SbRyknT5Q4nGfDnMUQHKSyqELvQnaXe-X2mI50QD1936v00E7hgdWMO86RBkn3joYSY-LcxAJJa624"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+</div>
+</div>
+<!-- Right Content: Conversion Engine Form -->
+<div class="bg-surface-container-lowest p-8 md:p-12 rounded-[2rem] shadow-sm relative overflow-hidden">
+<!-- Subtle Background Texture -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+<form class="relative z-10 space-y-8">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-outline">Full Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all" placeholder="John Architect" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-outline">Work Email</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-outline">Company Website</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all" placeholder="https://..." type="url"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-outline">Estimated Budget</label>
+<select class="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all appearance-none">
+<option>$10k - $25k</option>
+<option>$25k - $50k</option>
+<option>$50k - $100k</option>
+<option>$100k+</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-outline">Service Interest</label>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-2 rounded-full border border-outline-variant text-sm font-semibold hover:bg-primary hover:text-white transition-colors" type="button">UI/UX Design</button>
+<button class="px-5 py-2 rounded-full border border-outline-variant text-sm font-semibold hover:bg-primary hover:text-white transition-colors" type="button">Cloud Architecture</button>
+<button class="px-5 py-2 rounded-full border border-outline-variant text-sm font-semibold hover:bg-primary hover:text-white transition-colors" type="button">AI Engineering</button>
+<button class="px-5 py-2 rounded-full border border-outline-variant text-sm font-semibold hover:bg-primary hover:text-white transition-colors" type="button">Product Strategy</button>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-outline">Tell us about your project</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all resize-none" placeholder="What are we building together?" rows="4"></textarea>
+</div>
+<div class="space-y-6">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-white py-5 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-[0.98]">
+                                Submit Inquiry
+                            </button>
+<div class="flex items-center justify-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>We typically respond within 2-4 business hours.</span>
+</div>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Social Proof / Client Section -->
+<section class="tonal-shift py-16">
+<div class="max-w-7xl mx-auto px-8">
+<p class="text-center text-xs font-bold uppercase tracking-[0.3em] text-outline mb-12">Trusted by industry leaders</p>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale">
+<img alt="Client Logo 1" class="h-8" data-alt="Abstract minimalist corporate tech company logo in monochromatic grey style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrrJu08-q7bTaDKsfhwP-41cLcDBV3l3ht_9vg88XDV579kVCvrC6AnGfjIejABo4npM4OBTMleJjaHs7AI32lfLVluf6gDdeJW9KKeDz-rJHAPy2VGKF_eh5mbmTOE7vAOWFEBApjYdb22L2vKCt6Jib82sowQlp-XAbmwdDzG0VusPUbUrxhfsHLMIosXs8L_UIIPMBJWm-AP1Wn8AoINFz_vi7GYIoi2B5qaS_uI_tuZVaXinHkixjZ6JEqyT7o_SG8y98fYBQ"/>
+<img alt="Client Logo 2" class="h-8" data-alt="Modern clean typeface logo for a venture capital firm with geometric icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByq0hebzgusPAASTI1jo2-cdeszy009nlFErEpVQzCqUKQux8CM3Gnbs0BMezxWjCH0joei-QZ8h8VYbFY_YDJKjrtNGnKcSUbVrIQImlEAEvcw99fCY51jHXiZyuVEwev6voOrAKcsSwiEP6Y9akvxHEXHxwpRbipyTQMhuMNmRuHDF5edWxht6Rqwc7nckksiaYrv5IV0pRKFLJtl2WDBLJJb8o7cpcvsTpBrNdYb3K6LvOXHkj5b7GlQgmAfXV5v-Zj4fZ0JBk"/>
+<img alt="Client Logo 3" class="h-8" data-alt="Sleek sans-serif typography logo for a global logistics provider in flat grey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXjYuqBoecajxldS9pJTohocLDWRy2BV_960_N2csotD_WAswWvzfmVgGDpj69O99C7wZCrBa47bB9YfB2r0U4SD-aafLdPj55PDDAG-eZGkv4Hyi0MUcVibaCVXh6NB4h6pAYTlqdaQ14BJD-Tys6vB7C5uq5xI9xK5FC1dhlzvsfkJRltsV2lc9m4CSQ_k7XgMGBRkt4He0HGQ-qZUnL634y9lEZ_4OzaLGsaFwSVP0gxpdaLmDgs1ERpmDCEjl8oHHKsWyroL0"/>
+<img alt="Client Logo 4" class="h-8" data-alt="Innovative fintech brand logo featuring an interlocking shield and gear icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZRPboI50vUAzmLFllbug5Xs020xvUyqAJIWX4rPjQvz-fhlZ9wloJiR89a_7T1s-GyFkqFPq2Kl6uCkVAi1qx2KAzfWBOkzlXOq6IuhEXd8NUweIArkLTmaVSbKEsBPriHmlfA1oTFf9iEPFTtG8Lno2BkZEX7Kb77yxrwVpQWXeF7ljlSiqE7QfcIq0yHoqksiyI0NwT4HAj6s20nqYGUsjyPRuA_nbr_UQGTe-F3AdruH3jVD1eht_3maZb7UMIwalmpEHpToM"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 w-full pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-bold text-[#001d32]">Caudate Tech</div>
+<p class="text-slate-500 font-['Inter'] text-sm leading-relaxed">
+                    Architecting high-performance digital solutions for the next generation of industry leaders.
+                </p>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm hover:translate-x-1 transition-transform duration-200 block" href="#">Services</a></li>
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm hover:translate-x-1 transition-transform duration-200 block" href="#">Case Studies</a></li>
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm hover:translate-x-1 transition-transform duration-200 block" href="#">About</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm hover:translate-x-1 transition-transform duration-200 block" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm hover:translate-x-1 transition-transform duration-200 block" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6">Connect</h4>
+<ul class="space-y-4">
+<li><a class="text-[#006a64] font-semibold font-['Inter'] text-sm hover:translate-x-1 transition-transform duration-200 block" href="#">Contact Us</a></li>
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm hover:translate-x-1 transition-transform duration-200 block" href="#">LinkedIn</a></li>
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm hover:translate-x-1 transition-transform duration-200 block" href="#">Twitter</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 font-['Inter'] text-sm leading-relaxed">© 2024 Caudate Tech. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-400">language</span>
+<span class="material-symbols-outlined text-slate-400">lock</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,400;1,500;1,600;1,700;1,800&amp;family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#c5c7c9",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#3b4d00",
+                    "on-surface-variant": "#c5c9b1",
+                    "primary-fixed": "#caf15c",
+                    "surface-bright": "#393939",
+                    "primary-container": "#caf15c",
+                    "on-primary-fixed": "#161f00",
+                    "inverse-primary": "#4f6600",
+                    "error": "#ffb4ab",
+                    "on-primary-container": "#546d00",
+                    "on-secondary-container": "#b4b5b5",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-secondary-fixed-variant": "#454747",
+                    "surface-container-high": "#2a2a2a",
+                    "primary": "#ffffff",
+                    "error-container": "#93000a",
+                    "surface-dim": "#131313",
+                    "surface-variant": "#353535",
+                    "on-surface": "#e2e2e2",
+                    "on-tertiary": "#2e3133",
+                    "surface-container": "#1f1f1f",
+                    "outline": "#8f937d",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "surface-container-low": "#1b1b1b",
+                    "secondary-fixed": "#e2e2e2",
+                    "outline-variant": "#444937",
+                    "surface-tint": "#aed442",
+                    "on-error": "#690005",
+                    "surface-container-highest": "#353535",
+                    "on-tertiary-container": "#626567",
+                    "tertiary": "#ffffff",
+                    "tertiary-fixed": "#e1e3e5",
+                    "background": "#131313",
+                    "secondary": "#c6c6c7",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "primary-fixed-dim": "#aed442",
+                    "on-secondary": "#2f3131",
+                    "surface": "#131313",
+                    "inverse-on-surface": "#303030",
+                    "on-primary": "#283500",
+                    "inverse-surface": "#e2e2e2",
+                    "on-background": "#e2e2e2",
+                    "tertiary-container": "#e1e3e5",
+                    "secondary-container": "#454747"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Space Grotesk", "monospace"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      .tonal-separation { background-image: linear-gradient(to bottom, transparent, rgba(19, 19, 19, 0.8)); }
+      .editorial-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-transparent dark:bg-[#131313]/70 backdrop-blur-xl flex justify-between items-center px-12 py-8 w-full max-w-full">
+<div class="text-2xl font-black tracking-tighter text-white dark:text-white uppercase">CAUDATE TECH</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-serif italic tracking-tighter uppercase font-medium text-white/80 hover:text-white transition-colors duration-300" href="#">Strategy</a>
+<a class="font-serif italic tracking-tighter uppercase font-medium text-white/80 hover:text-white transition-colors duration-300" href="#">Expertise</a>
+<a class="font-serif italic tracking-tighter uppercase font-medium text-white/80 hover:text-white transition-colors duration-300" href="#">Case Studies</a>
+<a class="font-serif italic tracking-tighter uppercase font-medium text-white/80 hover:text-white transition-colors duration-300" href="#">Manifesto</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 font-label uppercase text-xs tracking-widest font-bold hover:bg-white transition-all duration-300 scale-95 hover:scale-100 ease-in-out">
+            Start Project
+        </button>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-end px-12 pb-24 pt-48 overflow-hidden">
+<div class="absolute inset-0 -z-10 opacity-40">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<img alt="hero" class="w-full h-full object-cover" data-alt="Abstract fluid dark waves with metallic silver highlights and deep shadows in a high-resolution minimalist architectural style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqNIAx7pNgHzPYCJ_KZoBnGe2eTYxXTr2ir7awVXGLDRz63bO3jZ37XMagF8WSMuyqxQjgynRXwdJcFmJD8vlamcTY2OGoChSzcBI1Z7TP-QCNosi9V56jkg_uhlDeHEnCDPdJmuFV6qoApvV4YSQI9NGG7Cj90Uz7bxA-sBviDMog6RXacyeC6DPD4xUMlbW-GXUU0LTMs5uXcYVTzGt-zCjCfrpUrOp4V3bWbK19osmEGN8Uqe2KBRBKaobs_v25TYETvY7Zcck"/>
+</div>
+<div class="max-w-7xl w-full">
+<div class="flex flex-col md:flex-row items-baseline gap-4 mb-8">
+<span class="w-12 h-[2px] bg-primary-container block mb-4"></span>
+<p class="font-label text-xs tracking-[0.3em] text-primary-container uppercase">Precision Digital Engineering</p>
+</div>
+<h1 class="text-7xl md:text-[10rem] font-headline italic font-bold tracking-tighter leading-[0.85] text-white">
+                Fluid<br/>
+<span class="ml-[10%]">Resolution</span>
+</h1>
+<div class="mt-16 editorial-grid w-full">
+<p class="col-start-1 md:col-start-7 col-span-12 md:col-span-5 text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed">
+                    We bridge the gap between high-precision technical infrastructure and the fluid beauty of high-end editorial experiences.
+                </p>
+</div>
+</div>
+</section>
+<!-- Client Logo Strip -->
+<section class="py-24 px-12 bg-surface-container-low">
+<div class="flex flex-col md:flex-row items-center justify-between gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+<span class="font-label text-xs tracking-widest">EST. 2024</span>
+<span class="text-3xl font-black italic tracking-tighter">VERTEX</span>
+<span class="text-3xl font-black italic tracking-tighter">NEXUS</span>
+<span class="text-3xl font-black italic tracking-tighter">QUANTUM</span>
+<span class="text-3xl font-black italic tracking-tighter">SYNAPSE</span>
+<span class="text-3xl font-black italic tracking-tighter">ORBIT</span>
+</div>
+</section>
+<!-- Expertise Section: The Resolution Marker -->
+<section class="py-32 px-12">
+<div class="editorial-grid">
+<div class="col-span-12 md:col-span-4 flex flex-col gap-8">
+<div class="sticky top-40">
+<h2 class="text-5xl font-headline italic mb-8">Core<br/>Competencies</h2>
+<p class="text-on-surface-variant font-body mb-12">Building high-density digital environments with architectural precision.</p>
+<div class="flex gap-4">
+<div class="w-1 h-32 bg-primary-container/20 relative">
+<div class="absolute top-0 left-0 w-full h-1/3 bg-primary-container"></div>
+</div>
+<div class="font-label text-xs text-primary-container uppercase flex flex-col justify-between py-1">
+<span>Analysis</span>
+<span>Execution</span>
+<span>Resolution</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-col gap-24">
+<!-- Competency 01 -->
+<div class="group border-b border-outline-variant/10 pb-16">
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-xs text-outline italic">01 // STRUCTURE</span>
+<span class="material-symbols-outlined text-primary-container scale-150" data-icon="architecture">architecture</span>
+</div>
+<h3 class="text-4xl md:text-6xl font-headline italic mb-8 transition-all group-hover:pl-4 group-hover:text-primary">System Architecture</h3>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                        Developing bulletproof backends that scale without friction. Our systems are designed for high-resolution performance and extreme reliability.
+                    </p>
+</div>
+<!-- Competency 02 -->
+<div class="group border-b border-outline-variant/10 pb-16">
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-xs text-outline italic">02 // INTERFACE</span>
+<span class="material-symbols-outlined text-primary-container scale-150" data-icon="fluid">fluid</span>
+</div>
+<h3 class="text-4xl md:text-6xl font-headline italic mb-8 transition-all group-hover:pl-4 group-hover:text-primary">Fluid Experience</h3>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                        Aesthetics that respond with precision. We prioritize the tactile feel of digital interactions, ensuring every transition feels organic yet exact.
+                    </p>
+</div>
+<!-- Competency 03 -->
+<div class="group border-b border-outline-variant/10 pb-16">
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-xs text-outline italic">03 // ANALYTICS</span>
+<span class="material-symbols-outlined text-primary-container scale-150" data-icon="data_thresholding">data_thresholding</span>
+</div>
+<h3 class="text-4xl md:text-6xl font-headline italic mb-8 transition-all group-hover:pl-4 group-hover:text-primary">Deep Logic</h3>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                        Data visualization that tells a story. We transform complex data sets into high-clarity insights using bespoke algorithmic mapping.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Case Study: Asymmetrical Bento Grid -->
+<section class="py-32 px-12 bg-surface-container-lowest">
+<div class="mb-24">
+<span class="font-label text-xs tracking-widest text-primary-container">WORK IN FOCUS</span>
+<h2 class="text-6xl font-headline italic mt-4">Selected Artefacts</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto md:h-[1228px]">
+<!-- Large Card -->
+<div class="md:col-span-8 relative overflow-hidden bg-surface group">
+<img alt="case study 1" class="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-40 transition-all duration-700" data-alt="Modernist data server room with neon green fiber optic cables and soft smoke atmosphere, cinematic high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbRDzt4LrxsECseFeD4STtMEznd_GvU80dTtkx1bAN0I5pn8q4pfn_OswuNmLThGSQbUpyiAoxiXq4nQhbCw0ME6jMDtk5p2Bn95O9GTIXlcEJKuPjYl4zE-vjbXiIQB-Bs3Ih_zH0LqJb2jR-xc-ggZRmmaJGaXqg9xFCMFSyQHYTpy7MxYqabc80ngNdRyspNRSJsdTUMtvfik1a0zFPpvYgP_R0BRWLvEUh1jFQAgi-jtl5ipH61LLQppwYJR5zMFRBLPfLpHw"/>
+<div class="absolute inset-0 p-12 flex flex-col justify-end">
+<span class="font-label text-xs text-primary-container mb-4">PROJECT 001</span>
+<h3 class="text-5xl font-headline italic text-white mb-6">Neural Mesh Infrastructure</h3>
+<p class="max-w-md text-on-surface-variant font-body">Global distribution network for AI training modules. 99.99% resolution uptime.</p>
+</div>
+</div>
+<!-- Tall Side Card -->
+<div class="md:col-span-4 relative overflow-hidden bg-surface-container-high group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/10 to-transparent"></div>
+<div class="p-12 h-full flex flex-col justify-between">
+<div>
+<span class="font-label text-xs text-primary-container">STRATEGY</span>
+<h3 class="text-4xl font-headline italic text-white mt-4">Quantum Encryption Protocol</h3>
+</div>
+<div class="w-full aspect-square border border-outline-variant/20 relative overflow-hidden">
+<img alt="security detail" class="w-full h-full object-cover mix-blend-overlay opacity-50" data-alt="Abstract macro shot of microchip circuitry with soft neon green lighting, technical editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3gM4O3w8-uwpyywcCAH2m0oxu_xvVrQamofl1bFYt6xduKYV5lhLpQZTuFApj7OOeApYUz6nVy8hebWzqN1ms34qQjj9a_Bm94v1JIaXS100BA02XaH4JxAW9ATNaprxEKYZ6gBsra9XTRyk3CMbNzKCqE6O3jUXahLOAWC4RJiu10gXakkLikhELe_Ksepvkh0DuLk2OtUSSKGZAJhKGoWuZFdna-uy7UFA_uISaMgKcDVdLoHFkvMAF_rF9yq5OBohysPz-7Co"/>
+</div>
+</div>
+</div>
+<!-- Bottom Left Card -->
+<div class="md:col-span-5 relative overflow-hidden bg-surface-container group">
+<div class="p-12">
+<span class="font-label text-xs text-outline">EXPERTISE</span>
+<h3 class="text-3xl font-headline italic text-white mt-4 mb-8">Editorial CMS for High-Fashion</h3>
+<button class="flex items-center gap-4 text-primary-container font-label text-xs tracking-widest uppercase group">
+                        View Project
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Bottom Right Card -->
+<div class="md:col-span-7 relative overflow-hidden bg-surface group">
+<img alt="office detail" class="w-full h-full object-cover opacity-50" data-alt="Minimalist monochromatic concrete office space with a single green plant, soft natural side lighting, high contrast architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5dKAeCN94OgVZKSKk8yI2t3JjSVFmyF9sBxlTS2zRZixsv_oNm0iR28PHsQGTe1GIKseXgRDRKbpeyzlk3o-24YCieFXkQSiUDnpcvpntJ1UOFlgWIshk6AKZ76h7tozeI1TozDaIwGOCDDwN3CDVFmUyCiiCakEQ2xfaNEyfBxw63KR-Chh3njlzuy8ySsKvAcDKeX4_sGxUY2KCj6s_TvWZcrdatrDW8nlgs98rXrPwBM6G-An6OBhhJ5jey7h_dJOdN0y58VY"/>
+</div>
+</div>
+</section>
+<!-- Manifesto / CTA Section -->
+<section class="py-48 px-12 relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-container/5 blur-[120px] rounded-full"></div>
+<div class="max-w-4xl mx-auto text-center">
+<span class="font-label text-xs tracking-widest text-primary-container uppercase block mb-12">The Manifesto</span>
+<h2 class="text-5xl md:text-8xl font-headline italic leading-tight text-white mb-16">
+                We believe in the power of <span class="text-primary-container">absolute</span> clarity.
+            </h2>
+<div class="flex flex-col md:flex-row justify-center gap-8">
+<button class="bg-primary-container text-on-primary-container px-12 py-5 font-label uppercase text-sm tracking-widest font-bold hover:bg-white transition-all duration-300">
+                    Initiate Project
+                </button>
+<button class="border border-outline-variant/30 text-white px-12 py-5 font-label uppercase text-sm tracking-widest font-bold hover:bg-surface-container-high transition-all duration-300">
+                    Read Manifesto
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full mt-32 bg-[#0e0e0e] dark:bg-[#0e0e0e] grid grid-cols-1 md:grid-cols-4 gap-16 px-12 py-24 border-t border-white/5">
+<div class="col-span-1 md:col-span-2">
+<div class="text-4xl font-serif italic text-white mb-8">Caudate Tech.</div>
+<p class="font-mono uppercase tracking-widest text-xs text-white/40 max-w-xs leading-loose">
+                Architecting high-resolution digital futures with precision and fluidity.
+            </p>
+</div>
+<div class="flex flex-col gap-6">
+<span class="font-label text-xs text-primary-container tracking-widest mb-4">CONNECT</span>
+<a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform opacity-transition" href="#">LinkedIn</a>
+<a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform opacity-transition" href="#">Instagram</a>
+<a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform opacity-transition" href="#">Clutch</a>
+<a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform opacity-transition" href="#">Medium</a>
+</div>
+<div class="flex flex-col gap-6">
+<span class="font-label text-xs text-primary-container tracking-widest mb-4">LEGAL</span>
+<a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform opacity-transition" href="#">Privacy</a>
+<a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform opacity-transition" href="#">Terms</a>
+<div class="mt-12">
+<span class="font-mono uppercase tracking-widest text-[10px] text-white/20 block">© 2024 CAUDATE TECH. PRECISION FLUIDITY.</span>
+</div>
+</div>
+</footer>
+</body></html>

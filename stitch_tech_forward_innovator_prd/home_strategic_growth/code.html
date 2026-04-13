@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Caudate Tech | Strategic Digital Growth</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#8e1115",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#006a64",
+                        "surface-container": "#e2efff",
+                        "tertiary-container": "#ff746a",
+                        "primary-fixed-dim": "#55dacf",
+                        "inverse-on-surface": "#e8f2ff",
+                        "outline-variant": "#bbc9c7",
+                        "on-tertiary-container": "#74000a",
+                        "surface": "#f7f9ff",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#001d32",
+                        "tertiary": "#b02c2a",
+                        "inverse-primary": "#55dacf",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-background": "#001d32",
+                        "tertiary-fixed-dim": "#ffb3ac",
+                        "secondary-container": "#c3e0fe",
+                        "secondary-fixed": "#cde5ff",
+                        "on-secondary-fixed-variant": "#2d4962",
+                        "on-tertiary-fixed": "#410003",
+                        "surface-container-low": "#edf4ff",
+                        "secondary-fixed-dim": "#adcae7",
+                        "background": "#f7f9ff",
+                        "surface-container-high": "#d8eaff",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#c0ddfb",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#3c4948",
+                        "primary-fixed": "#76f7eb",
+                        "inverse-surface": "#15334a",
+                        "surface-container-highest": "#cde5ff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#00504b",
+                        "on-primary-container": "#003e3a",
+                        "on-secondary-container": "#48637d",
+                        "outline": "#6c7a78",
+                        "primary": "#006a64",
+                        "surface-bright": "#f7f9ff",
+                        "on-secondary-fixed": "#001d32",
+                        "surface-variant": "#cde5ff",
+                        "primary-container": "#16b2a8",
+                        "on-primary-fixed": "#00201e",
+                        "secondary": "#45617b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9ff; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .hero-gradient { background: linear-gradient(135deg, #006a64 0%, #16b2a8 100%); }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm shadow-[#001d32]/5">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto relative">
+<div class="text-2xl font-black text-[#001d32] dark:text-white tracking-tighter">Caudate Tech</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Inter'] font-bold tracking-tight text-slate-600 dark:text-slate-400 hover:text-[#006a64] transition-all duration-300 ease-in-out" href="#">Services</a>
+<a class="font-['Inter'] font-bold tracking-tight text-slate-600 dark:text-slate-400 hover:text-[#006a64] transition-all duration-300 ease-in-out" href="#">Case Studies</a>
+<a class="font-['Inter'] font-bold tracking-tight text-slate-600 dark:text-slate-400 hover:text-[#006a64] transition-all duration-300 ease-in-out" href="#">About</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden lg:block text-[#006a64] font-semibold px-4 py-2 transition-all duration-300 hover:opacity-80 active:scale-95">Get a Quote</button>
+<button class="bg-gradient-to-r from-[#006a64] to-[#16b2a8] text-white px-6 py-2.5 rounded-xl font-bold transition-all duration-300 hover:opacity-90 active:scale-95 shadow-lg shadow-[#006a64]/20">Start Project</button>
+</div>
+<div class="bg-gradient-to-r from-[#006a64] to-[#16b2a8] h-[2px] w-full absolute bottom-0 left-0"></div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-surface">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-primary bg-primary-container/20 rounded-full uppercase">Engineered Growth</span>
+<h1 class="text-5xl lg:text-7xl font-extrabold tracking-tighter leading-[1.1] text-on-surface mb-6">
+                        Strategic Digital Growth for the <span class="text-primary">Modern Enterprise</span>
+</h1>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-xl">
+                        We architect high-performance digital ecosystems that drive measurable ROI. Transforming traditional market leaders into digital-first giants through data-driven precision.
+                    </p>
+<div class="bg-surface-container-low p-2 rounded-2xl max-w-md flex flex-col sm:flex-row gap-2 shadow-sm">
+<input class="flex-grow bg-transparent border-none focus:ring-0 px-4 text-on-surface" placeholder="Enter your business email" type="email"/>
+<button class="hero-gradient text-white px-6 py-4 rounded-xl font-bold transition-all duration-300 hover:opacity-95 whitespace-nowrap">
+                            Free Strategy Audit
+                        </button>
+</div>
+<p class="mt-4 text-sm text-outline flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+                        No commitment required. 24-hour turnaround.
+                    </p>
+</div>
+<div class="relative hidden lg:block">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-700">
+<img alt="Professional meeting" class="w-full h-[600px] object-cover" data-alt="Modern high-tech office interior with professionals collaborating around a screen showing data visualizations in soft teal and blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrJvdwCPvuI_rw2OPQ183p4_lzhb_VSLjHLGdA2Ve3_L4Fbp3uIbUKPntg35VkH54fG7090eiecTobBFV_KUl8dS2wgVvGWvtyB-BWcPgL4srJyaRVog3N0gFbRlEJO624F9weEYZeUbWBcvH6YCx721WWH28gGTpT4XVtHiGTodEDjxnbmPjOzOewUxpigvgndWb6KJFyGhupMT4p2Jd-mERJM_1d2O1WwalQ02h0Qxgihbh_6bzM8bPD0jA7N1_jxz9cpUWRUyY"/>
+</div>
+<div class="absolute -bottom-10 -left-10 bg-white p-8 rounded-2xl shadow-xl z-20 max-w-[280px]">
+<div class="text-4xl font-black text-primary mb-1">+142%</div>
+<div class="text-sm font-bold text-on-surface leading-tight uppercase tracking-wide">Average ROI Increase</div>
+<div class="mt-2 text-xs text-outline">Across 50+ enterprise clients in 2023.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust / Logo Section -->
+<section class="py-16 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-8">
+<p class="text-center text-xs font-bold tracking-[0.2em] text-outline uppercase mb-10">Trusted by Global Industry Leaders</p>
+<div class="flex flex-wrap justify-center items-center gap-12 lg:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+<span class="text-2xl font-black tracking-tighter">VOLTAIC</span>
+<span class="text-2xl font-black tracking-tighter">HEXA_CORP</span>
+<span class="text-2xl font-black tracking-tighter">NEURALINK</span>
+<span class="text-2xl font-black tracking-tighter">QUANTUM</span>
+<span class="text-2xl font-black tracking-tighter">APEX_BIO</span>
+</div>
+</div>
+</section>
+<!-- Why Choose Us / Stats Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-5">
+<h2 class="text-4xl lg:text-5xl font-black tracking-tighter leading-tight mb-8">
+                            Engineered for <br/><span class="text-primary">Performance.</span>
+</h2>
+<p class="text-lg text-on-surface-variant mb-12">
+                            Unlike traditional agencies, we treat your digital presence as critical infrastructure. Our methodology is rooted in architectural stability and scalable growth.
+                        </p>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="architecture">architecture</span>
+</div>
+<div>
+<h4 class="font-bold text-xl mb-1">Foundational Strategy</h4>
+<p class="text-on-surface-variant">We build on facts, not trends. Every campaign starts with deep-tier market analysis.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="monitoring">monitoring</span>
+</div>
+<div>
+<h4 class="font-bold text-xl mb-1">Real-time Attribution</h4>
+<p class="text-on-surface-variant">Trace every cent of your marketing spend directly to revenue generation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container p-8 rounded-3xl h-64 flex flex-col justify-end">
+<div class="text-5xl font-black text-primary mb-2">500M+</div>
+<div class="font-bold text-sm uppercase tracking-widest text-on-surface-variant">Ad Spend Managed</div>
+</div>
+<div class="bg-primary-container text-on-primary-container p-8 rounded-3xl h-64 flex flex-col justify-end transform translate-y-8">
+<div class="text-5xl font-black mb-2">12+</div>
+<div class="font-bold text-sm uppercase tracking-widest opacity-80">Years Excellence</div>
+</div>
+<div class="bg-surface-container-high p-8 rounded-3xl h-64 flex flex-col justify-end">
+<div class="text-5xl font-black text-primary mb-2">98%</div>
+<div class="font-bold text-sm uppercase tracking-widest text-on-surface-variant">Client Retention</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-3xl h-64 flex flex-col justify-end shadow-sm transform translate-y-8">
+<div class="text-5xl font-black text-primary mb-2">150+</div>
+<div class="font-bold text-sm uppercase tracking-widest text-on-surface-variant">Growth Specialists</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Our Capabilities</span>
+<h2 class="text-4xl lg:text-5xl font-black tracking-tighter mt-4">Growth Architectures</h2>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 group">
+                        View All Services 
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Consulting Card -->
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] hover:shadow-2xl transition-all duration-500 group">
+<span class="material-symbols-outlined text-4xl text-primary mb-8" data-icon="insights">insights</span>
+<h3 class="text-2xl font-bold mb-4">Strategic Consulting</h3>
+<p class="text-on-surface-variant mb-8 leading-relaxed">High-level digital roadmap development for enterprises looking to redefine their market position.</p>
+<a class="inline-flex items-center text-primary font-bold hover:gap-3 transition-all" href="#">
+                            Learn More <span class="material-symbols-outlined ml-2 text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+<!-- SEO Card -->
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] hover:shadow-2xl transition-all duration-500 group">
+<span class="material-symbols-outlined text-4xl text-primary mb-8" data-icon="travel_explore">travel_explore</span>
+<h3 class="text-2xl font-bold mb-4">Organic Authority</h3>
+<p class="text-on-surface-variant mb-8 leading-relaxed">Technical SEO and content architecture designed to dominate search landscapes for high-intent keywords.</p>
+<a class="inline-flex items-center text-primary font-bold hover:gap-3 transition-all" href="#">
+                            Learn More <span class="material-symbols-outlined ml-2 text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+<!-- Paid Media Card -->
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] hover:shadow-2xl transition-all duration-500 group">
+<span class="material-symbols-outlined text-4xl text-primary mb-8" data-icon="ads_click">ads_click</span>
+<h3 class="text-2xl font-bold mb-4">Paid Performance</h3>
+<p class="text-on-surface-variant mb-8 leading-relaxed">Aggressive ROI-focused media buying across Search, Social, and Programmatic networks.</p>
+<a class="inline-flex items-center text-primary font-bold hover:gap-3 transition-all" href="#">
+                            Learn More <span class="material-symbols-outlined ml-2 text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-24 bg-surface-container-highest overflow-hidden relative">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="max-w-4xl">
+<span class="material-symbols-outlined text-6xl text-primary/30 mb-8" data-icon="format_quote">format_quote</span>
+<blockquote class="text-3xl md:text-4xl font-bold text-on-surface leading-tight mb-12">
+                        "Caudate Tech didn't just provide us with marketing services; they rebuilt our entire digital acquisition engine. Within six months, our customer acquisition cost dropped by 40% while volume doubled."
+                    </blockquote>
+<div class="flex items-center gap-6">
+<img alt="Executive profile" class="w-16 h-16 rounded-full object-cover" data-alt="Professional portrait of a female executive in a modern business suit, looking confident against a clean grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIL-W2DI4WR-ESEcg3IEiI_z6yKyoYE8AQOJwROEeZVvDLlCNNzN_2Uw1Yzhh25CY2Vl416mdhTwe5yxUBvLVn6olo9BMpSwPv1wfR_5HEmrLquomhe4uBQDuR1LhD25w3Mi73-AiVZTZcPL5bAbVWGkjSL4p-RmtpgSIoXCdeHG-q1CR4vWqWMCOlPaVmVsbrahzDyLnYPwreHUJmRctF1-To9jRD7cN2MKI_Mf9jV2hG8ATmexuZHKb3Ow9NABH0vIiMD57muMg"/>
+<div>
+<div class="font-bold text-xl text-on-surface">Sarah Chen</div>
+<div class="text-primary font-medium">Chief Marketing Officer, Voltaic Global</div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
+</section>
+<!-- Final Lead Gen CTA -->
+<section class="py-24 bg-surface">
+<div class="max-w-5xl mx-auto px-8 text-center">
+<div class="bg-on-surface text-surface rounded-[3rem] p-12 lg:p-20 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary to-transparent"></div>
+<div class="relative z-10">
+<h2 class="text-4xl lg:text-6xl font-black tracking-tighter mb-8">Ready to Architect Your Growth?</h2>
+<p class="text-xl text-surface-container mb-12 max-w-2xl mx-auto opacity-80">
+                            Book a 30-minute high-level strategy audit with our lead consultants. No sales pitch, just pure data and direction.
+                        </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary/20">
+                                Schedule Strategy Call
+                            </button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-bold text-lg transition-all hover:bg-white/20">
+                                Download Case Studies
+                            </button>
+</div>
+<div class="mt-12 flex justify-center items-center gap-8 text-sm opacity-60">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base" data-icon="verified">verified</span> ISO 27001 Certified</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base" data-icon="stars">stars</span> Premier Partner</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-[#001d32] dark:text-white mb-6">Caudate Tech</div>
+<p class="text-slate-500 font-['Inter'] text-sm leading-relaxed mb-6">
+                    Engineering high-performance digital ecosystems for the modern enterprise. Data-driven, results-oriented, architecturally sound.
+                </p>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm transition-transform duration-200 hover:translate-x-1 block" href="#">Consulting</a></li>
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm transition-transform duration-200 hover:translate-x-1 block" href="#">SEO Strategy</a></li>
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm transition-transform duration-200 hover:translate-x-1 block" href="#">Paid Media</a></li>
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm transition-transform duration-200 hover:translate-x-1 block" href="#">Content Architecture</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm transition-transform duration-200 hover:translate-x-1 block" href="#">About Us</a></li>
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm transition-transform duration-200 hover:translate-x-1 block" href="#">Case Studies</a></li>
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm transition-transform duration-200 hover:translate-x-1 block" href="#">Contact</a></li>
+<li><a class="text-slate-500 hover:text-[#006a64] font-['Inter'] text-sm transition-transform duration-200 hover:translate-x-1 block" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Stay Informed</h4>
+<p class="text-slate-500 font-['Inter'] text-sm leading-relaxed mb-4">Growth insights delivered to your inbox.</p>
+<div class="flex bg-slate-100 dark:bg-slate-900 rounded-lg p-1">
+<input class="bg-transparent border-none focus:ring-0 text-sm flex-grow" placeholder="Email" type="text"/>
+<button class="bg-[#006a64] text-white p-2 rounded-md hover:bg-[#16b2a8] transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-slate-500 font-['Inter'] text-sm">© 2024 Caudate Tech. All rights reserved.</div>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-[#006a64]" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-slate-400 hover:text-[#006a64]" href="#"><span class="material-symbols-outlined" data-icon="hub">hub</span></a>
+<a class="text-slate-400 hover:text-[#006a64]" href="#"><span class="material-symbols-outlined" data-icon="group">group</span></a>
+</div>
+</div>
+</footer>
+</body></html>

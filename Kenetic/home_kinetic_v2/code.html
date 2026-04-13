@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#d2bbff",
+                        "primary": "#ffffff",
+                        "on-background": "#e3e2e7",
+                        "tertiary-fixed-dim": "#ffb1c3",
+                        "on-surface-variant": "#c2caaf",
+                        "surface-bright": "#38393d",
+                        "outline-variant": "#424935",
+                        "on-primary": "#233600",
+                        "surface": "#121317",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#344e00",
+                        "primary-fixed-dim": "#98da00",
+                        "on-secondary-fixed": "#25005a",
+                        "on-error": "#690005",
+                        "on-primary-container": "#4c6f00",
+                        "surface-variant": "#343439",
+                        "surface-container-low": "#1a1b1f",
+                        "surface-tint": "#98da00",
+                        "on-tertiary-fixed-variant": "#8f0041",
+                        "secondary-container": "#6001d1",
+                        "on-tertiary": "#66002c",
+                        "tertiary": "#ffffff",
+                        "on-tertiary-container": "#c6005d",
+                        "secondary-fixed": "#eaddff",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#131f00",
+                        "surface-dim": "#121317",
+                        "outline": "#8c947b",
+                        "on-tertiary-fixed": "#3f0019",
+                        "inverse-on-surface": "#2f3035",
+                        "surface-container-lowest": "#0d0e12",
+                        "inverse-surface": "#e3e2e7",
+                        "tertiary-container": "#ffd9e0",
+                        "tertiary-fixed": "#ffd9e0",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "surface-container-high": "#292a2e",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "primary-container": "#b3f730",
+                        "surface-container-highest": "#343439",
+                        "error": "#ffb4ab",
+                        "background": "#121317",
+                        "inverse-primary": "#476800",
+                        "surface-container": "#1e1f24",
+                        "on-secondary": "#3f008e",
+                        "primary-fixed": "#b3f730",
+                        "on-surface": "#e3e2e7",
+                        "on-secondary-container": "#c9aeff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #121317 0%, #1a1b1f 50%, #121317 100%);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(179, 247, 48, 0.4);
+        }
+        .glass-panel {
+            backdrop-filter: blur(40px);
+            background: rgba(52, 52, 57, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl dark:bg-[#121317]/60 no-border transition-colors duration-300">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-[1920px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-white dark:text-white">Caudate Tech</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-white/70 hover:text-white transition-all duration-200" href="#">Services</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-white/70 hover:text-white transition-all duration-200" href="#">Portfolio</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-white/70 hover:text-white transition-all duration-200" href="#">About</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-white/70 hover:text-white transition-all duration-200" href="#">Process</a>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed px-6 py-2 text-xs font-['Space_Grotesk'] uppercase tracking-widest font-bold hover:scale-105 transition-all duration-200 glow-hover">
+                Start Project
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-surface">
+<!-- Background Visual -->
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/4 -right-1/4 w-[800px] h-[800px] bg-secondary-container/20 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-primary-fixed/10 rounded-full blur-[100px]"></div>
+<img class="w-full h-full object-cover opacity-40 mix-blend-lighten" data-alt="abstract 3d renders of fluid metallic shapes and neon green light particles against a deep black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBXDKqZ8BXs7q9qjcBLU6OBH2y21J8uCHA6FEiEAXTW8oqViwS-KwdMLsp6lL5SrqcEq0P654j1E_-p0FCLTo9AMqpCrn5F7PbRhuppVjBri-66CmIQ_szTuAXKmv1-g5ovA1eyILBXBtyYOVMJSgGADkN7RzaaCs5MQ2RAjzJnmSVkgqKHg-YzLV8RjhYem4Jr96Jhj02M9Bcv4L6FRTTCJb5v2pu4yRRZGbkPVFE1x18T1_Vf-Ndpp04nVmB4ab6wMZPhwTqZV8"/>
+</div>
+<div class="relative z-10 max-w-[1920px] mx-auto px-8 w-full">
+<div class="max-w-6xl">
+<div class="inline-flex items-center gap-4 mb-8 bg-surface-container-highest/50 px-4 py-2 rounded-full border border-white/5">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+<span class="text-xs font-['Space_Grotesk'] uppercase tracking-[0.2em] text-on-surface-variant">The Future of Digital Architecture</span>
+</div>
+<h1 class="font-headline text-[clamp(3.5rem,10vw,8rem)] leading-[0.9] font-black tracking-tighter mb-12">
+                        Data-Driven.<br/>
+<span class="text-primary-fixed">Future-Obsessed.</span>
+</h1>
+<div class="flex flex-col md:flex-row gap-8 items-start md:items-center">
+<button class="bg-primary-fixed text-on-primary-fixed px-10 py-5 text-sm font-['Space_Grotesk'] uppercase tracking-widest font-bold glow-hover transition-all duration-200">
+                            Launch Your Vision
+                        </button>
+<p class="max-w-md text-on-surface-variant font-body leading-relaxed text-lg border-l-2 border-outline-variant/30 pl-6">
+                            We architect high-velocity digital experiences where precision meets radical creativity. Engineered for those who lead.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof / Logo Marquee -->
+<section class="py-16 bg-surface-container-low border-y border-outline-variant/10">
+<div class="max-w-[1920px] mx-auto px-8">
+<p class="text-center text-[10px] font-['Space_Grotesk'] uppercase tracking-[0.3em] text-white/40 mb-12">Powering global innovators</p>
+<div class="flex flex-wrap justify-center items-center gap-16 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+<img class="h-8 md:h-10 object-contain" data-alt="minimalist tech logo for a company named Nexa in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW6n9s4EH_u2tOB-0whKyiJnO5uSIGPEkabgw5pjld7JInRDarPF-PWonBk6rGE11HpXZMnZFBv0r1yEEe6ioUGTAtSf435gKQHw6wj1oAfYbMpqNhZwb5abEQeZ2Ip_qRtMyn6nlGF9ToVyzwdzZP1l5_gCaRuBfKiUOVSaVALnqe5khkQUn1gLWP0pkVT4SBbAuVdO8CK063SfDZDyS459opcVIaX-uOhWynKrKqNvtOzRwMMl2N1BXbCZZKCgwKGDr60vGbbVU"/>
+<img class="h-8 md:h-10 object-contain" data-alt="modern geometric logo for a company named Vertex in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_GH-135G8L41TY9pYVRx3nF7vJccx83qMVE1Z38YZAdJWPsQGHqgJHUjUYVUaBNCfm8YmrjLqDf8iaTtpld0QRgfBiXPgE8DZyXECoTvWE_axvopyhri-rd7lsbpoEnVXxlCeB8yIg4ZjQG-rjlzc_5taPTxyo6QyZ-G3BT-OM-IAVkioE4W0_knUhYj9k7_Qg8dikjT7iQ4jwsQ8BkhBZlb2P_AokqpI3_kGLErPsM3WsOuGc-QmspURtDMzNpOAKMswI0VA64A"/>
+<img class="h-8 md:h-10 object-contain" data-alt="abstract circular logo for a company named Orbit in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASwsnXBP3wbSLTprxPosAU1-CZ16RhvSj2ElP44lhliZ3Jp9qviJk7kLH9L9Mt0bivRfL9CKT7SZNDpApWuBELaFTt7vGki4FFcDVv4kXAg9fq5op4uzMRKQKg1grG1DsMw-G527LuSSo5FpnNEWyx3PPcCidtfn_JZBhBsNgbx_syCd0FX6BNnFoOvOQHQ1Y0dZT8EVwJz2EL-Xac7oxYMTVxAvmjLnDxnP8Mam5ncBNHvDkCEACg0hHGl_opOr0VGWR0WoansBw"/>
+<img class="h-8 md:h-10 object-contain" data-alt="typographic logo for a company named Synapse in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQpjWVklei6daKKw8CZl4XYuGx0WTZf1m42RVqQkId7GG9r2J6i2PdGUDwH32RvMXJadDjlk7RXN_25IzjtdM1cfS7a7ZCIcfhakJzuoXquG-Q2-3zs14Y8jpuNl_9tOeEhARcwtqiGseWfygUXCbsUTg4c4CJ6NgVSolx-83MUyH_CvSrCh5NEz54F3Dq2Mbl6sWP4PoiK9PyT9d9TudxEWvK6M9TuHrQj9-YaCAXNOPSIjcM20JNSX224LC5dWxJ1kCnwH9XSWU"/>
+<img class="h-8 md:h-10 object-contain" data-alt="sharp angular logo for a company named Zenith in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHOnUEb-bTf7lDY3wu4KzXsjBFqUgCg3muJ7vTd3Dqa5q6IS9YpQwsghD5FnUdkl-Pu19xYS4K_dQR7fvue0PlTf3bTTskQsQBvOl30K0FftdKqvYqMv0lE7teTmK9dgXwBgx_H6WCGVq8wzeOTYYC22hP4cHvOvn10w1KlT67BXYfuP-mA9yYMw-0SCjEbZ9tu5ancOCjcc92sJQXYv5qIdYs5lpmDygWXu7osjR4pMhQYQBpjE7YYSIv7V4g5X6GkJSgxiT-Fz0"/>
+</div>
+</div>
+</section>
+<!-- Service Highlights -->
+<section class="py-32 bg-surface">
+<div class="max-w-[1920px] mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div class="max-w-2xl">
+<span class="text-secondary text-sm font-['Space_Grotesk'] uppercase tracking-widest font-bold mb-4 block">Core Competencies</span>
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter">High-Energy <span class="text-outline">Solutions.</span></h2>
+</div>
+<div class="text-on-surface-variant max-w-sm text-right">
+                        Our methodology blends clinical data analysis with high-fashion editorial design logic.
+                    </div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Service Card 1 -->
+<div class="md:col-span-8 group relative bg-surface-container-high overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-fixed/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="p-10 flex flex-col h-full justify-between min-h-[400px]">
+<div>
+<span class="material-symbols-outlined text-primary-fixed text-4xl mb-6">insights</span>
+<h3 class="font-headline text-4xl font-bold mb-4">Strategic Intelligence</h3>
+<p class="text-on-surface-variant max-w-md">Transforming raw data into actionable kinetic roadmaps. We identify the friction points and turn them into velocity.</p>
+</div>
+<div class="flex items-center gap-4 text-primary-fixed font-bold tracking-widest uppercase text-xs">
+<span>Explore Strategy</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<img class="absolute right-0 bottom-0 w-1/2 h-2/3 object-cover object-left opacity-30 grayscale group-hover:grayscale-0 transition-all duration-700 translate-y-8 translate-x-8 group-hover:translate-y-0 group-hover:translate-x-0" data-alt="high contrast macro shot of data visualizations on a dark screen with vibrant neon green accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHxOiPlsRxTiYIuXT68XchSYyxU-c_OyxCL3auxytmuRmByf9iXezgqwwRE1P4yfPAxAlrtpR03z6HZ7UFPINnTM5V8H5vb-BjPMY0Z3go7ir4bIy9hxWaHQFcJhcew5fcXqqSv70lS_dWc_HU5LA7KgjZ33qredJQMtIL5A1V8CCdt1xE-r9qq0JTDXFgh3yK46kGe-G1K7BFlEqWG827qQcFJXljbGsnts2QOGDGh-b2tp1Aw4QepFEJcPWs8B5wkTeFIQrXCrU"/>
+</div>
+<!-- Service Card 2 -->
+<div class="md:col-span-4 bg-surface-container-highest relative overflow-hidden group">
+<div class="p-10 flex flex-col h-full justify-between min-h-[400px]">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">dynamic_form</span>
+<h3 class="font-headline text-4xl font-bold mb-4">Kinetic Design</h3>
+<p class="text-on-surface-variant">Editorial-grade aesthetics meeting high-performance digital interfaces.</p>
+</div>
+<div class="h-32 mt-8 overflow-hidden">
+<img class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700" data-alt="minimalist editorial fashion layout with bold typography and high contrast black and white imagery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPaGg-pgShtdeUxAQmA4t3YVbNcObs6X6YTMcvH-kpQzZcis8cCWAol6HxEHHtDNyf4Kxdf1tKcwyQ6aFxia_Fth27l86KNDUyKRquMgPpQQYlEmTbwbchs8XDOJfdW2zwAZQOLCxZMx7vu8qysmGdVxn-un1_DOosz2_YjEGA_ZOgGKFdDOJmHsouxHgM-2VEMOKOUKeyiZ9Z786fn1yp9vYkqkm41KsdI8Elms3FDeD-cmSN_uJwlfSS9IgUE_PQzh3c2oDullk"/>
+</div>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="md:col-span-4 bg-surface-container relative overflow-hidden group">
+<div class="p-10 min-h-[400px] flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-6">terminal</span>
+<div>
+<h3 class="font-headline text-3xl font-bold mb-4">Full-Stack Tech</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Robust architecture engineered for scale and speed without compromise.</p>
+</div>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="md:col-span-8 bg-surface-container-low border border-outline-variant/10 group hover:border-primary-fixed/30 transition-colors duration-500">
+<div class="grid md:grid-cols-2 h-full">
+<div class="p-10 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-4xl font-bold mb-4">Future-Proof Growth</h3>
+<p class="text-on-surface-variant">We don't just build for now; we architect for the next decade of digital evolution.</p>
+</div>
+<div class="flex gap-2 flex-wrap">
+<span class="px-3 py-1 bg-surface-variant text-[10px] font-bold uppercase tracking-wider">AI Integration</span>
+<span class="px-3 py-1 bg-surface-variant text-[10px] font-bold uppercase tracking-wider">Scale-Up</span>
+<span class="px-3 py-1 bg-surface-variant text-[10px] font-bold uppercase tracking-wider">Cloud Native</span>
+</div>
+</div>
+<div class="relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="futuristic technical blueprint with neon lines glowing against a dark glass surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdf5RC13QNBNqXNOe17gNjTS1w8jA0lNbphMoFEHnY06Sf84-e6RbqyyhABW6onsspPPzM6uSnm9obMYHFu1Cn63ob3zAmc5uPoJ0Ng_zK0xNNMObFB3ur8e_ZAO85a-6fckxhut5BjNfdlGFYK9Cz5fk_sZQsjGWM5u7k7gWUioxE0uCZLJYdjILrhYTlz-qZIeTH4yeI6Izs1ynXIsh0cNQ0e-nAzKRGGmtKXWZcNAhqyE2Atnw8itq69WFFjjb2aBv7WZvEC3o"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic CTA -->
+<section class="py-24 bg-surface-container-low overflow-hidden relative">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-primary-fixed to-transparent opacity-30"></div>
+<div class="max-w-[1920px] mx-auto px-8 relative z-10 text-center">
+<h2 class="font-headline text-[clamp(2.5rem,8vw,6rem)] font-black leading-[1] tracking-tighter mb-12">
+                    READY TO <span class="text-primary-fixed">DISRUPT?</span>
+</h2>
+<div class="flex justify-center">
+<button class="bg-primary text-surface px-12 py-6 text-lg font-['Space_Grotesk'] uppercase tracking-[0.2em] font-black glow-hover transition-all duration-300">
+                        Start Your Evolution
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-24 pb-12 bg-[#121317] dark:bg-[#121317]">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-1">
+<div class="text-4xl font-black text-white mb-8">Caudate Tech</div>
+<p class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 leading-relaxed">
+                    Defining the kinetic edge of digital transformation through radical strategy and obsessed execution.
+                </p>
+</div>
+<div class="md:col-span-1">
+<h4 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">Services</a></li>
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">Portfolio</a></li>
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">Process</a></li>
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Contact</h4>
+<ul class="space-y-4">
+<li class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40">hello@caudate.tech</li>
+<li class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40">+1 (555) 000-TECH</li>
+<li class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40">San Francisco, CA</li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Social</h4>
+<ul class="flex flex-wrap gap-6">
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">LinkedIn</a></li>
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">Instagram</a></li>
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">Twitter</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between gap-4">
+<p class="font-['Space_Grotesk'] text-xs tracking-tight text-white/20">© 2024 Caudate Tech. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-xs tracking-tight text-white/20 hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-tight text-white/20 hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>

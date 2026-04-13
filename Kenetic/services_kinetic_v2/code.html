@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#d2bbff",
+                        "primary": "#ffffff",
+                        "on-background": "#e3e2e7",
+                        "tertiary-fixed-dim": "#ffb1c3",
+                        "on-surface-variant": "#c2caaf",
+                        "surface-bright": "#38393d",
+                        "outline-variant": "#424935",
+                        "on-primary": "#233600",
+                        "surface": "#121317",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#344e00",
+                        "primary-fixed-dim": "#98da00",
+                        "on-secondary-fixed": "#25005a",
+                        "on-error": "#690005",
+                        "on-primary-container": "#4c6f00",
+                        "surface-variant": "#343439",
+                        "surface-container-low": "#1a1b1f",
+                        "surface-tint": "#98da00",
+                        "on-tertiary-fixed-variant": "#8f0041",
+                        "secondary-container": "#6001d1",
+                        "on-tertiary": "#66002c",
+                        "tertiary": "#ffffff",
+                        "on-tertiary-container": "#c6005d",
+                        "secondary-fixed": "#eaddff",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#131f00",
+                        "surface-dim": "#121317",
+                        "outline": "#8c947b",
+                        "on-tertiary-fixed": "#3f0019",
+                        "inverse-on-surface": "#2f3035",
+                        "surface-container-lowest": "#0d0e12",
+                        "inverse-surface": "#e3e2e7",
+                        "tertiary-container": "#ffd9e0",
+                        "tertiary-fixed": "#ffd9e0",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "surface-container-high": "#292a2e",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "primary-container": "#b3f730",
+                        "surface-container-highest": "#343439",
+                        "error": "#ffb4ab",
+                        "background": "#121317",
+                        "inverse-primary": "#476800",
+                        "surface-container": "#1e1f24",
+                        "on-secondary": "#3f008e",
+                        "primary-fixed": "#b3f730",
+                        "on-surface": "#e3e2e7",
+                        "on-secondary-container": "#c9aeff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, rgba(179, 247, 48, 0.1) 0%, rgba(18, 19, 23, 0) 100%);
+        }
+        .glass-panel {
+            background: rgba(52, 52, 57, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .text-neon {
+            color: #b3f730;
+            text-shadow: 0 0 10px rgba(179, 247, 48, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl dark:bg-[#121317]/60 no-border transition-colors duration-300">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-[1920px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-white dark:text-white uppercase font-headline">Caudate Tech</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-[#b3f730] font-bold border-b-2 border-[#b3f730] pb-1 snappy 200ms cubic-bezier ease-in-out" href="#">Services</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-white/70 hover:text-white transition-all duration-200" href="#">Portfolio</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-white/70 hover:text-white transition-all duration-200" href="#">About</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-white/70 hover:text-white transition-all duration-200" href="#">Process</a>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed px-6 py-2 font-headline uppercase tracking-widest text-xs font-bold rounded-lg hover:shadow-[0_0_20px_rgba(179,247,48,0.4)] transition-all duration-200">
+                Start Project
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-[1920px] mx-auto min-h-screen">
+<div class="flex flex-col lg:flex-row gap-16">
+<!-- Sidebar Navigation -->
+<aside class="hidden lg:block w-72 shrink-0">
+<div class="sticky top-40 space-y-8">
+<div class="label-sm uppercase tracking-[0.2em] text-on-surface-variant font-bold text-[10px]">Capabilities</div>
+<ul class="space-y-6">
+<li>
+<a class="group flex items-center gap-4 text-neon" href="#">
+<span class="h-[2px] w-8 bg-primary-fixed"></span>
+<span class="font-headline font-bold text-lg uppercase tracking-tight">Our Services</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center gap-4 text-on-surface/40 hover:text-on-surface transition-colors" href="#">
+<span class="h-[2px] w-0 group-hover:w-8 bg-on-surface/40 group-hover:bg-primary-fixed transition-all duration-300"></span>
+<span class="font-headline font-medium text-lg uppercase tracking-tight">Technology</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center gap-4 text-on-surface/40 hover:text-on-surface transition-colors" href="#">
+<span class="h-[2px] w-0 group-hover:w-8 bg-on-surface/40 group-hover:bg-primary-fixed transition-all duration-300"></span>
+<span class="font-headline font-medium text-lg uppercase tracking-tight">Methodology</span>
+</a>
+</li>
+</ul>
+<div class="p-8 mt-12 bg-surface-container-low border border-primary-fixed/10 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-4">Latest Insights</p>
+<h4 class="font-headline font-bold text-lg leading-tight mb-4">AI-Driven Infrastructure in 2024</h4>
+<a class="text-primary-fixed text-xs font-bold uppercase tracking-widest border-b border-primary-fixed pb-1" href="#">Read More</a>
+</div>
+<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-secondary/10 blur-[40px]"></div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<div class="flex-1">
+<!-- Header -->
+<header class="mb-24">
+<div class="flex items-center gap-4 mb-6">
+<span class="h-[1px] w-12 bg-primary-fixed"></span>
+<span class="font-label text-primary-fixed text-xs uppercase tracking-[0.4em]">Expertise</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter text-white leading-[0.9] max-w-4xl">
+                        KINETIC <span class="text-primary-fixed">SOLUTIONS</span> FOR THE DIGITAL FRONTIER.
+                    </h1>
+</header>
+<!-- Asymmetrical Services Grid -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+<!-- Service 01: Consulting -->
+<div class="md:col-span-7 bg-surface-container-high p-10 md:p-16 rounded-xl kinetic-gradient group hover:bg-surface-container-highest transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-12 text-on-surface-variant/10 font-headline font-black text-9xl select-none">01</div>
+<span class="material-symbols-outlined text-primary-fixed text-5xl mb-8" data-icon="hub">hub</span>
+<h2 class="font-headline text-4xl font-bold text-white mb-6 uppercase tracking-tight">Consulting</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-10 max-w-lg">
+                            Strategic roadmapping and digital transformation for enterprises. We bridge the gap between complex legacy systems and future-proof cloud architectures.
+                        </p>
+<div class="flex flex-wrap gap-4 mt-8">
+<div class="flex items-center gap-2 bg-surface px-4 py-2 rounded-full border border-white/5">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="cloud">cloud</span>
+<span class="text-xs font-label uppercase tracking-widest">AWS</span>
+</div>
+<div class="flex items-center gap-2 bg-surface px-4 py-2 rounded-full border border-white/5">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="terminal">terminal</span>
+<span class="text-xs font-label uppercase tracking-widest">Terraform</span>
+</div>
+<div class="flex items-center gap-2 bg-surface px-4 py-2 rounded-full border border-white/5">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="monitoring">monitoring</span>
+<span class="text-xs font-label uppercase tracking-widest">Datadog</span>
+</div>
+</div>
+</div>
+<!-- Side Image / Brand Moment -->
+<div class="md:col-span-5 h-full min-h-[400px] bg-surface-container rounded-xl overflow-hidden relative">
+<img alt="Abstract high-tech visualization" class="w-full h-full object-cover grayscale opacity-60 hover:scale-105 hover:grayscale-0 transition-all duration-700" data-alt="Abstract visualization of flowing data streams with neon lime lighting and deep obsidian shadows in high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_cUZtRq4ffG9aj64WlRwPaeviWoCyIct_1SIRAquwK7yuPnQzOrRQDcV-LCR5VZNzmLhnX5ZgHaJf_L0-LTjdAqKrbvci-vYqzPjDXJilk-JMAx87-lfpMEzyeTu9KjwInmvdIGksbgC2gomO9CjpSTSFESs7NMUgQqY-nyvkCz0ja6HwqnP59eKnJLlIUoBA1QTG5uE28pKqzB1ZdrsQchMzzHuzG2K5Q_L2v-B3kL4WS_5trRYZJJIKSAGZWIbBl-Hob82RsGI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-80"></div>
+<div class="absolute bottom-8 left-8 right-8">
+<p class="text-primary-fixed font-headline font-bold text-2xl leading-none uppercase italic tracking-widest">Velocity &amp; Precision</p>
+</div>
+</div>
+<!-- Service 02: Marketing -->
+<div class="md:col-span-5 bg-surface-container-low border border-white/5 p-10 rounded-xl group hover:border-secondary/30 transition-all duration-500">
+<span class="material-symbols-outlined text-secondary text-5xl mb-8" data-icon="campaign">campaign</span>
+<h2 class="font-headline text-3xl font-bold text-white mb-4 uppercase">Growth Engine</h2>
+<p class="text-on-surface-variant text-base leading-relaxed mb-8">
+                            Data-backed marketing strategies that leverage machine learning to optimize conversion and reach across global networks.
+                        </p>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-white/5 pb-4">
+<span class="font-label text-sm uppercase tracking-widest text-on-surface">SEO Automation</span>
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="north_east">north_east</span>
+</div>
+<div class="flex justify-between items-center border-b border-white/5 pb-4">
+<span class="font-label text-sm uppercase tracking-widest text-on-surface">Performance Ads</span>
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="north_east">north_east</span>
+</div>
+</div>
+</div>
+<!-- Service 03: Architecture -->
+<div class="md:col-span-7 bg-[#1a1b1f] p-10 md:p-16 rounded-xl border-l-4 border-primary-fixed relative">
+<div class="flex flex-col md:flex-row gap-12 items-start">
+<div class="flex-1">
+<h2 class="font-headline text-4xl font-bold text-white mb-6 uppercase tracking-tight">System Architecture</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                                    High-availability, fault-tolerant systems designed for scale. We specialize in React-based frontends and resilient microservices.
+                                </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 bg-primary-fixed rounded-full"></span>
+<span class="font-label text-xs uppercase tracking-widest">React &amp; Next.js</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 bg-primary-fixed rounded-full"></span>
+<span class="font-label text-xs uppercase tracking-widest">Node.js / Go</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 bg-primary-fixed rounded-full"></span>
+<span class="font-label text-xs uppercase tracking-widest">Kubernetes</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 bg-primary-fixed rounded-full"></span>
+<span class="font-label text-xs uppercase tracking-widest">PostgreSQL</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-48 aspect-square bg-surface rounded-lg flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-primary-fixed text-6xl" data-icon="architecture">architecture</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Partners/Tech Stack Section -->
+<section class="mt-32">
+<p class="font-label text-[10px] uppercase tracking-[0.5em] text-on-surface-variant mb-12 text-center">Powering Industry Leaders with</p>
+<div class="flex flex-wrap justify-center items-center gap-16 opacity-40 grayscale contrast-125">
+<div class="flex items-center gap-2 font-headline font-bold text-2xl text-white">
+<span class="material-symbols-outlined" data-icon="cloud_done">cloud_done</span> AWS
+                        </div>
+<div class="flex items-center gap-2 font-headline font-bold text-2xl text-white">
+<span class="material-symbols-outlined" data-icon="code">code</span> REACT
+                        </div>
+<div class="flex items-center gap-2 font-headline font-bold text-2xl text-white">
+<span class="material-symbols-outlined" data-icon="database">database</span> MONGO
+                        </div>
+<div class="flex items-center gap-2 font-headline font-bold text-2xl text-white">
+<span class="material-symbols-outlined" data-icon="token">token</span> ETHEREUM
+                        </div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#121317] dark:bg-[#121317] w-full pt-24 pb-12 transition duration-300">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-2">
+<div class="text-4xl font-black text-white mb-8 font-headline uppercase tracking-tighter">Caudate Tech</div>
+<p class="font-body text-[#e3e2e7]/40 max-w-sm mb-8 leading-relaxed">
+                    Building the next generation of digital infrastructure. Kinetic designs for a moving world.
+                </p>
+</div>
+<div>
+<h5 class="text-white font-headline font-bold mb-6 uppercase tracking-widest text-xs">Navigation</h5>
+<ul class="space-y-4">
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-[#b3f730] hover:text-[#b3f730] transition-colors" href="#">Services</a></li>
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">Portfolio</a></li>
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">Process</a></li>
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">About</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-headline font-bold mb-6 uppercase tracking-widest text-xs">Connect</h5>
+<ul class="space-y-4">
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">LinkedIn</a></li>
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">Instagram</a></li>
+<li><a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">Twitter</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40">© 2024 Caudate Tech. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-tight text-white/40 hover:text-[#b3f730] transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | CAUDATE TECH</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,wght@0,400;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#c5c7c9",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#3b4d00",
+                      "on-surface-variant": "#c5c9b1",
+                      "primary-fixed": "#caf15c",
+                      "surface-bright": "#393939",
+                      "primary-container": "#caf15c",
+                      "on-primary-fixed": "#161f00",
+                      "inverse-primary": "#4f6600",
+                      "error": "#ffb4ab",
+                      "on-primary-container": "#546d00",
+                      "on-secondary-container": "#b4b5b5",
+                      "on-tertiary-fixed": "#191c1e",
+                      "on-secondary-fixed-variant": "#454747",
+                      "surface-container-high": "#2a2a2a",
+                      "primary": "#ffffff",
+                      "error-container": "#93000a",
+                      "surface-dim": "#131313",
+                      "surface-variant": "#353535",
+                      "on-surface": "#e2e2e2",
+                      "on-tertiary": "#2e3133",
+                      "surface-container": "#1f1f1f",
+                      "outline": "#8f937d",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "surface-container-low": "#1b1b1b",
+                      "secondary-fixed": "#e2e2e2",
+                      "outline-variant": "#444937",
+                      "surface-tint": "#aed442",
+                      "on-error": "#690005",
+                      "surface-container-highest": "#353535",
+                      "on-tertiary-container": "#626567",
+                      "tertiary": "#ffffff",
+                      "tertiary-fixed": "#e1e3e5",
+                      "background": "#131313",
+                      "secondary": "#c6c6c7",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "primary-fixed-dim": "#aed442",
+                      "on-secondary": "#2f3131",
+                      "surface": "#131313",
+                      "inverse-on-surface": "#303030",
+                      "on-primary": "#283500",
+                      "inverse-surface": "#e2e2e2",
+                      "on-background": "#e2e2e2",
+                      "tertiary-container": "#e1e3e5",
+                      "secondary-container": "#454747"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Newsreader", "serif"],
+                      "body": ["Inter", "sans-serif"],
+                      "label": ["Space Grotesk", "monospace"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent dark:bg-[#131313]/70 backdrop-blur-xl flex justify-between items-center px-12 py-8 w-full max-w-full">
+<div class="text-2xl font-black tracking-tighter text-white dark:text-white">CAUDATE TECH</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-serif italic tracking-tighter uppercase font-medium text-white/80 hover:text-white transition-colors duration-300" href="#">Strategy</a>
+<a class="font-serif italic tracking-tighter uppercase font-medium text-[#D2FA64] border-b-2 border-[#D2FA64] pb-1" href="#">Expertise</a>
+<a class="font-serif italic tracking-tighter uppercase font-medium text-white/80 hover:text-white transition-colors duration-300" href="#">Case Studies</a>
+<a class="font-serif italic tracking-tighter uppercase font-medium text-white/80 hover:text-white transition-colors duration-300" href="#">Manifesto</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-label uppercase tracking-widest text-xs font-bold hover:bg-white hover:text-black transition-all scale-95 duration-200 ease-in-out">
+            Start Project
+        </button>
+</nav>
+<main class="pt-48">
+<!-- Hero Section -->
+<section class="px-12 mb-32">
+<div class="editorial-grid">
+<div class="col-span-12 md:col-span-8">
+<div class="w-12 h-0.5 bg-primary-container mb-8"></div>
+<h1 class="text-7xl md:text-9xl font-headline italic font-medium tracking-tighter leading-none mb-12">
+                        Precision <br/> Capability.
+                    </h1>
+</div>
+<div class="col-span-12 md:col-start-6 md:col-span-6">
+<p class="text-xl md:text-2xl font-body text-on-surface-variant leading-relaxed mb-8">
+                        We dissolve the friction between high-level strategy and technical execution. Our services are engineered for brands that demand resolution over noise.
+                    </p>
+<div class="flex gap-4 items-center font-label text-xs tracking-widest uppercase text-primary-container">
+<span class="material-symbols-outlined">analytics</span>
+<span>Technical Intelligence &amp; Creative Velocity</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="px-12 mb-40">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Strategic Consulting -->
+<div class="md:col-span-2 bg-surface-container-low p-12 flex flex-col justify-between group hover:bg-surface-container-high transition-colors duration-500">
+<div>
+<span class="font-label text-xs tracking-widest uppercase text-outline mb-12 block">01 / Intelligence</span>
+<h2 class="text-5xl font-headline italic tracking-tighter mb-8">Strategic Consulting &amp; Architectural Roadmap</h2>
+<ul class="space-y-4 max-w-md">
+<li class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<span class="font-body text-on-surface">Market Resonance Mapping</span>
+<span class="font-label text-[10px] text-outline">ALPHA</span>
+</li>
+<li class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<span class="font-body text-on-surface">Technical Debt Liquidation</span>
+<span class="font-label text-[10px] text-outline">CORE</span>
+</li>
+<li class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<span class="font-body text-on-surface">Scalability Frameworks</span>
+<span class="font-label text-[10px] text-outline">INFRA</span>
+</li>
+</ul>
+</div>
+<div class="mt-24 flex items-center gap-4 text-primary-container group-hover:translate-x-2 transition-transform">
+<span class="font-label text-xs uppercase tracking-widest font-bold">Explore Methodology</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<!-- Digital Marketing -->
+<div class="bg-primary-container p-12 text-on-primary-container flex flex-col justify-between">
+<div>
+<span class="font-label text-xs tracking-widest uppercase opacity-70 mb-12 block">02 / Growth</span>
+<h2 class="text-4xl font-headline italic tracking-tighter leading-tight mb-6">Editorial Marketing &amp; Hyper-Targeted Narrative</h2>
+<p class="font-body text-sm leading-relaxed opacity-90">
+                            We don't buy traffic; we curate attention through high-resolution content ecosystems and algorithmic precision.
+                        </p>
+</div>
+<div class="mt-12 bg-on-primary-container h-[200px] w-full relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50" data-alt="abstract digital visualization of data streams flowing in dark space with glowing green accents matching a tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtcVGelRTpDzkHfgdfC8K9PaKtzj73AXvZ4OHq1HlgnufGdAOhBGe-3fwM0CSlGVzW-oYfuvkN6mbv9in9m0XD0VpN16bc6Y-a81wrHIOgKghbeptq1sOg1cVO4kE2KVStzn3XEJH-t8jsuvQbtXE0DVxBsjr2MSjqxcy7KAYKeLDgPBjBnXGu-oaomSFAQdUK-CWFFz0B9SJOWWsjLJEjpXSIkGyycgxbbX2ciGiUOFuBckUaIG54w6ivvUbzfCv_-ALG5HpT9J4"/>
+</div>
+</div>
+<!-- Technical Stack Card -->
+<div class="bg-surface-container-lowest p-12 border border-outline-variant/10">
+<span class="font-label text-xs tracking-widest uppercase text-outline mb-12 block">03 / Implementation</span>
+<h2 class="text-3xl font-headline italic tracking-tighter mb-8">The Stack Showcase</h2>
+<div class="space-y-6">
+<div class="group">
+<p class="font-label text-[10px] text-primary-container mb-1">FRONTEND</p>
+<p class="text-xl font-body">Next.js / TypeScript / Tailwind</p>
+</div>
+<div class="group">
+<p class="font-label text-[10px] text-primary-container mb-1">BACKEND</p>
+<p class="text-xl font-body">Rust / Go / PostgreSQL</p>
+</div>
+<div class="group">
+<p class="font-label text-[10px] text-primary-container mb-1">CLOUD</p>
+<p class="text-xl font-body">AWS / Vercel / Kubernetes</p>
+</div>
+</div>
+</div>
+<!-- Visual Media -->
+<div class="md:col-span-2 relative h-[400px] overflow-hidden group">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="minimalist architectural shot of a sleek modern concrete building with sharp shadows and dramatic perspective in black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAboX27h6w4QtoBdW2OQ-_YhRi5BlAl8TNeCytF5vPJe_mB_9cYkR47XMC6nMN79z2SOvELZESVghIczZPWylH-gSkMfgvD_a_hYMoHWMsFoCULB6qgPY2xZp70otphmWV9Q9M8Slk9kcFR70NiqOgfVMiGkgkQxVEK4Cj69Us_AOhwuMppaaBuSmLb5vC6SnTUFS-y2wTCc_-M_64FFGDCBnWBlFmjGvC7wUtuRWvpfCqcbIJtlBXgLCXHxzvijYek3C03vN2_irU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+<div class="absolute bottom-12 left-12">
+<h3 class="text-4xl font-headline italic text-white tracking-tighter">Visual Identity &amp; System Design</h3>
+<p class="font-label text-xs tracking-widest text-primary-container uppercase mt-2">Precision Aesthetics</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature List (No Dividers) -->
+<section class="px-12 py-24 bg-surface-container-low">
+<div class="editorial-grid">
+<div class="col-span-12 md:col-span-4 mb-16 md:mb-0">
+<h2 class="text-xs font-label uppercase tracking-[0.3em] text-outline mb-4">Engagement Models</h2>
+<p class="text-3xl font-headline italic leading-tight">Fluid integration with your existing internal teams.</p>
+</div>
+<div class="col-span-12 md:col-start-6 md:col-span-7 space-y-16">
+<div class="group">
+<h4 class="text-2xl font-body mb-4 group-hover:text-primary-container transition-colors">Embedded Engineering</h4>
+<p class="text-on-surface-variant leading-relaxed max-w-xl">
+                            Our seniors join your sprints, establishing high-resolution standards and mentoring your talent in real-time.
+                        </p>
+</div>
+<div class="group">
+<h4 class="text-2xl font-body mb-4 group-hover:text-primary-container transition-colors">Venture Studio Model</h4>
+<p class="text-on-surface-variant leading-relaxed max-w-xl">
+                            From zero to one. We build the MVP, the brand identity, and the initial growth engine as a single, cohesive unit.
+                        </p>
+</div>
+<div class="group">
+<h4 class="text-2xl font-body mb-4 group-hover:text-primary-container transition-colors">Fractional CTO/CMO</h4>
+<p class="text-on-surface-variant leading-relaxed max-w-xl">
+                            Strategic oversight for growing startups that need high-level decision making without the overhead of a full-time executive.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-12 py-40 text-center">
+<h2 class="text-6xl md:text-8xl font-headline italic tracking-tighter mb-12">Ready for higher resolution?</h2>
+<div class="flex flex-col md:flex-row justify-center gap-8 items-center">
+<a class="px-12 py-6 bg-primary-container text-on-primary-container font-label uppercase tracking-widest text-sm font-bold hover:bg-white hover:text-black transition-all" href="#">
+                    Initiate Consultation
+                </a>
+<a class="font-label uppercase tracking-widest text-xs text-outline hover:text-white transition-colors border-b border-outline/30 pb-2" href="#">
+                    Download Capabilities Deck (PDF)
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] dark:bg-[#0e0e0e] w-full mt-32 border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 px-12 py-24">
+<div class="md:col-span-1">
+<div class="text-4xl font-serif italic text-white mb-8">CAUDATE TECH</div>
+<p class="font-mono uppercase tracking-widest text-xs text-white/40">© 2024 CAUDATE TECH. <br/>PRECISION FLUIDITY.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-mono uppercase tracking-widest text-xs text-[#D2FA64] mb-4">Platforms</h5>
+<a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform opacity-transition" href="#">LinkedIn</a>
+<a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform opacity-transition" href="#">Instagram</a>
+<a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform opacity-transition" href="#">Clutch</a>
+<a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform opacity-transition" href="#">Medium</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-mono uppercase tracking-widest text-xs text-[#D2FA64] mb-4">Legal</h5>
+<a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform opacity-transition" href="#">Privacy</a>
+<a class="font-mono uppercase tracking-widest text-xs text-white/40 hover:text-[#D2FA64] hover:translate-x-1 transition-transform opacity-transition" href="#">Terms</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-mono uppercase tracking-widest text-xs text-[#D2FA64] mb-4">Contact</h5>
+<p class="font-mono uppercase tracking-widest text-xs text-white/40">hello@caudate.tech</p>
+<p class="font-mono uppercase tracking-widest text-xs text-white/40">Berlin / London / Remote</p>
+</div>
+</div>
+</footer>
+</body></html>
