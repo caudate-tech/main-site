@@ -27,7 +27,7 @@ export const serviceCategories: ServiceCategory[] = [
     id: 'pipeline-growth',
     href: '/services/pipeline-growth',
     overviewHash: '/services#pipeline-growth',
-    label: 'Pipeline & growth',
+    label: 'Pipeline & Growth',
     shortLabel: 'Pipeline',
     description:
       'Behavioral intelligence, signal mapping, and managed outbound.',
@@ -37,7 +37,7 @@ export const serviceCategories: ServiceCategory[] = [
     id: 'digital-suite',
     href: '/services/digital-suite',
     overviewHash: '/services#digital-suite',
-    label: 'Digital marketing',
+    label: 'Digital Marketing',
     shortLabel: 'Digital',
     description:
       'Strategy, GEO & SEO, content, paid media, web, and automation.',
@@ -47,7 +47,7 @@ export const serviceCategories: ServiceCategory[] = [
     id: 'spotlight-programs',
     href: '/services/program-guides',
     overviewHash: '/services#spotlight-programs',
-    label: 'Program guides',
+    label: 'Program Guides',
     shortLabel: 'Guides',
     description:
       'Visual overviews for consulting, SEO, paid media, and content.',
