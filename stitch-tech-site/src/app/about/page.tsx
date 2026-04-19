@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function AboutPage() {
@@ -137,41 +138,53 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {/* Team Member 1 */}
             <div className="group">
-              <div className="aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
-                <img 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEvsnE_r8jQTVNPLRxwSE0oFrbMtPwIyq0Rm0QUJbb-GIcimBNUHOxiXfhTZPbCugp46Z67T_hsF_Zo3NVUoR-UjDvXpbcRT4dj_o8fDcmnWStXJzchtSVJe0HyAhkuW39ly-Hxss-lu5XTE7cy0IjTotRH9ijEb11QM9EpkfG7GK0gwAsvbORiZxNGEo_Fdyx0usfmgZnI9tv7zVw0DmVytW5jtuIzjCRqzzlN_-blgjTLHZzGzlRjezJWLMTmxpaS_IG6msWK6A" 
+              <div className="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
+                <Image
+                  src="/team/ajay-headshot.png"
+                  alt="Ajay Kanwar, CEO and Founder"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <h3 className="text-2xl font-black">Marcus Thorne</h3>
-              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Founder & CTO</p>
-              <p className="text-on-surface-variant leading-relaxed">Former Lead Architect at major fintech firms. Over 15 years of experience in high-availability systems.</p>
+              <h3 className="text-2xl font-black">Ajay Kanwar</h3>
+              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">CEO & Founder</p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Sets direction for the firm and client engagements, with a focus on durable architecture and outcomes that scale.
+              </p>
             </div>
-            {/* Team Member 2 */}
             <div className="group">
-              <div className="aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
-                <img 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD45mbe-ZmwF90SwvRDsZPuDKOJ6LBBMOICn-8TPW36_gbT62QGdKtmGwhW7NW7e0Kx6R1txBTneQTlE5Spo0WZR9VSxPOHQgxPRVZcHzrFHzMZst-dg_M8pJRqr-a1LudhYAvMRqrjZusKdEE3lUAeo7KTncye3QsU7lBTOFC6hD2o3RkzLACKpc3QuPNETWcnxzkrvdDTN2tYiGdip1H-AsNfyXYGqSkET2iBr5t5OywkA8pYsmxFVsnHUglTfm738iHDyYBBhcQ" 
+              <div className="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
+                <Image
+                  src="/team/suraj-headshot.png"
+                  alt="Suraj Kanwar, CTO and Data Analyst"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <h3 className="text-2xl font-black">Elena Rodriguez</h3>
-              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Head of Product Strategy</p>
-              <p className="text-on-surface-variant leading-relaxed">Specialist in user-centric scaling. Elena has helped over 20 startups reach Series B through product excellence.</p>
+              <h3 className="text-2xl font-black">Suraj Kanwar</h3>
+              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">CTO & Data Analyst</p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Owns technical strategy, systems design, and analytics so decisions are grounded in measurable signal, not guesswork.
+              </p>
             </div>
-            {/* Team Member 3 */}
             <div className="group">
-              <div className="aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
-                <img 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDod18Pomr4X3FBtG0bEY7CJNVYFSb0zGX9ZRXq0qi67yB7hFj-i0wnqWTbl6Qsx7j_xiZccCjs9EEGexjWWl2om3JoTEezeuizS_QCwYaBAz23UPhgd4bjpnaFr0d-_Gt3LwwKQsRFlkaASa-UxGcbMS5_hudujT6c7KeIFg8aBimhoZeBi_9MYHq7wZsXRXsYMpzQBBDM230zzbtL-8b5gk-ncBh7ve60TYIMsbQg19s31CB-VH4rtZWybRm59XeKf1aVJ29P2HI" 
+              <div className="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
+                <Image
+                  src="/team/raman-headshot.png"
+                  alt="Raman Verma, Chief Marketing Officer"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <h3 className="text-2xl font-black">David Chen</h3>
-              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Lead Performance Architect</p>
-              <p className="text-on-surface-variant leading-relaxed">Data scientist turned media strategist. David bridges the gap between raw data and creative execution.</p>
+              <h3 className="text-2xl font-black">Raman Verma</h3>
+              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Chief Marketing Officer</p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Leads brand, demand, and growth programs so positioning, creative, and media work together toward pipeline and revenue.
+              </p>
             </div>
           </div>
         </div>
