@@ -133,6 +133,16 @@ export const digitalMarketingPillars: DigitalMarketingPillar[] = [
         description:
           'Strategic placements on LinkedIn and industry platforms to reach the right job titles.',
       },
+      {
+        title: 'Google Ads — Full-Channel Playbook',
+        description:
+          'Search, Display, YouTube, Shopping, PMax, and Demand Gen — with Smart Bidding, GA4/GTM tracking, and a 10-phase execution framework from discovery through scaling.',
+      },
+      {
+        title: 'E-Commerce & Lead Gen Campaigns',
+        description:
+          'Shopping + Performance Max for revenue, plus dedicated lead-gen funnels with CPA and ROAS measurement.',
+      },
     ],
   },
   {

@@ -27,8 +27,12 @@ export default function DigitalSuitePage() {
           ,{' '}
           <Link href="/services/paid-media" className="font-bold text-primary hover:underline">
             paid media
+          </Link>{' '}
+          (including our{' '}
+          <Link href="/services/paid-media#playbook" className="font-bold text-primary hover:underline">
+            10-phase Google Ads playbook
           </Link>
-          , and{' '}
+          ), and{' '}
           <Link href="/services/content-strategy" className="font-bold text-primary hover:underline">
             content strategy
           </Link>

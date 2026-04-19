@@ -1,0 +1,234 @@
+Google Ads & Performance Marketing Service
+To deliver high-performance, ROI-driven Google Ads campaigns while ensuring 100% compliance with Google Ads policies and best practices.
+
+
+Scope of Services
+We provide end-to-end performance marketing services:
+PPC (Pay-Per-Click) Management
+Google Ads (Search, Display, YouTube)
+Performance Max Campaigns
+Demand Generation Campaigns
+Shopping Campaigns (E-commerce)
+A/B Testing & Optimization
+Smart Bidding Strategies
+Keyword & Audience Planning
+Budget & ROI Management
+Funnel Strategy & Performance Planning
+Competitor Research
+Account Setup, Audit & Scaling
+
+
+Client Onboarding Process
+
+Step 1: Requirement Gathering
+Business understanding
+Target audience identification
+Define KPIs (Leads, Sales, ROAS, CPA)
+Competitor overview
+Step 2: Account Access
+Google Ads access(Admin in initial stage)
+GA4 & Tag Manager access
+Website backend (Optional)
+
+
+Website & Policy Compliance Check (Mandatory Step)
+Required Elements:
+Clear business identity (About Us, branding)
+Contact details (Email / Phone)
+Privacy Policy
+Terms & Conditions
+Secure website (HTTPS)
+Mobile-friendly & fast loading
+Compliance Checks:
+No misleading claims
+No fake offers or clickbait
+No restricted or unsafe content
+Landing page matches ad content
+
+
+Strategy Planning
+Keyword research & segmentation
+Audience targeting (In-market, Custom, Remarketing)
+Funnel planning (TOF, MOF, BOF)
+Budget allocation strategy
+Channel selection:
+Search
+Display
+YouTube
+Shopping
+Performance Max
+Demand Gen
+
+
+Account Setup & Campaign Structure
+Account creation / restructuring
+Conversion tracking setup (GA4 + GTM)
+Campaign & ad group structuring
+Keyword match type planning
+Negative keyword implementation
+Performance Planing
+Budget Planing
+Content Sutablity 
+Brand, Content, IP’s Exclusion 
+
+Campaign Execution
+
+Campaign Types:
+Search Campaigns (High intent based)
+Display Campaigns (Awareness & remarketing)
+Shopping Campaigns (E-commerce)
+Performance Max (Full funnel and Aquring new customers)
+Demand Gen (YouTube + Discovery)
+Ad Creation:
+High-converting ad copies
+Multiple variations for A/B testing
+Strong CTA strategy
+AI Max (Beta)
+Smart and Manual Biddings
+
+
+Bidding & Budget Management
+
+Manual Bidding:
+Manual CPC
+Enhanced CPC
+Smart Bidding:
+Maximize Clicks, Max-Conversions
+Target CPA
+Target ROAS
+Budget Optimization:
+Daily monitoring
+Reallocation based on performance
+Scaling profitable campaigns
+
+
+Tracking & Analytics
+
+Conversion tracking setup- Website
+Enhanced Conversion for better ROI and ROAS
+Event tracking via GA4
+ROI & performance measurement
+Metrics:
+CPA (Cost per Acquisition)
+ROAS (Return on Ad Spend)
+CTR (Click-through rate)
+Conversion rate
+
+
+Continuous Optimization
+
+Regular Activities:
+Keyword optimization
+Negative keyword updates
+Bid adjustments
+Audience refinement
+A/B testing (ads & creatives)
+Device & location optimization
+
+
+Performance Scaling
+Identify winning campaigns
+Increase budget strategically
+Expand keyword targeting
+Launch new audience segments
+Cross-channel scaling
+
+
+Reporting & Communication
+
+Weekly / Monthly reports- Based on Business Requirements
+Performance insights
+ROI tracking
+Actionable recommendations
+
+
+
+Google Ads Policy Compliance (Core Principle)
+
+We strictly follow Google Ads policies to avoid:
+Account suspension
+Ad disapproval
+Budget wastage
+Key Compliance Areas:
+No misrepresentation
+No unrealistic claims
+Transparent landing pages
+Proper data privacy practices
+No policy bypass techniques
+
+
+Risk Management
+
+We proactively prevent:
+Policy violations
+Conversion tracking errors
+Budget overspending
+Low-quality traffic
+IP Exclusions
+Bot traffic 
+
+
+Deliverables
+Fully structured ad account
+Live optimized campaigns
+Performance reports
+Strategy roadmap
+Continuous optimization
+
+
+Why Choose Us?
+
+Data-driven decisions
+ROI-focused campaigns
+Advanced automation (Smart Bidding)
+Full-funnel expertise
+100% Google Ads policy compliant
+
+Our Pricing
+Pricing for NEW ACCOUNT (From Scratch)
+Setup + First Month Fee
+🇺🇸 US Clients
+Setup Fee: $300 – $800
+Monthly Management:
+Small budget ($1k–$3k ad spend): $400 – $800
+Medium ($3k–$10k): $800 – $1,500
+High ($10k+): $1,500 – $3,000+
+🇪🇺 European Clients
+Setup Fee: €250 – €600
+Monthly Management:
+Small: €300 – €700
+Medium: €700 – €1,200
+High: €1,200 – €2,500+
+
+Our Pricing
+Pricing for EXISTING ACCOUNT (Audit + Management)
+✅ Audit + Optimization Model
+🇺🇸 US Clients
+One-time Audit Fee: $200 – $500
+Monthly Management:
+Small: $300 – $700
+Medium: $700 – $1,200
+High: $1,200 – $2,500+
+🇪🇺 European Clients
+Audit Fee: €150 – €400
+Monthly Management:
+Small: €250 – €600
+Medium: €600 – €1,000
+High: €1,000 – €2,000+
+
+Pricing Calculations
+% of Ad Spend Model (Optional / Scaling Clients)
+10% – 20% of ad spend- will take as fee
+Example:
+Client spends $5,000 → You charge $500–$1,000
+Client spends $1,000 → You charge $150–$200 (For Low and Very Low)
+
+👉 Minimum fee should always be fixed:
+Minimum: $200–$500
+Premium Pricing (When You Should Charge More)
+Charge higher if:
+You handle full funnel (Ads + Strategy + CRO)
+Running Performance Max + advanced tracking
+Managing $10k+ monthly budgets
+Providing landing page strategy
+Delivering strong ROI
