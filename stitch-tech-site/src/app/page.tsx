@@ -112,7 +112,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Service categories — same four paths as /services */}
+      {/* Service categories: same four paths as /services */}
       <section className="py-24 bg-surface-container-low">
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
@@ -122,7 +122,7 @@ export default function Home() {
                 Four ways to explore our work
               </h2>
               <p className="text-on-surface-variant mt-4 leading-relaxed max-w-xl">
-                SAP and infrastructure, pipeline programs, the full digital marketing suite, and visual program guides—each opens on the Services page.
+                SAP and infrastructure, pipeline programs, the full digital marketing suite, and visual program guides. Each opens on the Services page.
               </p>
             </div>
             <Link href="/services" className="text-primary font-bold flex items-center gap-2 group shrink-0">

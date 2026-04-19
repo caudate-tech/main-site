@@ -30,7 +30,7 @@ export const portfolioIntro = {
   eyebrow: 'Caudate Technologies',
   title: 'The Nervous System of Enterprise Efficiency and Growth',
   body:
-    'Caudate Technologies provides a unified approach to business health. We maintain the "internal nervous system" of your company—your ERP and IT infrastructure—while optimizing the "external signals" that drive your market growth.',
+    'Caudate Technologies provides a unified approach to business health. We maintain the "internal nervous system" of your company, your ERP and IT infrastructure, while optimizing the "external signals" that drive your market growth.',
 };
 
 export const portfolioPillars: PortfolioPillar[] = [
@@ -120,7 +120,7 @@ export const portfolioPillars: PortfolioPillar[] = [
     offerings: [
       {
         name: 'Caudate Signal Mapping',
-        badge: 'Targeted Messaging Discovery — $6,000/Engagement',
+        badge: 'Targeted Messaging Discovery · $6,000/Engagement',
         description:
           'We map the behavioral "nerve centers" of your target audience. We don\'t guess what your buyers want; we find out through data.',
         bullets: [
@@ -141,7 +141,7 @@ export const portfolioPillars: PortfolioPillar[] = [
       },
       {
         name: 'Caudate Momentum',
-        badge: 'The Growth Engine — Custom Subscription',
+        badge: 'The Growth Engine · Custom Subscription',
         description:
           'Ongoing pipeline optimization for teams that need continuous growth and market adaptation.',
         bullets: [
@@ -164,7 +164,7 @@ export const portfolioPillars: PortfolioPillar[] = [
       },
       {
         name: 'Caudate Neural Pipeline',
-        badge: 'The Full System — Enterprise',
+        badge: 'The Full System · Enterprise',
         description:
           'A fully managed outbound pipeline system where Caudate Technologies acts as your outsourced growth department.',
         bullets: [

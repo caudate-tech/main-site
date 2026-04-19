@@ -60,7 +60,7 @@ export default function ServicesPage() {
             Combined digital marketing suite
           </h2>
           <p className="text-lg text-on-surface-variant mt-4 leading-relaxed">
-            Six integrated practices—strategy, generative &amp; technical SEO, content and social, paid and ABM, web and commerce, and lifecycle automation—layered on a stable enterprise core.
+            Six integrated practices: strategy, generative &amp; technical SEO, content and social, paid and ABM, web and commerce, and lifecycle automation, layered on a stable enterprise core.
           </p>
         </div>
         <DigitalMarketingSuite />

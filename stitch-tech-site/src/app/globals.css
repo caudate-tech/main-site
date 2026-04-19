@@ -145,7 +145,7 @@ body {
   background: linear-gradient(135deg, #006a64 0%, #16b2a8 100%);
 }
 
-/* Navbar CTA — subtle “alive” glow (neural / high-tech) */
+/* Navbar CTA: subtle “alive” glow (neural / high-tech) */
 @keyframes nav-cta-glow {
   0%,
   100% {

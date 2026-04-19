@@ -1,4 +1,4 @@
-/** Primary navigation — power menu structure (Solutions / Insights). */
+/** Primary navigation: power menu structure (Solutions / Insights). */
 
 export type NavDropdownItem = {
   label: string;
@@ -46,7 +46,7 @@ export const insightsMenu: NavDropdownItem[] = [
 export const solutionsPaths = solutionsMenu.map((i) => i.href);
 export const insightsPaths = insightsMenu.map((i) => i.href);
 
-/** Services overview and category roots — used for “Solutions” active state. */
+/** Services overview and category roots, used for “Solutions” active state. */
 export const solutionsRelatedPaths = [
   '/services',
   ...solutionsPaths,

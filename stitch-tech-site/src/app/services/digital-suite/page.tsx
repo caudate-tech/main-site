@@ -16,7 +16,7 @@ export default function DigitalSuitePage() {
       />
       <div className="max-w-7xl mx-auto px-8 pb-24 space-y-16">
         <p className="text-on-surface-variant max-w-2xl leading-relaxed">
-          Six integrated practices—Strategic Core, Search Authority (including GEO), Resonance, Targeted Impulse, Interface, and Lifecycle Connect. Explore detail pages for{' '}
+          Six integrated practices: Strategic Core, Search Authority (including GEO), Resonance, Targeted Impulse, Interface, and Lifecycle Connect. Explore detail pages for{' '}
           <Link href="/services/consulting" className="font-bold text-primary hover:underline">
             consulting
           </Link>

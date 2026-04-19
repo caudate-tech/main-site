@@ -140,7 +140,7 @@ export default function PaidMediaPage() {
         </div>
       </section>
 
-      {/* Beyond Google — omnichannel */}
+      {/* Beyond Google: omnichannel */}
       <section className="bg-surface py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
@@ -153,7 +153,7 @@ export default function PaidMediaPage() {
                 <span className="text-primary">Precision.</span>
               </h2>
               <p className="text-lg text-on-surface-variant leading-relaxed">
-                We extend the same rigor to every paid touchpoint—social,
+                We extend the same rigor to every paid touchpoint: social,
                 programmatic, and CRO.
               </p>
             </div>
@@ -350,7 +350,7 @@ export default function PaidMediaPage() {
         </div>
       </section>
 
-      {/* Methodology — ROAS Blueprint */}
+      {/* Methodology: ROAS Blueprint */}
       <section className="py-24 md:py-32 bg-surface">
         <div className="max-w-7xl mx-auto px-8">
           <div className="bg-on-surface text-surface rounded-[3rem] p-12 md:p-24 relative overflow-hidden">
@@ -367,7 +367,7 @@ export default function PaidMediaPage() {
                   {[
                     {
                       icon: 'smart_toy',
-                      text: 'Smart Bidding — tCPA, tROAS, Max Conversions',
+                      text: 'Smart Bidding: tCPA, tROAS, Max Conversions',
                     },
                     {
                       icon: 'monitoring',

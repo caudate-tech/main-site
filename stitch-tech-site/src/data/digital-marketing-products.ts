@@ -1,4 +1,4 @@
-/** Combined digital marketing suite — aligned with digital-marketing-products.md */
+/** Combined digital marketing suite, aligned with digital-marketing-products.md */
 
 export type DigitalMarketingBullet = {
   title: string;
@@ -20,7 +20,7 @@ export type DigitalMarketingPillar = {
 export const digitalMarketingIntro = {
   eyebrow: 'Combined Digital Marketing Suite',
   description:
-    'Six integrated practice areas—from strategy and generative search to paid media, web experience, and lifecycle automation.',
+    'Six integrated practice areas, from strategy and generative search to paid media, web experience, and lifecycle automation.',
 };
 
 export const digitalMarketingPillars: DigitalMarketingPillar[] = [
@@ -134,9 +134,9 @@ export const digitalMarketingPillars: DigitalMarketingPillar[] = [
           'Strategic placements on LinkedIn and industry platforms to reach the right job titles.',
       },
       {
-        title: 'Google Ads — Full-Channel Playbook',
+        title: 'Google Ads: Full-Channel Playbook',
         description:
-          'Search, Display, YouTube, Shopping, PMax, and Demand Gen — with Smart Bidding, GA4/GTM tracking, and a 10-phase execution framework from discovery through scaling.',
+          'Search, Display, YouTube, Shopping, PMax, and Demand Gen, with Smart Bidding, GA4/GTM tracking, and a 10-phase execution framework from discovery through scaling.',
       },
       {
         title: 'E-Commerce & Lead Gen Campaigns',
