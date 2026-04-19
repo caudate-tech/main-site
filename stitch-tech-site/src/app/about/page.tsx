@@ -174,14 +174,14 @@ export default function AboutPage() {
               <div className="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
                 <Image
                   src="/team/raman-headshot.png"
-                  alt="Raman Verma, Chief Marketing Officer"
+                  alt="Raman Verma, CMO and PPC Specialist"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <h3 className="text-2xl font-black">Raman Verma</h3>
-              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">Chief Marketing Officer</p>
+              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">CMO & PPC Specialist</p>
               <p className="text-on-surface-variant leading-relaxed">
                 Leads brand, demand, and growth programs so positioning, creative, and media work together toward pipeline and revenue.
               </p>

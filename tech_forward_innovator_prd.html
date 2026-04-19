@@ -1,76 +1,92 @@
-# Tech-Forward Innovator
+# Caudate Tech — Product Requirements (PRD)
 
 ## Product Overview
 
-**The Pitch:** Caudate Tech is a premier consulting and digital marketing agency that bridges the gap between raw data and explosive growth. We deliver cutting-edge digital strategies wrapped in a relentless, future-facing aesthetic that immediately establishes authority.
+**The pitch:** Caudate Tech is a consulting and digital marketing partner for enterprises and high-growth teams. The site positions the firm around **engineered growth**: SAP and cloud landscapes, paid media (Google, Meta), analytics, and measurable ROI—delivered with a polished, trustworthy visual system (not a dark “cyber” aesthetic).
 
-**For:** Enterprise tech companies and high-growth startups who care about measurable ROI, aggressive market capture, and working with an agency that visually and technically outpaces the competition.
+**For:** Organizations that need serious technical and growth execution, clear service paths, and low-friction contact.
 
-**Device:** desktop
+**Primary surface:** Responsive web; desktop-first layouts with mobile navigation patterns.
 
-**Design Direction:** A sleek, dynamic, dark-themed design with vibrant cyber-accents. High-contrast, deep charcoal backgrounds interrupted by slashing electric blues and neon purples, communicating precision and speed.
+**Design direction:** Light, high-clarity UI inspired by Material-style tokens: soft blue-tinted surfaces, **teal primary** (`#006a64`), strong typography, generous whitespace. Professional and architectural—aligned with “enterprise + growth” positioning.
 
-**Inspired by:** Pressfit.ai, Vercel
-
----
-
-## Screens
-
-- **Home:** Establishes agency authority with a dynamic hero, client roster, and core value propositions.
-- **Services:** Detailed breakdown of consulting and marketing capabilities in a high-tech grid layout.
-- **Case Studies:** Asymmetrical portfolio showcase proving ROI through stark data points and bold visuals.
-- **About Us:** Agency ethos, leadership team, and aggressive growth philosophy.
-- **Contact Us:** Frictionless, high-conversion intake form with floating labels and neon-glow focus states.
+**Reference implementations in repo:** [`stitch-tech-site/`](stitch-tech-site/) (Next.js app).
 
 ---
 
-## Key Flows
+## Screens (as implemented)
 
-**Client Acquisition Flow:** Prospective client seeks validation and initiates contact.
+| Route | Purpose |
+|--------|--------|
+| **Home** (`/`) | Hero with value prop + **ContactInquiryForm** (hero variant); **“Tools & ecosystems we operate in”** band with monochrome brand marks (Simple Icons + Devicon); stats/value sections; CTAs to contact. |
+| **Services** (`/services`, nested service pages) | Category navigation and detail pages (SAP, digital marketing, paid media, etc.). |
+| **Case Studies** (`/case-studies`) | Portfolio / proof points. |
+| **About** (`/about`) | Mission, values bento, timeline, **team grid (3)** with local headshots. |
+| **Contact** (`/contact`) | Inquiry form + office/contact details; optional **WhatsApp** link when `NEXT_PUBLIC_WHATSAPP_NUMBER` is set. |
+| **FAQ** (`/faq`) | Accordion FAQ from [`stitch-tech-site/src/data/faq.ts`](stitch-tech-site/src/data/faq.ts). |
+| **Privacy Policy** (`/privacy-policy`) | Legal. |
 
-1. User is on **Home** -> sees dynamic hero and marquee of trusted enterprise logos.
-2. User clicks **"See Our Impact"** -> navigates to **Case Studies**, viewing a specific ROI metric.
-3. User clicks **"Start a Project"** -> navigates to **Contact Us** and completes the inquiry form.
+---
+
+## Key flows
+
+**Lead capture**
+
+1. User lands on **Home** → reads hero → submits **ContactInquiryForm** or follows link to full **Contact**.
+2. User may use **WhatsApp** (floating button and/or form/contact copy) when configured.
+3. Form posts to **`/api/contact`** (Nodemailer); newsletter/API routes exist as implemented.
+
+**Discovery**
+
+1. User opens **Services** from nav or home → drills into specific service URLs.
+2. User opens **FAQ** from navbar or footer.
+3. User reviews **About** for leadership: **Ajay Kanwar** (CEO & Founder), **Suraj Kanwar** (CTO & Data Analyst), **Raman Verma** (Chief Marketing Officer); images served from **`/team/*.png`** via `next/image`.
+
+---
+
+## Global UX / chrome
+
+- **Navbar:** Brand + primary nav; **two mega-menu triggers** (SAP-focused group + Digital Marketing group) driven by [`stitch-tech-site/src/data/navigation.ts`](stitch-tech-site/src/data/navigation.ts); standalone links include **FAQ** and **Contact** (as wired).
+- **Footer:** Includes FAQ and other key links.
+- **WhatsApp:** [`WhatsAppChatButton`](stitch-tech-site/src/components/WhatsAppChatButton.tsx) in root layout when URL can be built from env.
 
 ---
 
 <details>
-<summary>Design System</summary>
+<summary>Design system (production tokens)</summary>
 
-## Color Palette
+## Color palette (see [`stitch-tech-site/src/app/globals.css`](stitch-tech-site/src/app/globals.css))
 
-- **Primary:** `#00F0FF` - Buttons, links, active states, cyber-cyan
-- **Background:** `#090A0F` - Deep abyss charcoal
-- **Surface:** `#12141D` - Cards, navigation, modals
-- **Text:** `#F1F5F9` - Main body text, stark white
-- **Muted:** `#64748B` - Secondary text, grid lines, disabled states
-- **Accent:** `#B026FF` - Neon purple for gradients, secondary highlights
+- **Primary:** `#006a64` — buttons, links, key accents, ecosystem logo monochrome tint.
+- **Primary container:** `#16b2a8` — gradients / emphasis.
+- **Background / surface:** `#f7f9ff` — main page background.
+- **Surface containers:** e.g. `#e2efff`, `#edf4ff`, `#ffffff` for bands and cards.
+- **On-surface:** `#001d32` — primary text.
+- **On-surface variant:** `#3c4948` — secondary text.
+- **Outline:** `#6c7a78` — borders, muted labels.
+- **Error:** `#ba1a1a` (and error container tokens as defined).
 
 ## Typography
 
-Distinctive, geometric, and unapologetically digital.
+- **Primary stack:** Inter (via `--font-inter` in layout/theme).
+- **Headlines:** Heavy weights, tight tracking where used on marketing sections.
+- **Body:** Readable line length; Material-onboarding-style labels for small caps / eyebrow text where applicable.
 
-- **Headings:** `Space Grotesk`, 700, 32-72px
-- **Body:** `Outfit`, 400, 16px
-- **Small text:** `Outfit`, 400, 14px
-- **Buttons:** `Space Grotesk`, 600, 15px, 1px letter-spacing
+## Iconography / assets
 
-**Style notes:** Sharp 0px border radius on buttons and cards for a brutalist-tech feel. 1px borders using `#1E293B`. Hover states feature intense `box-shadow` neon glows (`0 0 20px rgba(0, 240, 255, 0.4)`). Backgrounds utilize subtle noise textures over radial gradient meshes.
+- **Material Symbols** (outlined) where referenced in components.
+- **Brand marks (ecosystems band):** [`simple-icons`](https://simpleicons.org/) (CC0) for SAP, Google Ads, Google Analytics, Meta; **Devicon** (MIT) for AWS and Azure SVGs (Simple Icons no longer ships those brands in current releases). Rendered **monochrome** using `text-primary` / `fill-current`.
 
-## Design Tokens
+## Design tokens (illustrative)
 
 ```css
+/* Subset — full set in globals.css :root and @theme inline */
 :root {
-  --color-primary: #00F0FF;
-  --color-background: #090A0F;
-  --color-surface: #12141D;
-  --color-text: #F1F5F9;
-  --color-muted: #64748B;
-  --color-accent: #B026FF;
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Outfit', sans-serif;
-  --radius: 0px;
-  --spacing: 8px;
+  --primary: #006a64;
+  --primary-container: #16b2a8;
+  --surface: #f7f9ff;
+  --on-surface: #001d32;
+  --background: #f7f9ff;
 }
 ```
 
@@ -79,119 +95,68 @@ Distinctive, geometric, and unapologetically digital.
 ---
 
 <details>
-<summary>Screen Specifications</summary>
+<summary>Screen specifications (current build)</summary>
 
 ### Home
 
-**Purpose:** Hook the user, establish tech authority, and drive them to case studies or contact.
-
-**Layout:** Full viewport hero with glowing orb background, client logo ticker strip, 3-column service highlight, bottom CTA.
-
-**Key Elements:**
-- **Hero Title:** `Space Grotesk`, 72px, leading-tight. "Data-Driven. Future-Obsessed."
-- **Primary CTA:** `#00F0FF` background, black text, 0px radius, sharp hover glow.
-- **Client Marquee:** Infinite scroll of greyscale logos that turn full color on hover.
-
-**States:**
-- **Loading:** Entire screen fades in from black, hero text reveals line by line.
-
-**Components:**
-- **Service Highlight Card:** 350x350px, `#12141D` surface, 1px `#1E293B` border, top-left neon icon.
-
-**Interactions:**
-- **Hover Service Card:** Border transitions to `#00F0FF`, slight negative Y-axis translation (-4px), 300ms ease.
+- **Hero:** Split layout—headline + supporting copy + **ContactInquiryForm** (`variant="hero"`).
+- **Ecosystems band:** Title **“Tools & ecosystems we operate in”**; flex/grid of brand logos; hover opacity transition on row.
+- **Downstream sections:** Value props, stats, services teaser, CTAs—per [`stitch-tech-site/src/app/page.tsx`](stitch-tech-site/src/app/page.tsx).
 
 ### Services
 
-**Purpose:** Detail technical and marketing capabilities.
-
-**Layout:** Sticky left sidebar for navigation, right-side scrolling content blocks.
-
-**Key Elements:**
-- **Nav Sidebar:** Tracks current scroll position, active link glows `#B026FF`.
-- **Service Block:** Large `Space Grotesk` header, 2-column body text, bulleted feature list.
-- **Tech Stack Grid:** Mini-logos of tools used (e.g., AWS, React, Google Ads, HubSpot).
-
-**States:**
-- **Empty:** N/A - static content.
-
-**Components:**
-- **Feature Bullet:** Custom `>` chevron icon in `#00F0FF`, 16px text.
-
-**Interactions:**
-- **Scroll:** Sidebar nav highlights automatically sync with right-side content sections.
+- Hub and child routes under `/services/...` as in app directory.
 
 ### Case Studies
 
-**Purpose:** Prove ROI with hard numbers and visually striking project representations.
+- Static/marketing page structure as implemented.
 
-**Layout:** Asymmetrical masonry grid, full-width rows alternating with 50/50 splits.
+### About
 
-**Key Elements:**
-- **Stat Callout:** Massive 64px numbers (`+340%`) in `#00F0FF` overlaid on dark project images.
-- **Project Title:** Bottom-left aligned inside the card, stark white against a dark gradient overlay.
-- **Filter Bar:** Top sticky bar to filter by "Marketing", "Consulting", "Dev".
+- **Hero:** Large headline + circular portrait (external image URL as currently coded—**not** the team grid photos).
+- **Mission, values grid, timeline** as in page.
+- **Team:** Three cards; **`next/image`** with `fill` + `aspect-[3/4]`; grayscale until hover; names and titles as specified in PRD overview.
 
-**States:**
-- **Loading:** Skeleton pulses in `#12141D` before images lazy-load.
-- **Empty:** "No case studies match this filter." in `#64748B`.
+### Contact
 
-**Components:**
-- **Filter Button:** Transparent background, bottom border only. Active state gets 2px `#00F0FF` bottom border.
+- Two-column layout: copy + **ContactInquiryForm**; optional WhatsApp in contact details when env is set.
 
-**Interactions:**
-- **Hover Case Study:** Image scales up 1.05x inside container, stat callout opacity fades in from 0 to 1.
+### FAQ
 
-### About Us
-
-**Purpose:** Humanize the agency while maintaining the high-tech, aggressive branding.
-
-**Layout:** Split-screen mission statement, horizontal timeline, 4-column team grid.
-
-**Key Elements:**
-- **Hero Mission:** "We don't follow trends. We architect them."
-- **Team Card:** Grayscale headshots, stark contrasting text.
-- **Timeline:** Glowing horizontal line spanning the screen with pulsing nodes for key years.
-
-**Components:**
-- **Team Headshot:** 250x300px, CSS `filter: grayscale(100%) contrast(120%)`.
-
-**Interactions:**
-- **Hover Team Card:** Headshot transitions to full color, revealing a `#B026FF` bottom accent border.
-
-### Contact Us
-
-**Purpose:** Frictionless lead generation.
-
-**Layout:** 50/50 split. Left side: large typography and direct email. Right side: dynamic form.
-
-**Key Elements:**
-- **Large Contact Heading:** 64px, "Ready to scale?"
-- **Form Inputs:** No borders except a 1px bottom border `#64748B`. Floating labels.
-- **Submit Button:** Full width, `#B026FF` background transitioning to `#00F0FF` on hover.
-
-**States:**
-- **Loading:** Submit button text changes to "Transmitting..." with a pulsing opacity.
-- **Error:** Bottom border of invalid inputs turns `#EF4444`, shaking animation (300ms).
-- **Success:** Form replaced by a large `#00F0FF` checkmark and "Signal Received."
-
-**Interactions:**
-- **Focus Input:** Bottom border expands and glows `#00F0FF`, label floats to -20px Y.
+- Categories and accordion UI; content driven from `faqCategories` data.
 
 </details>
 
 ---
 
 <details>
-<summary>Build Guide</summary>
+<summary>Build guide</summary>
 
-**Stack:** HTML + Tailwind CSS v3
+## Stack
 
-**Build Order:**
-1. **Home:** Establishes the core variables, global layout (nav/footer), typography, and the dark/neon aesthetic.
-2. **Contact Us:** Nails down the form UI components, input states, and button micro-interactions crucial for conversion.
-3. **Services:** Builds the complex layout structures (sticky sidebars, typography hierarchy for long-form content).
-4. **Case Studies:** Implements grid layouts, image handling, and complex hover state animations.
-5. **About Us:** Reuses components from Home and Case Studies, adding the timeline and profile cards.
+- **Framework:** Next.js **16** (App Router).
+- **UI:** React **19**, **Tailwind CSS v4** (`@import "tailwindcss"` + `@theme inline`).
+- **Language:** TypeScript.
+- **Data / APIs:** Prisma + SQLite (Better SQLite adapter); **Nodemailer** for contact email.
+- **Brand SVG dependencies:** `simple-icons`, `devicon` (see [`PlatformsWeWorkWithLogos.tsx`](stitch-tech-site/src/components/PlatformsWeWorkWithLogos.tsx)).
+
+## Local development
+
+- From `stitch-tech-site/`: `npm install`, `npm run dev`, `npm run build`.
+
+## Content & assets
+
+- **Team photos:** [`stitch-tech-site/public/team/`](stitch-tech-site/public/team/) (`ajay-headshot.png`, `suraj-headshot.png`, `raman-headshot.png`); source originals may live under repo [`assets/`](assets/) (optional; not required for production build if `public/team` is present).
+
+## Environment
+
+- **`NEXT_PUBLIC_WHATSAPP_NUMBER`:** Enables WhatsApp deep links and floating button (see [`stitch-tech-site/src/lib/whatsapp.ts`](stitch-tech-site/src/lib/whatsapp.ts)).
 
 </details>
+
+---
+
+## Out of scope / notes
+
+- This PRD describes the **stitch-tech-site** product. Earlier concepts (dark theme, Space Grotesk/Outfit, neon cyan/purple) are **superseded** by the light teal/blue system above unless a separate “concept exploration” doc is created.
+- Trademark: ecosystem logos are **display-only**; they do not imply official partnership unless separately approved and copy is updated.
