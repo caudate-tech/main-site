@@ -1,4 +1,8 @@
 import Link from 'next/link';
+import DigitalMarketingSuite from '@/components/DigitalMarketingSuite';
+import ServicePortfolio from '@/components/ServicePortfolio';
+import ServicesCategoryNav from '@/components/ServicesCategoryNav';
+import { portfolioIntro } from '@/data/service-portfolio';
 
 export default function ServicesPage() {
   return (
@@ -6,12 +10,15 @@ export default function ServicesPage() {
       <header className="max-w-7xl mx-auto px-8 py-16 md:py-24">
         <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="flex-1 space-y-6">
-            <span className="text-sm font-bold tracking-[0.2em] uppercase text-primary">Strategic Excellence</span>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] text-on-surface">Digital architecture built for scale.</h1>
-            <p className="text-lg md:text-xl text-on-surface-variant max-xl leading-relaxed">We don't just provide services; we architect growth engines. Every engagement is a precision-engineered path toward market dominance.</p>
-            <Link href="/services/digital-marketing" className="inline-flex items-center gap-2 text-primary font-bold hover:underline">
-              View Full Marketing Suite <span className="material-symbols-outlined text-sm">arrow_forward</span>
-            </Link>
+            <span className="text-sm font-bold tracking-[0.2em] uppercase text-primary">
+              {portfolioIntro.eyebrow}: Service Portfolio
+            </span>
+            <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] text-on-surface">
+              {portfolioIntro.title}
+            </h1>
+            <p className="text-lg md:text-xl text-on-surface-variant max-xl leading-relaxed">
+              {portfolioIntro.body}
+            </p>
           </div>
           <div className="flex-1 w-full aspect-square md:aspect-[4/5] rounded-[2rem] overflow-hidden relative">
             <img 
@@ -22,21 +29,56 @@ export default function ServicesPage() {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
           </div>
         </div>
+        <div className="mt-16 md:mt-20">
+          <ServicesCategoryNav variant="hero" />
+        </div>
       </header>
 
-      {/* Jump Navigation */}
-      <div className="sticky top-[74px] z-40 bg-surface-container-low/90 backdrop-blur-md border-y border-outline-variant/10">
-        <div className="max-w-7xl mx-auto px-8 py-4 overflow-x-auto whitespace-nowrap flex gap-8 items-center no-scrollbar">
-          <span className="text-xs font-bold text-outline uppercase tracking-widest hidden lg:inline">Quick Jump:</span>
-          <a className="text-sm font-bold text-secondary hover:text-primary transition-colors" href="#strategy">Digital Strategy</a>
-          <a className="text-sm font-bold text-secondary hover:text-primary transition-colors" href="#seo">SEO</a>
-          <a className="text-sm font-bold text-secondary hover:text-primary transition-colors" href="#paid-media">Paid Media</a>
-          <a className="text-sm font-bold text-secondary hover:text-primary transition-colors" href="#content">Content Strategy</a>
+      {/* Sticky category bar */}
+      <div className="sticky top-[74px] z-40 border-y border-outline-variant/10 bg-surface-container-low/95 backdrop-blur-md">
+        <div className="max-w-7xl mx-auto px-8 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <span className="text-[10px] font-black text-outline uppercase tracking-widest shrink-0 text-center sm:text-left">
+            Jump to category
+          </span>
+          <ServicesCategoryNav variant="sticky" />
         </div>
       </div>
 
-      {/* Services Grid */}
-      <section className="max-w-7xl mx-auto px-8 mt-24 space-y-32 mb-48">
+      {/* SAP & enterprise portfolio (SAP-Products.md) */}
+      <section className="max-w-7xl mx-auto px-8 mt-24 mb-8">
+        <ServicePortfolio />
+      </section>
+
+      {/* Digital marketing suite */}
+      <section
+        id="digital-suite"
+        className="max-w-7xl mx-auto px-8 pt-16 border-t border-outline-variant/15 scroll-mt-40"
+      >
+        <div className="mb-12 max-w-3xl">
+          <span className="text-sm font-bold tracking-[0.2em] uppercase text-primary">Digital growth</span>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-on-surface mt-4">
+            Combined digital marketing suite
+          </h2>
+          <p className="text-lg text-on-surface-variant mt-4 leading-relaxed">
+            Six integrated practices—strategy, generative &amp; technical SEO, content and social, paid and ABM, web and commerce, and lifecycle automation—layered on a stable enterprise core.
+          </p>
+        </div>
+        <DigitalMarketingSuite />
+      </section>
+
+      <section
+        id="spotlight-programs"
+        className="max-w-7xl mx-auto px-8 pt-24 space-y-32 mb-48 border-t border-outline-variant/10 scroll-mt-40"
+      >
+        <div className="max-w-3xl">
+          <span className="text-sm font-bold tracking-[0.2em] uppercase text-primary">Spotlight programs</span>
+          <h2 className="text-3xl md:text-4xl font-black tracking-tighter text-on-surface mt-4">
+            Deeper dives &amp; case-ready narratives
+          </h2>
+          <p className="text-on-surface-variant mt-3 leading-relaxed">
+            Visual overviews below map to our consulting, SEO, paid media, and content strategy engagements.
+          </p>
+        </div>
         {/* 01. Digital Strategy & Consulting */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start scroll-mt-40" id="strategy">
           <div className="lg:col-span-5 space-y-8">

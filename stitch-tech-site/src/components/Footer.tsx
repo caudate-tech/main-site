@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { serviceCategories } from '@/data/service-categories';
 
 const NewsletterForm = () => {
   const [email, setEmail] = useState('');
@@ -70,12 +71,23 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <h4 className="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Solutions</h4>
-          <ul className="space-y-4">
-            <li><Link href="/services" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">Consulting</Link></li>
-            <li><Link href="/services" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">SEO Strategy</Link></li>
-            <li><Link href="/services" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">Paid Media</Link></li>
-            <li><Link href="/services" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">Content Architecture</Link></li>
+          <h4 className="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Services</h4>
+          <ul className="space-y-3">
+            <li>
+              <Link href="/services" className="text-outline hover:text-primary font-body text-sm font-bold transition-transform duration-200 hover:translate-x-1 block">
+                All services
+              </Link>
+            </li>
+            {serviceCategories.map((c) => (
+              <li key={c.id}>
+                <Link
+                  href={c.href}
+                  className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block"
+                >
+                  {c.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div>

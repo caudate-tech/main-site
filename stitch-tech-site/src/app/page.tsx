@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import ServicesCategoryNav from '@/components/ServicesCategoryNav';
 
 export default function Home() {
   return (
@@ -112,48 +112,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Service categories — same four paths as /services */}
       <section className="py-24 bg-surface-container-low">
         <div className="max-w-7xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
             <div className="max-w-2xl">
-              <span className="text-primary font-bold tracking-widest uppercase text-sm">Our Capabilities</span>
-              <h2 className="text-4xl lg:text-5xl font-black tracking-tighter mt-4">Growth Architectures</h2>
+              <span className="text-primary font-bold tracking-widest uppercase text-sm">What we offer</span>
+              <h2 className="text-4xl lg:text-5xl font-black tracking-tighter mt-4">
+                Four ways to explore our work
+              </h2>
+              <p className="text-on-surface-variant mt-4 leading-relaxed max-w-xl">
+                SAP and infrastructure, pipeline programs, the full digital marketing suite, and visual program guides—each opens on the Services page.
+              </p>
             </div>
-            <Link href="/services" className="text-primary font-bold flex items-center gap-2 group">
-              View All Services 
+            <Link href="/services" className="text-primary font-bold flex items-center gap-2 group shrink-0">
+              Services overview
               <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Consulting Card */}
-            <div className="bg-surface-container-lowest p-10 rounded-[2rem] hover:shadow-2xl transition-all duration-500 group">
-              <span className="material-symbols-outlined text-4xl text-primary mb-8">insights</span>
-              <h3 className="text-2xl font-bold mb-4">Strategic Consulting</h3>
-              <p className="text-on-surface-variant mb-8 leading-relaxed">High-level digital roadmap development for enterprises looking to redefine their market position.</p>
-              <Link className="inline-flex items-center text-primary font-bold hover:gap-3 transition-all" href="/services">
-                Learn More <span className="material-symbols-outlined ml-2 text-sm">north_east</span>
-              </Link>
-            </div>
-            {/* SEO Card */}
-            <div className="bg-surface-container-lowest p-10 rounded-[2rem] hover:shadow-2xl transition-all duration-500 group">
-              <span className="material-symbols-outlined text-4xl text-primary mb-8">travel_explore</span>
-              <h3 className="text-2xl font-bold mb-4">Organic Authority</h3>
-              <p className="text-on-surface-variant mb-8 leading-relaxed">Technical SEO and content architecture designed to dominate search landscapes for high-intent keywords.</p>
-              <Link className="inline-flex items-center text-primary font-bold hover:gap-3 transition-all" href="/services">
-                Learn More <span className="material-symbols-outlined ml-2 text-sm">north_east</span>
-              </Link>
-            </div>
-            {/* Paid Media Card */}
-            <div className="bg-surface-container-lowest p-10 rounded-[2rem] hover:shadow-2xl transition-all duration-500 group">
-              <span className="material-symbols-outlined text-4xl text-primary mb-8">ads_click</span>
-              <h3 className="text-2xl font-bold mb-4">Paid Performance</h3>
-              <p className="text-on-surface-variant mb-8 leading-relaxed">Aggressive ROI-focused media buying across Search, Social, and Programmatic networks.</p>
-              <Link className="inline-flex items-center text-primary font-bold hover:gap-3 transition-all" href="/services">
-                Learn More <span className="material-symbols-outlined ml-2 text-sm">north_east</span>
-              </Link>
-            </div>
-          </div>
+          <ServicesCategoryNav variant="hero" />
         </div>
       </section>
 
