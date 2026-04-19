@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import ContactInquiryForm from '@/components/ContactInquiryForm';
 import ServicesCategoryNav from '@/components/ServicesCategoryNav';
+import PlatformsWeWorkWithLogos from '@/components/PlatformsWeWorkWithLogos';
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-surface py-16 lg:py-24">
+      <section className="relative overflow-visible bg-surface py-12 lg:py-16">
         <div className="absolute -top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none hidden lg:block" />
-        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           <div className="z-10">
             <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-primary bg-primary-container/20 rounded-full uppercase">Engineered Growth</span>
             <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tighter leading-[1.1] text-on-surface mb-6">
@@ -32,16 +33,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust / Logo Section */}
+      {/* Tools & ecosystems */}
       <section className="py-16 bg-surface-container-lowest">
         <div className="max-w-7xl mx-auto px-8">
-          <p className="text-center text-xs font-bold tracking-[0.2em] text-outline uppercase mb-10">Trusted by Global Industry Leaders</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            <span className="text-2xl font-black tracking-tighter">VOLTAIC</span>
-            <span className="text-2xl font-black tracking-tighter">HEXA_CORP</span>
-            <span className="text-2xl font-black tracking-tighter">NEURALINK</span>
-            <span className="text-2xl font-black tracking-tighter">QUANTUM</span>
-            <span className="text-2xl font-black tracking-tighter">APEX_BIO</span>
+          <p className="text-center text-xs font-bold tracking-[0.2em] text-outline uppercase mb-3">
+            Tools & ecosystems we operate in
+          </p>
+          <p className="text-center text-sm text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed">
+            SAP landscapes, cloud foundations, and growth channels including Google and Meta ads, day to day.
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 sm:gap-x-10 lg:gap-x-14 opacity-80 hover:opacity-100 transition-opacity duration-500">
+            <PlatformsWeWorkWithLogos />
           </div>
         </div>
       </section>

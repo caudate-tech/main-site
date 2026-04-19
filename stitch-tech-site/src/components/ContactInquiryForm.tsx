@@ -3,12 +3,15 @@
 import { useState } from 'react';
 import { getWhatsAppChatUrl } from '@/lib/whatsapp';
 
-const SERVICES = [
-  'UI/UX Design',
-  'Cloud Architecture',
-  'AI Engineering',
-  'Product Strategy',
-];
+/** Single-select options aligned with how clients actually buy from the site. */
+const SERVICE_INTEREST_OPTIONS = [
+  { value: 'Enterprise & SAP', label: 'Enterprise & SAP' },
+  { value: 'Pipeline & growth', label: 'Pipeline & growth' },
+  { value: 'Digital marketing suite', label: 'Digital marketing suite' },
+  { value: 'Google Ads & paid media', label: 'Google Ads & paid media' },
+  { value: 'Program guides / consulting', label: 'Program guides / consulting' },
+  { value: 'Multiple or not sure yet', label: 'Multiple or not sure yet' },
+] as const;
 
 type ContactInquiryFormProps = {
   className?: string;
@@ -20,22 +23,17 @@ export default function ContactInquiryForm({
   variant = 'default',
 }: ContactInquiryFormProps) {
   const whatsappUrl = getWhatsAppChatUrl();
+  const isHero = variant === 'hero';
 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     website: '',
     budget: '$10k - $25k',
+    serviceInterest: '',
     message: '',
   });
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-
-  const toggleService = (service: string) => {
-    setSelectedServices((prev) =>
-      prev.includes(service) ? prev.filter((s) => s !== service) : [...prev, service],
-    );
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,8 +44,12 @@ export default function ContactInquiryForm({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          ...formData,
-          services: selectedServices,
+          name: formData.name,
+          email: formData.email,
+          website: formData.website,
+          budget: formData.budget,
+          services: formData.serviceInterest ? [formData.serviceInterest] : [],
+          message: formData.message.trim(),
         }),
       });
 
@@ -58,9 +60,9 @@ export default function ContactInquiryForm({
           email: '',
           website: '',
           budget: '$10k - $25k',
+          serviceInterest: '',
           message: '',
         });
-        setSelectedServices([]);
       } else {
         setStatus('error');
       }
@@ -69,48 +71,47 @@ export default function ContactInquiryForm({
     }
   };
 
+  const cardPad = isHero ? 'p-5 sm:p-6 md:p-7' : 'p-8 md:p-12';
+  const fieldY = 'py-3';
+  const formGap = isHero ? 'space-y-4' : 'space-y-6';
+  const gridGap = isHero ? 'gap-4' : 'gap-6';
+
   return (
     <div
-      className={`bg-surface-container-lowest p-8 md:p-12 rounded-[2rem] shadow-sm relative overflow-hidden ${className}`.trim()}
+      className={`bg-surface-container-lowest ${cardPad} rounded-[2rem] shadow-sm relative overflow-hidden max-h-none ${className}`.trim()}
     >
       <div className="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-full blur-3xl -mr-16 -mt-16" />
 
       {status === 'success' ? (
-        <div className="relative z-10 text-center py-12">
-          <span className="material-symbols-outlined text-6xl text-primary mb-6">check_circle</span>
-          <h2 className="text-3xl font-black mb-4">Inquiry Received</h2>
-          <p className="text-on-surface-variant">
-            Thank you for reaching out. An architect will review your project and respond within 4
-            business hours.
+        <div className="relative z-10 text-center py-8 md:py-10">
+          <span className="material-symbols-outlined text-5xl text-primary mb-4">check_circle</span>
+          <h2 className="text-2xl md:text-3xl font-black mb-3">Inquiry Received</h2>
+          <p className="text-on-surface-variant text-sm md:text-base">
+            Thank you for reaching out. We will review your note and respond within 4 business hours.
           </p>
           <button
             type="button"
             onClick={() => setStatus('idle')}
-            className="mt-8 text-primary font-bold hover:underline"
+            className="mt-6 text-primary font-bold hover:underline text-sm"
           >
             Send another message
           </button>
         </div>
       ) : (
         <>
-          {variant === 'hero' ? (
-            <div className="relative z-10 mb-6 space-y-3">
-              <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
-                <span className="material-symbols-outlined text-base">rocket_launch</span>
-                Fast response
-              </span>
-              <h2 className="text-2xl md:text-3xl font-black tracking-tight text-on-surface leading-tight">
+          {isHero ? (
+            <div className="relative z-10 mb-4 space-y-1.5">
+              <h2 className="text-xl sm:text-2xl font-black tracking-tight text-on-surface leading-snug">
                 Tell us what you are building. We reply the same business day.
               </h2>
-              <p className="text-sm md:text-base text-on-surface-variant leading-relaxed max-w-xl">
-                SAP, Google Ads, growth programs, or full digital suite: drop a short brief below and
-                a specialist will follow up with next steps, not a generic autoresponder.
+              <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Pick your primary focus, add details if you want, and send. No extra clicks.
               </p>
             </div>
           ) : null}
 
-          {whatsappUrl ? (
-            <p className="relative z-10 mb-6 text-sm text-on-surface-variant">
+          {whatsappUrl && !isHero ? (
+            <p className="relative z-10 mb-5 text-sm text-on-surface-variant">
               <span className="font-semibold text-on-surface">Prefer WhatsApp?</span>{' '}
               <a
                 href={whatsappUrl}
@@ -123,25 +124,29 @@ export default function ContactInquiryForm({
             </p>
           ) : null}
 
-          <form onSubmit={handleSubmit} className="relative z-10 space-y-8">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-wider text-outline">Full Name</label>
+          <form onSubmit={handleSubmit} className={`relative z-10 ${formGap}`}>
+            <div className={`grid sm:grid-cols-2 ${gridGap}`}>
+              <div className="space-y-1.5">
+                <label className="text-[10px] font-bold uppercase tracking-wider text-outline">
+                  Full Name
+                </label>
                 <input
                   required
-                  className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all"
-                  placeholder="John Architect"
+                  className={`w-full bg-surface-container-low border-none rounded-xl px-3 ${fieldY} focus:ring-2 focus:ring-primary-container transition-all text-sm`}
+                  placeholder="Jane Doe"
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
               </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-wider text-outline">Work Email</label>
+              <div className="space-y-1.5">
+                <label className="text-[10px] font-bold uppercase tracking-wider text-outline">
+                  Work Email
+                </label>
                 <input
                   required
-                  className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all"
-                  placeholder="john@company.com"
+                  className={`w-full bg-surface-container-low border-none rounded-xl px-3 ${fieldY} focus:ring-2 focus:ring-primary-container transition-all text-sm`}
+                  placeholder="you@company.com"
                   type="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -149,21 +154,25 @@ export default function ContactInquiryForm({
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-wider text-outline">Company Website</label>
+            <div className={`grid sm:grid-cols-2 ${gridGap}`}>
+              <div className="space-y-1.5">
+                <label className="text-[10px] font-bold uppercase tracking-wider text-outline">
+                  Company Website
+                </label>
                 <input
-                  className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all"
+                  className={`w-full bg-surface-container-low border-none rounded-xl px-3 ${fieldY} focus:ring-2 focus:ring-primary-container transition-all text-sm`}
                   placeholder="https://..."
                   type="url"
                   value={formData.website}
                   onChange={(e) => setFormData({ ...formData, website: e.target.value })}
                 />
               </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-wider text-outline">Estimated Budget</label>
+              <div className="space-y-1.5">
+                <label className="text-[10px] font-bold uppercase tracking-wider text-outline">
+                  Estimated Budget
+                </label>
                 <select
-                  className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all appearance-none"
+                  className={`w-full bg-surface-container-low border-none rounded-xl px-3 ${fieldY} focus:ring-2 focus:ring-primary-container transition-all appearance-none text-sm`}
                   value={formData.budget}
                   onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                 >
@@ -175,57 +184,73 @@ export default function ContactInquiryForm({
               </div>
             </div>
 
-            <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-outline">Service Interest</label>
-              <div className="flex flex-wrap gap-3">
-                {SERVICES.map((service) => (
-                  <button
-                    key={service}
-                    type="button"
-                    onClick={() => toggleService(service)}
-                    className={`px-5 py-2 rounded-full border transition-colors text-sm font-semibold ${
-                      selectedServices.includes(service)
-                        ? 'bg-primary border-primary text-white'
-                        : 'border-outline-variant text-outline hover:bg-surface-container-high'
-                    }`}
-                  >
-                    {service}
-                  </button>
+            <div className="space-y-1.5">
+              <label className="text-[10px] font-bold uppercase tracking-wider text-outline">
+                Service interest <span className="text-error">*</span>
+              </label>
+              <select
+                required
+                className={`w-full bg-surface-container-low border-none rounded-xl px-3 ${fieldY} focus:ring-2 focus:ring-primary-container transition-all appearance-none text-sm`}
+                value={formData.serviceInterest}
+                onChange={(e) => setFormData({ ...formData, serviceInterest: e.target.value })}
+              >
+                <option value="">Choose a focus</option>
+                {SERVICE_INTEREST_OPTIONS.map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
                 ))}
-              </div>
+              </select>
             </div>
 
-            <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-outline">Tell us about your project</label>
+            <div className="space-y-1.5">
+              <label className="text-[10px] font-bold uppercase tracking-wider text-outline">
+                Project notes <span className="font-normal text-outline">(optional)</span>
+              </label>
               <textarea
-                required
-                className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all resize-none"
-                placeholder="What are we building together?"
-                rows={4}
+                className={`w-full bg-surface-container-low border-none rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-primary-container transition-all resize-none text-sm min-h-[4.5rem]`}
+                placeholder="Short context helps us prepare (optional)."
+                rows={isHero ? 2 : 3}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               />
             </div>
 
-            <div className="space-y-6">
+            <div className={`${isHero ? 'space-y-3 pt-1' : 'space-y-4'}`}>
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full bg-gradient-to-r from-primary to-primary-container text-white py-5 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-[0.98] disabled:opacity-50"
+                className="w-full bg-gradient-to-r from-primary to-primary-container text-white py-3.5 sm:py-4 rounded-xl font-bold text-base shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-[0.98] disabled:opacity-50"
               >
-                {status === 'loading' ? 'Sending...' : 'Submit Inquiry'}
+                {status === 'loading' ? 'Sending…' : 'Submit inquiry'}
               </button>
-              <div className="flex items-center justify-center gap-2 text-on-surface-variant text-sm">
-                <span
-                  className="material-symbols-outlined text-primary text-base"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  bolt
-                </span>
-                <span>We typically respond within 2-4 business hours.</span>
+              <div className="flex flex-col items-center gap-2 text-on-surface-variant text-xs sm:text-sm text-center">
+                <div className="flex items-center justify-center gap-2">
+                  <span
+                    className="material-symbols-outlined text-primary text-base"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    bolt
+                  </span>
+                  <span>We typically respond within 2 to 4 business hours.</span>
+                </div>
+                {whatsappUrl ? (
+                  <span>
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-[#128C7E] hover:underline"
+                    >
+                      WhatsApp
+                    </a>
+                    {' · '}
+                    same team
+                  </span>
+                ) : null}
               </div>
               {status === 'error' ? (
-                <p className="text-error text-center font-bold">Failed to send message. Please try again.</p>
+                <p className="text-error text-center font-bold text-sm">Something went wrong. Please try again.</p>
               ) : null}
             </div>
           </form>

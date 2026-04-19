@@ -1,5 +1,6 @@
 import ContactInquiryForm from '@/components/ContactInquiryForm';
 import { getWhatsAppChatUrl } from '@/lib/whatsapp';
+import PlatformsWeWorkWithLogos from '@/components/PlatformsWeWorkWithLogos';
 
 export default function ContactPage() {
   const whatsappUrl = getWhatsAppChatUrl();
@@ -77,16 +78,17 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Social Proof / Client Section */}
+      {/* Tools & ecosystems */}
       <section className="bg-surface-container-low py-16">
         <div className="max-w-7xl mx-auto px-8">
-          <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-outline mb-12">Trusted by industry leaders</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale">
-            <span className="text-2xl font-black tracking-tighter">VOLTAIC</span>
-            <span className="text-2xl font-black tracking-tighter">HEXA_CORP</span>
-            <span className="text-2xl font-black tracking-tighter">NEURALINK</span>
-            <span className="text-2xl font-black tracking-tighter">QUANTUM</span>
-            <span className="text-2xl font-black tracking-tighter">APEX_BIO</span>
+          <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-outline mb-3">
+            Tools & ecosystems we operate in
+          </p>
+          <p className="text-center text-sm text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed">
+            SAP, cloud, and paid media stacks our architects and media leads use in production.
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 sm:gap-x-10 md:gap-x-14 opacity-80 hover:opacity-100 transition-opacity duration-500">
+            <PlatformsWeWorkWithLogos />
           </div>
         </div>
       </section>
