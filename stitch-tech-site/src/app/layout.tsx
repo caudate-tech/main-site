@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppChatButton from "@/components/WhatsAppChatButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
         <Navbar />
         <main className="pt-20 flex-grow">{children}</main>
         <Footer />
+        <WhatsAppChatButton />
       </body>
     </html>
   );

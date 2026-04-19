@@ -1,6 +1,8 @@
 import ContactInquiryForm from '@/components/ContactInquiryForm';
+import { getWhatsAppChatUrl } from '@/lib/whatsapp';
 
 export default function ContactPage() {
+  const whatsappUrl = getWhatsAppChatUrl();
   return (
     <div className="pt-24 min-h-screen">
       {/* Hero Contact Section */}
@@ -43,6 +45,19 @@ export default function ContactPage() {
                     <span className="material-symbols-outlined text-primary">mail</span>
                     <p className="font-bold text-on-surface">hello@caudate.tech</p>
                   </div>
+                  {whatsappUrl ? (
+                    <div className="flex items-center gap-3">
+                      <span className="material-symbols-outlined text-primary">chat</span>
+                      <a
+                        href={whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-[#128C7E] hover:underline"
+                      >
+                        WhatsApp
+                      </a>
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>

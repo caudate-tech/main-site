@@ -4,10 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useState } from "react";
 import {
+  faqPath,
   insightsMenu,
   insightsPaths,
-  solutionsMenu,
-  solutionsRelatedPaths,
+  isDigitalMarketingNavActive,
+  isSapNavActive,
+  solutionNavGroups,
 } from "@/data/navigation";
 
 function isPathActive(pathname: string, href: string) {
@@ -15,21 +17,23 @@ function isPathActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
+type OpenMenu = null | "sap" | "digital" | "insights";
+
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [openMenu, setOpenMenu] = useState<null | "solutions" | "insights">(null);
+  const [openMenu, setOpenMenu] = useState<OpenMenu>(null);
 
-  const solutionsActive = solutionsRelatedPaths.some(
-    (p) => pathname === p || (p !== "/services" && pathname.startsWith(`${p}/`)),
-  );
+  const sapActive = isSapNavActive(pathname);
+  const digitalActive = isDigitalMarketingNavActive(pathname);
   const insightsActive = insightsPaths.some((p) => isPathActive(pathname, p));
+  const faqActive = pathname === faqPath;
   const aboutActive = isPathActive(pathname, "/about");
   const homeActive = pathname === "/";
 
   const closeDropdowns = useCallback(() => setOpenMenu(null), []);
 
-  const navTriggerClass = (active: boolean, menu: "solutions" | "insights") => {
+  const navTriggerClass = (active: boolean, menu: Exclude<OpenMenu, null>) => {
     const isOpen = openMenu === menu;
     return [
       "group relative flex items-center gap-1 py-2 font-semibold tracking-tight transition-colors duration-200",
@@ -60,6 +64,43 @@ export default function Navbar() {
     ].join(" ");
   };
 
+  const renderSolutionPanel = (items: (typeof solutionNavGroups)[0]["items"]) => (
+    <div className="absolute left-0 top-full z-50 w-[min(22rem,calc(100vw-2rem))] pt-3 animate-in fade-in slide-in-from-top-1 duration-200">
+      <div className="rounded-2xl border border-outline-variant/15 bg-white p-2 shadow-xl">
+        <Link
+          href="/services"
+          onClick={closeDropdowns}
+          className="mb-1 block rounded-xl px-3 py-2 text-sm font-normal text-outline transition-colors hover:bg-surface-container-low hover:text-on-surface"
+        >
+          Full services overview
+        </Link>
+        <div className="my-1 border-t border-outline-variant/10" />
+        {items.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            onClick={closeDropdowns}
+            className={dropdownItemClass(item.href)}
+          >
+            <div className="flex items-start gap-3">
+              <span className="material-symbols-outlined mt-0.5 text-lg text-primary">
+                {item.icon}
+              </span>
+              <span>
+                <span className="block text-sm font-semibold leading-snug">
+                  {item.label}
+                </span>
+                <span className="mt-0.5 block text-xs font-normal leading-relaxed text-outline">
+                  {item.sublabel}
+                </span>
+              </span>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-outline-variant/10 bg-white/85 shadow-sm shadow-on-surface/5 backdrop-blur-md">
       <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-8 lg:gap-10">
@@ -76,60 +117,31 @@ export default function Navbar() {
           Caudate Tech
         </Link>
 
-        <div className="hidden items-center gap-10 lg:gap-12 md:flex">
-          <div
-            className="relative"
-            onMouseEnter={() => setOpenMenu("solutions")}
-            onMouseLeave={() => setOpenMenu(null)}
-          >
-            <button
-              type="button"
-              className={navTriggerClass(solutionsActive, "solutions")}
-              aria-expanded={openMenu === "solutions"}
-              aria-haspopup="true"
+        <div className="hidden items-center gap-6 lg:gap-8 md:flex md:flex-wrap">
+          {solutionNavGroups.map((group) => (
+            <div
+              key={group.id}
+              className="relative"
+              onMouseEnter={() => setOpenMenu(group.id)}
+              onMouseLeave={() => setOpenMenu(null)}
             >
-              Solutions
-              <span className="material-symbols-outlined text-base text-current transition-transform group-hover:translate-y-px">
-                expand_more
-              </span>
-            </button>
-            {openMenu === "solutions" ? (
-              <div className="absolute left-0 top-full z-50 w-[min(22rem,calc(100vw-2rem))] pt-3 animate-in fade-in slide-in-from-top-1 duration-200">
-                <div className="rounded-2xl border border-outline-variant/15 bg-white p-2 shadow-xl">
-                  <Link
-                    href="/services"
-                    onClick={closeDropdowns}
-                    className="mb-1 block rounded-xl px-3 py-2 text-sm font-normal text-outline transition-colors hover:bg-surface-container-low hover:text-on-surface"
-                  >
-                    Full services overview
-                  </Link>
-                  <div className="my-1 border-t border-outline-variant/10" />
-                  {solutionsMenu.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={closeDropdowns}
-                      className={dropdownItemClass(item.href)}
-                    >
-                      <div className="flex items-start gap-3">
-                        <span className="material-symbols-outlined mt-0.5 text-lg text-primary">
-                          {item.icon}
-                        </span>
-                        <span>
-                          <span className="block text-sm font-semibold leading-snug">
-                            {item.label}
-                          </span>
-                          <span className="mt-0.5 block text-xs font-normal leading-relaxed text-outline">
-                            {item.sublabel}
-                          </span>
-                        </span>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ) : null}
-          </div>
+              <button
+                type="button"
+                className={navTriggerClass(
+                  group.id === "sap" ? sapActive : digitalActive,
+                  group.id,
+                )}
+                aria-expanded={openMenu === group.id}
+                aria-haspopup="true"
+              >
+                {group.triggerLabel}
+                <span className="material-symbols-outlined text-base text-current transition-transform group-hover:translate-y-px">
+                  expand_more
+                </span>
+              </button>
+              {openMenu === group.id ? renderSolutionPanel(group.items) : null}
+            </div>
+          ))}
 
           <div
             className="relative"
@@ -178,6 +190,14 @@ export default function Navbar() {
           </div>
 
           <Link
+            href={faqPath}
+            className={standaloneLinkClass(faqActive)}
+            aria-current={faqActive ? "page" : undefined}
+          >
+            FAQ
+          </Link>
+
+          <Link
             href="/about"
             className={standaloneLinkClass(aboutActive)}
             aria-current={aboutActive ? "page" : undefined}
@@ -216,36 +236,38 @@ export default function Navbar() {
           className="max-h-[min(75vh,calc(100dvh-5rem))] overflow-y-auto border-t border-outline-variant/15 bg-white/95 backdrop-blur-md md:hidden"
         >
           <div className="flex flex-col gap-6 px-8 py-6">
-            <div>
-              <p className="px-1 text-[10px] font-black uppercase tracking-widest text-outline">
-                Solutions
-              </p>
-              <Link
-                href="/services"
-                className="mt-2 block rounded-xl px-3 py-3 text-sm font-semibold text-on-surface hover:bg-surface-container-low"
-                onClick={() => setMobileOpen(false)}
-              >
-                Full Services Overview
-              </Link>
-              {solutionsMenu.map((item) => (
+            {solutionNavGroups.map((group) => (
+              <div key={group.id}>
+                <p className="px-1 text-[10px] font-black uppercase tracking-widest text-outline">
+                  {group.triggerLabel}
+                </p>
                 <Link
-                  key={item.href}
-                  href={item.href}
-                  className="mt-1 flex gap-3 rounded-xl px-3 py-3 hover:bg-surface-container-low"
+                  href="/services"
+                  className="mt-2 block rounded-xl px-3 py-3 text-sm font-semibold text-on-surface hover:bg-surface-container-low"
                   onClick={() => setMobileOpen(false)}
                 >
-                  <span className="material-symbols-outlined text-primary">
-                    {item.icon}
-                  </span>
-                  <span>
-                    <span className="block text-sm font-semibold">{item.label}</span>
-                    <span className="mt-0.5 block text-xs font-normal text-outline">
-                      {item.sublabel}
-                    </span>
-                  </span>
+                  Full Services Overview
                 </Link>
-              ))}
-            </div>
+                {group.items.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="mt-1 flex gap-3 rounded-xl px-3 py-3 hover:bg-surface-container-low"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    <span className="material-symbols-outlined text-primary">
+                      {item.icon}
+                    </span>
+                    <span>
+                      <span className="block text-sm font-semibold">{item.label}</span>
+                      <span className="mt-0.5 block text-xs font-normal text-outline">
+                        {item.sublabel}
+                      </span>
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            ))}
             <div className="border-t border-outline-variant/10 pt-4">
               <p className="px-1 text-[10px] font-black uppercase tracking-widest text-outline">
                 Insights
@@ -269,6 +291,13 @@ export default function Navbar() {
                 </Link>
               ))}
             </div>
+            <Link
+              href={faqPath}
+              className="rounded-xl px-3 py-3 font-semibold text-on-surface hover:bg-surface-container-low"
+              onClick={() => setMobileOpen(false)}
+            >
+              FAQ
+            </Link>
             <Link
               href="/about"
               className="rounded-xl px-3 py-3 font-semibold text-on-surface hover:bg-surface-container-low"

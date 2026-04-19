@@ -27,7 +27,7 @@ export default function Home() {
             </p>
           </div>
           <div className="relative z-10 w-full">
-            <ContactInquiryForm />
+            <ContactInquiryForm variant="hero" />
           </div>
         </div>
       </section>

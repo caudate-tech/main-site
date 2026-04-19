@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { getWhatsAppChatUrl } from '@/lib/whatsapp';
 
 const SERVICES = [
   'UI/UX Design',
@@ -11,9 +12,15 @@ const SERVICES = [
 
 type ContactInquiryFormProps = {
   className?: string;
+  variant?: 'default' | 'hero';
 };
 
-export default function ContactInquiryForm({ className = '' }: ContactInquiryFormProps) {
+export default function ContactInquiryForm({
+  className = '',
+  variant = 'default',
+}: ContactInquiryFormProps) {
+  const whatsappUrl = getWhatsAppChatUrl();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -85,112 +92,144 @@ export default function ContactInquiryForm({ className = '' }: ContactInquiryFor
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="relative z-10 space-y-8">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-outline">Full Name</label>
-              <input
-                required
-                className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all"
-                placeholder="John Architect"
-                type="text"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              />
-            </div>
-            <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-outline">Work Email</label>
-              <input
-                required
-                className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all"
-                placeholder="john@company.com"
-                type="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              />
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-outline">Company Website</label>
-              <input
-                className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all"
-                placeholder="https://..."
-                type="url"
-                value={formData.website}
-                onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-              />
-            </div>
-            <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-outline">Estimated Budget</label>
-              <select
-                className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all appearance-none"
-                value={formData.budget}
-                onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-              >
-                <option>$10k - $25k</option>
-                <option>$25k - $50k</option>
-                <option>$50k - $100k</option>
-                <option>$100k+</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-outline">Service Interest</label>
-            <div className="flex flex-wrap gap-3">
-              {SERVICES.map((service) => (
-                <button
-                  key={service}
-                  type="button"
-                  onClick={() => toggleService(service)}
-                  className={`px-5 py-2 rounded-full border transition-colors text-sm font-semibold ${
-                    selectedServices.includes(service)
-                      ? 'bg-primary border-primary text-white'
-                      : 'border-outline-variant text-outline hover:bg-surface-container-high'
-                  }`}
-                >
-                  {service}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-outline">Tell us about your project</label>
-            <textarea
-              required
-              className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all resize-none"
-              placeholder="What are we building together?"
-              rows={4}
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            />
-          </div>
-
-          <div className="space-y-6">
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="w-full bg-gradient-to-r from-primary to-primary-container text-white py-5 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-[0.98] disabled:opacity-50"
-            >
-              {status === 'loading' ? 'Sending...' : 'Submit Inquiry'}
-            </button>
-            <div className="flex items-center justify-center gap-2 text-on-surface-variant text-sm">
-              <span
-                className="material-symbols-outlined text-primary text-base"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                bolt
+        <>
+          {variant === 'hero' ? (
+            <div className="relative z-10 mb-6 space-y-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
+                <span className="material-symbols-outlined text-base">rocket_launch</span>
+                Fast response
               </span>
-              <span>We typically respond within 2-4 business hours.</span>
+              <h2 className="text-2xl md:text-3xl font-black tracking-tight text-on-surface leading-tight">
+                Tell us what you are building. We reply the same business day.
+              </h2>
+              <p className="text-sm md:text-base text-on-surface-variant leading-relaxed max-w-xl">
+                SAP, Google Ads, growth programs, or full digital suite: drop a short brief below and
+                a specialist will follow up with next steps, not a generic autoresponder.
+              </p>
             </div>
-            {status === 'error' ? (
-              <p className="text-error text-center font-bold">Failed to send message. Please try again.</p>
-            ) : null}
-          </div>
-        </form>
+          ) : null}
+
+          {whatsappUrl ? (
+            <p className="relative z-10 mb-6 text-sm text-on-surface-variant">
+              <span className="font-semibold text-on-surface">Prefer WhatsApp?</span>{' '}
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-[#128C7E] hover:underline"
+              >
+                Open chat with Caudate
+              </a>
+            </p>
+          ) : null}
+
+          <form onSubmit={handleSubmit} className="relative z-10 space-y-8">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label className="text-xs font-bold uppercase tracking-wider text-outline">Full Name</label>
+                <input
+                  required
+                  className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all"
+                  placeholder="John Architect"
+                  type="text"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-xs font-bold uppercase tracking-wider text-outline">Work Email</label>
+                <input
+                  required
+                  className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all"
+                  placeholder="john@company.com"
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                />
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label className="text-xs font-bold uppercase tracking-wider text-outline">Company Website</label>
+                <input
+                  className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all"
+                  placeholder="https://..."
+                  type="url"
+                  value={formData.website}
+                  onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-xs font-bold uppercase tracking-wider text-outline">Estimated Budget</label>
+                <select
+                  className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all appearance-none"
+                  value={formData.budget}
+                  onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                >
+                  <option>$10k - $25k</option>
+                  <option>$25k - $50k</option>
+                  <option>$50k - $100k</option>
+                  <option>$100k+</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-xs font-bold uppercase tracking-wider text-outline">Service Interest</label>
+              <div className="flex flex-wrap gap-3">
+                {SERVICES.map((service) => (
+                  <button
+                    key={service}
+                    type="button"
+                    onClick={() => toggleService(service)}
+                    className={`px-5 py-2 rounded-full border transition-colors text-sm font-semibold ${
+                      selectedServices.includes(service)
+                        ? 'bg-primary border-primary text-white'
+                        : 'border-outline-variant text-outline hover:bg-surface-container-high'
+                    }`}
+                  >
+                    {service}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-xs font-bold uppercase tracking-wider text-outline">Tell us about your project</label>
+              <textarea
+                required
+                className="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary-container transition-all resize-none"
+                placeholder="What are we building together?"
+                rows={4}
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              />
+            </div>
+
+            <div className="space-y-6">
+              <button
+                type="submit"
+                disabled={status === 'loading'}
+                className="w-full bg-gradient-to-r from-primary to-primary-container text-white py-5 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-[0.98] disabled:opacity-50"
+              >
+                {status === 'loading' ? 'Sending...' : 'Submit Inquiry'}
+              </button>
+              <div className="flex items-center justify-center gap-2 text-on-surface-variant text-sm">
+                <span
+                  className="material-symbols-outlined text-primary text-base"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  bolt
+                </span>
+                <span>We typically respond within 2-4 business hours.</span>
+              </div>
+              {status === 'error' ? (
+                <p className="text-error text-center font-bold">Failed to send message. Please try again.</p>
+              ) : null}
+            </div>
+          </form>
+        </>
       )}
     </div>
   );

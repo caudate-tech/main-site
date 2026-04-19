@@ -96,6 +96,7 @@ const Footer = () => {
             <li><Link href="/about" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">About Us</Link></li>
             <li><Link href="/case-studies" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">Case Studies</Link></li>
             <li><Link href="/contact" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">Contact</Link></li>
+            <li><Link href="/faq" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">FAQ</Link></li>
             <li><Link href="/privacy-policy" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">Privacy Policy</Link></li>
           </ul>
         </div>
