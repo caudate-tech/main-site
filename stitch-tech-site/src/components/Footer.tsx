@@ -96,13 +96,13 @@ const Footer = () => {
             <li><Link href="/about" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">About Us</Link></li>
             <li><Link href="/case-studies" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">Case Studies</Link></li>
             <li><Link href="/contact" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">Contact</Link></li>
-            <li><Link href="#" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">Privacy Policy</Link></li>
+            <li><Link href="/privacy-policy" className="text-outline hover:text-primary font-body text-sm transition-transform duration-200 hover:translate-x-1 block">Privacy Policy</Link></li>
           </ul>
         </div>
         <NewsletterForm />
       </div>
       <div className="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div className="text-outline font-body text-sm">© 2024 Caudate Tech. All rights reserved.</div>
+        <div className="text-outline font-body text-sm">© 2026 Caudate Technologies. All rights reserved.</div>
         <div className="flex gap-6">
           <a className="text-outline-variant hover:text-primary" href="#"><span className="material-symbols-outlined">public</span></a>
           <a className="text-outline-variant hover:text-primary" href="#"><span className="material-symbols-outlined">hub</span></a>
