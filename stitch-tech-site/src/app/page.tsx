@@ -1,45 +1,33 @@
 import Link from 'next/link';
+import ContactInquiryForm from '@/components/ContactInquiryForm';
 import ServicesCategoryNav from '@/components/ServicesCategoryNav';
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[921px] flex items-center overflow-hidden bg-surface">
-        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="relative overflow-hidden bg-surface py-16 lg:py-24">
+        <div className="absolute -top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none hidden lg:block" />
+        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="z-10">
             <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-primary bg-primary-container/20 rounded-full uppercase">Engineered Growth</span>
             <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tighter leading-[1.1] text-on-surface mb-6">
               Strategic Digital Growth for the <span className="text-primary">Modern Enterprise</span>
             </h1>
-            <p className="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-xl">
+            <p className="text-xl text-on-surface-variant leading-relaxed mb-8 max-w-xl">
               We architect high-performance digital ecosystems that drive measurable ROI. Transforming traditional market leaders into digital-first giants through data-driven precision.
             </p>
-            <div className="bg-surface-container-low p-2 rounded-2xl max-w-md flex flex-col sm:flex-row gap-2 shadow-sm">
-              <input className="flex-grow bg-transparent border-none focus:ring-0 px-4 text-on-surface" placeholder="Enter your business email" type="email" />
-              <button className="hero-gradient text-white px-6 py-4 rounded-xl font-bold transition-all duration-300 hover:opacity-95 whitespace-nowrap">
-                Free Strategy Audit
-              </button>
-            </div>
-            <p className="mt-4 text-sm text-outline flex items-center gap-2">
-              <span className="material-symbols-outlined text-sm">check_circle</span>
-              No commitment required. 24-hour turnaround.
+            <p className="text-sm text-on-surface-variant flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span className="material-symbols-outlined text-primary text-base">bolt</span>
+              <span>Start your project below, or</span>
+              <Link href="/contact" className="font-bold text-primary hover:underline">
+                view full contact details
+              </Link>
+              <span>.</span>
             </p>
           </div>
-          <div className="relative hidden lg:block">
-            <div className="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-700">
-              <img 
-                alt="Professional meeting" 
-                className="w-full h-[600px] object-cover" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrJvdwCPvuI_rw2OPQ183p4_lzhb_VSLjHLGdA2Ve3_L4Fbp3uIbUKPntg35VkH54fG7090eiecTobBFV_KUl8dS2wgVvGWvtyB-BWcPgL4srJyaRVog3N0gFbRlEJO624F9weEYZeUbWBcvH6YCx721WWH28gGTpT4XVtHiGTodEDjxnbmPjOzOewUxpigvgndWb6KJFyGhupMT4p2Jd-mERJM_1d2O1WwalQ02h0Qxgihbh_6bzM8bPD0jA7N1_jxz9cpUWRUyY" 
-              />
-            </div>
-            <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-2xl shadow-xl z-20 max-w-[280px]">
-              <div className="text-4xl font-black text-primary mb-1">+142%</div>
-              <div className="text-sm font-bold text-on-surface leading-tight uppercase tracking-wide">Average ROI Increase</div>
-              <div className="mt-2 text-xs text-outline">Across 50+ enterprise clients in 2023.</div>
-            </div>
+          <div className="relative z-10 w-full">
+            <ContactInquiryForm />
           </div>
         </div>
       </section>
