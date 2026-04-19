@@ -222,8 +222,7 @@ export default function Navbar() {
             href="/contact"
             className="nav-cta-neural rounded-xl bg-gradient-to-r from-primary to-primary-container px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/25 transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/35 active:translate-y-0 sm:px-6 sm:text-base"
           >
-            <span className="hidden sm:inline">Start Project</span>
-            <span className="sm:hidden">Start</span>
+            Contact Us
           </Link>
         </div>
 
