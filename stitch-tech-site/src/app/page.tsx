@@ -20,7 +20,7 @@ export default function Home() {
             </p>
             <p className="text-sm text-on-surface-variant flex flex-wrap items-center gap-x-2 gap-y-1">
               <span className="material-symbols-outlined text-primary text-base">bolt</span>
-              <span>Start your project below, or</span>
+              <span>Start your project by filling out the form, or</span>
               <Link href="/contact" className="font-bold text-primary hover:underline">
                 view full contact details
               </Link>
@@ -45,6 +45,28 @@ export default function Home() {
           <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 sm:gap-x-10 lg:gap-x-14 opacity-80 hover:opacity-100 transition-opacity duration-500">
             <PlatformsWeWorkWithLogos />
           </div>
+        </div>
+      </section>
+
+      {/* Service categories: same four paths as /services */}
+      <section className="py-24 bg-surface-container-low">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+            <div className="max-w-2xl">
+              <span className="text-primary font-bold tracking-widest uppercase text-sm">What we offer</span>
+              <h2 className="text-4xl lg:text-5xl font-black tracking-tighter mt-4">
+                Four ways to explore our work
+              </h2>
+              <p className="text-on-surface-variant mt-4 leading-relaxed max-w-xl">
+                SAP and infrastructure, pipeline programs, the full digital marketing suite, and visual program guides. Each opens on the Services page.
+              </p>
+            </div>
+            <Link href="/services" className="text-primary font-bold flex items-center gap-2 group shrink-0">
+              Services overview
+              <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+            </Link>
+          </div>
+          <ServicesCategoryNav variant="hero" />
         </div>
       </section>
 
@@ -100,52 +122,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Service categories: same four paths as /services */}
-      <section className="py-24 bg-surface-container-low">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
-            <div className="max-w-2xl">
-              <span className="text-primary font-bold tracking-widest uppercase text-sm">What we offer</span>
-              <h2 className="text-4xl lg:text-5xl font-black tracking-tighter mt-4">
-                Four ways to explore our work
-              </h2>
-              <p className="text-on-surface-variant mt-4 leading-relaxed max-w-xl">
-                SAP and infrastructure, pipeline programs, the full digital marketing suite, and visual program guides. Each opens on the Services page.
-              </p>
-            </div>
-            <Link href="/services" className="text-primary font-bold flex items-center gap-2 group shrink-0">
-              Services overview
-              <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
-            </Link>
-          </div>
-          <ServicesCategoryNav variant="hero" />
-        </div>
-      </section>
-
-      {/* Testimonial Section */}
-      <section className="py-24 bg-surface-container-highest overflow-hidden relative">
-        <div className="max-w-7xl mx-auto px-8 relative z-10">
-          <div className="max-w-4xl">
-            <span className="material-symbols-outlined text-6xl text-primary/30 mb-8">format_quote</span>
-            <blockquote className="text-3xl md:text-4xl font-bold text-on-surface leading-tight mb-12">
-              "Caudate Tech didn't just provide us with marketing services; they rebuilt our entire digital acquisition engine. Within six months, our customer acquisition cost dropped by 40% while volume doubled."
-            </blockquote>
-            <div className="flex items-center gap-6">
-              <img 
-                alt="Executive profile" 
-                className="w-16 h-16 rounded-full object-cover" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIL-W2DI4WR-ESEcg3IEiI_z6yKyoYE8AQOJwROEeZVvDLlCNNzN_2Uw1Yzhh25CY2Vl416mdhTwe5yxUBvLVn6olo9BMpSwPv1wfR_5HEmrLquomhe4uBQDuR1LhD25w3Mi73-AiVZTZcPL5bAbVWGkjSL4p-RmtpgSIoXCdeHG-q1CR4vWqWMCOlPaVmVsbrahzDyLnYPwreHUJmRctF1-To9jRD7cN2MKI_Mf9jV2hG8ATmexuZHKb3Ow9NABH0vIiMD57muMg" 
-              />
-              <div>
-                <div className="font-bold text-xl text-on-surface">Sarah Chen</div>
-                <div className="text-primary font-medium">Chief Marketing Officer, Voltaic Global</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
       </section>
 
       {/* Final Lead Gen CTA */}
