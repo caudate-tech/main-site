@@ -25,7 +25,7 @@ export const sendEmail = async ({ to, subject, html }: { to: string; subject: st
 
   try {
     const info = await transporter.sendMail({
-      from: '"Caudate Tech Site" <noreply@caudate.tech>',
+      from: '"Caudate Tech" <contact@caudate-tech.com>',
       to,
       subject,
       html,

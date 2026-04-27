@@ -23,16 +23,14 @@ export default function ContactPage() {
 
             <div className="grid sm:grid-cols-2 gap-12 pt-8">
               <div className="space-y-4">
-                <h3 className="text-primary font-bold text-sm uppercase tracking-widest">Global Offices</h3>
-                <div className="space-y-6">
-                  <div>
-                    <p className="font-bold text-on-surface">London Studio</p>
-                    <p className="text-on-surface-variant text-sm">24 Architectural Square, EC1V 2NX</p>
-                  </div>
-                  <div>
-                    <p className="font-bold text-on-surface">San Francisco</p>
-                    <p className="text-on-surface-variant text-sm">101 Tech Plaza, SOMA District</p>
-                  </div>
+                <h3 className="text-primary font-bold text-sm uppercase tracking-widest">Office</h3>
+                <div>
+                  <p className="font-bold text-on-surface">Caudate Tech</p>
+                  <p className="text-on-surface-variant text-sm leading-relaxed mt-1">
+                    239 Lakeview Dr
+                    <br />
+                    Ridgewood, NJ 07450
+                  </p>
                 </div>
               </div>
               <div className="space-y-4">
@@ -40,11 +38,21 @@ export default function ContactPage() {
                 <div className="space-y-6">
                   <div className="flex items-center gap-3">
                     <span className="material-symbols-outlined text-primary">call</span>
-                    <p className="font-bold text-on-surface">+1 (555) 012-3456</p>
+                    <a
+                      href="tel:+12016321255"
+                      className="font-bold text-on-surface hover:text-primary hover:underline"
+                    >
+                      +1 201 632 1255
+                    </a>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="material-symbols-outlined text-primary">mail</span>
-                    <p className="font-bold text-on-surface">hello@caudate.tech</p>
+                    <a
+                      href="mailto:contact@caudate-tech.com"
+                      className="font-bold text-on-surface hover:text-primary hover:underline"
+                    >
+                      contact@caudate-tech.com
+                    </a>
                   </div>
                   {whatsappUrl ? (
                     <div className="flex items-center gap-3">
@@ -66,7 +74,7 @@ export default function ContactPage() {
             {/* Decorative Map Element */}
             <div className="relative h-48 rounded-xl overflow-hidden bg-surface-container shadow-inner">
               <img
-                alt="Stylized map showing office locations"
+                alt="Stylized map near Ridgewood, New Jersey"
                 className="w-full h-full object-cover grayscale opacity-50 mix-blend-multiply"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeYMjWQcsbDfsJ00Nm_QugK4QBiM1_Myi-bQmLuLaXf-Kq1x7cPvX88YcvLyLvu5jhmCorqeUAyk9OhoRJkQGkyHrMr6tM56HRly4LL2ZH0bTn-Je1sGBUcSnJ3IZa_7XJ4GWifmj2XdhcF3FpfvHR70mNkr2Fi370jVpl2GnMqqd4qm2wfsT0cQHFx_I54SbRyknT5Q4nGfDnMUQHKSyqELvQnaXe-X2mI50QD1936v00E7hgdWMO86RBkn3joYSY-LcxAJJa624"
               />

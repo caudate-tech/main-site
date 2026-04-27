@@ -22,7 +22,7 @@ export async function POST(req: Request) {
 
     // 2. Send Email Notification
     await sendEmail({
-      to: 'admin@caudate.tech',
+      to: 'contact@caudate-tech.com',
       subject: `New Project Inquiry: ${name}`,
       html: `
         <h2>New Project Inquiry</h2>

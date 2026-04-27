@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 const EFFECTIVE_DATE = 'April 19, 2026';
 const COMPANY = 'Caudate Technologies';
-const EMAIL = 'privacy@caudate.tech';
-const WEBSITE = 'https://caudate.tech';
+const EMAIL = 'contact@caudate-tech.com';
+const WEBSITE = 'https://caudate-tech.com';
 
 const sections = [
   { id: 'overview', label: 'Overview' },
