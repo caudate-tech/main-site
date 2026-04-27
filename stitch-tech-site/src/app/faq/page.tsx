@@ -10,8 +10,27 @@ export const metadata: Metadata = {
 };
 
 export default function FaqPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqCategories.flatMap(cat => 
+      cat.items.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    )
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="max-w-7xl mx-auto px-8 pt-16 pb-12 md:pt-24 md:pb-16 border-b border-outline-variant/15">
         <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">
           Help center

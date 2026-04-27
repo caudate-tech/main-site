@@ -1,5 +1,11 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about Caudate Tech, our engineering team, and our mission to provide scalable digital growth strategies.',
+};
 
 export default function AboutPage() {
   return (

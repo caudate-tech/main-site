@@ -161,8 +161,8 @@ export default function ContactInquiryForm({
                 </label>
                 <input
                   className={`w-full bg-surface-container-low border-none rounded-xl px-3 ${fieldY} focus:ring-2 focus:ring-primary-container transition-all text-sm`}
-                  placeholder="https://..."
-                  type="url"
+                  placeholder="yourcompany.com"
+                  type="text"
                   value={formData.website}
                   onChange={(e) => setFormData({ ...formData, website: e.target.value })}
                 />

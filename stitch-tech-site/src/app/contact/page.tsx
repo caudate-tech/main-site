@@ -1,6 +1,12 @@
+import type { Metadata } from 'next';
 import ContactInquiryForm from '@/components/ContactInquiryForm';
 import { getWhatsAppChatUrl } from '@/lib/whatsapp';
 import PlatformsWeWorkWithLogos from '@/components/PlatformsWeWorkWithLogos';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Get in touch with Caudate Tech. Submit an inquiry for Enterprise SAP, Digital Marketing, or Pipeline Growth strategies.',
+};
 
 export default function ContactPage() {
   const whatsappUrl = getWhatsAppChatUrl();

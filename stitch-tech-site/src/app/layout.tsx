@@ -11,8 +11,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Caudate Tech | Strategic Digital Growth",
+  metadataBase: new URL("https://caudate-tech.com"),
+  title: {
+    default: "Caudate Tech | Strategic Digital Growth",
+    template: "%s | Caudate Tech",
+  },
   description: "Architecting the foundations of digital success through strategic growth and innovative technology solutions.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://caudate-tech.com",
+    title: "Caudate Tech | Strategic Digital Growth",
+    description: "Architecting the foundations of digital success through strategic growth and innovative technology solutions.",
+    siteName: "Caudate Tech",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Caudate Tech | Strategic Digital Growth",
+    description: "Architecting the foundations of digital success through strategic growth and innovative technology solutions.",
+  },
 };
 
 export default function RootLayout({

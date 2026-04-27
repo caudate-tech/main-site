@@ -1,11 +1,41 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import ContactInquiryForm from '@/components/ContactInquiryForm';
 import ServicesCategoryNav from '@/components/ServicesCategoryNav';
 import PlatformsWeWorkWithLogos from '@/components/PlatformsWeWorkWithLogos';
 
+export const metadata: Metadata = {
+  title: 'Home',
+};
+
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Caudate Tech",
+    "alternateName": "Caudate Technologies",
+    "url": "https://caudate-tech.com",
+    "logo": "https://caudate-tech.com/next.svg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-201-632-1255",
+      "contactType": "customer service",
+      "email": "contact@caudate-tech.com",
+      "availableLanguage": "en"
+    },
+    "description": "Architecting the foundations of digital success through strategic growth and innovative technology solutions including Enterprise SAP and Digital Marketing.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <section className="relative overflow-visible bg-surface py-12 lg:py-16">
         <div className="absolute -top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none hidden lg:block" />

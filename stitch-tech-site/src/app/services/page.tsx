@@ -1,8 +1,14 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import DigitalMarketingSuite from '@/components/DigitalMarketingSuite';
 import ServicePortfolio from '@/components/ServicePortfolio';
 import ServicesCategoryNav from '@/components/ServicesCategoryNav';
 import { portfolioIntro } from '@/data/service-portfolio';
+
+export const metadata: Metadata = {
+  title: 'Services',
+  description: 'Explore our comprehensive suite of services including Enterprise SAP, Digital Marketing, Pipeline Growth, and consulting.',
+};
 
 export default function ServicesPage() {
   return (
