@@ -13,6 +13,18 @@ const SERVICE_INTEREST_OPTIONS = [
   { value: 'Multiple or not sure yet', label: 'Multiple or not sure yet' },
 ] as const;
 
+const BUDGET_OPTIONS = [
+  '$300 - $1k',
+  '$1k - $5k',
+  '$5k - $10k',
+  '$10k - $25k',
+  '$25k - $50k',
+  '$50k - $100k',
+  '$100k+',
+] as const;
+
+const DEFAULT_BUDGET = BUDGET_OPTIONS[0];
+
 type ContactInquiryFormProps = {
   className?: string;
   variant?: 'default' | 'hero';
@@ -29,7 +41,7 @@ export default function ContactInquiryForm({
     name: '',
     email: '',
     website: '',
-    budget: '$10k - $25k',
+    budget: DEFAULT_BUDGET,
     serviceInterest: '',
     message: '',
   });
@@ -59,7 +71,7 @@ export default function ContactInquiryForm({
           name: '',
           email: '',
           website: '',
-          budget: '$10k - $25k',
+          budget: DEFAULT_BUDGET,
           serviceInterest: '',
           message: '',
         });
@@ -169,17 +181,18 @@ export default function ContactInquiryForm({
               </div>
               <div className="space-y-1.5">
                 <label className="text-[10px] font-bold uppercase tracking-wider text-outline">
-                  Estimated Budget
+                  Estimated budget (USD)
                 </label>
                 <select
                   className={`w-full bg-surface-container-low border-none rounded-xl px-3 ${fieldY} focus:ring-2 focus:ring-primary-container transition-all appearance-none text-sm`}
                   value={formData.budget}
                   onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                 >
-                  <option>$10k - $25k</option>
-                  <option>$25k - $50k</option>
-                  <option>$50k - $100k</option>
-                  <option>$100k+</option>
+                  {BUDGET_OPTIONS.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>
