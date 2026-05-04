@@ -23,7 +23,9 @@ const BUDGET_OPTIONS = [
   '$100k+',
 ] as const;
 
-const DEFAULT_BUDGET = BUDGET_OPTIONS[0];
+type BudgetBracket = (typeof BUDGET_OPTIONS)[number];
+
+const DEFAULT_BUDGET: BudgetBracket = BUDGET_OPTIONS[0];
 
 type ContactInquiryFormProps = {
   className?: string;
@@ -37,7 +39,14 @@ export default function ContactInquiryForm({
   const whatsappUrl = getWhatsAppChatUrl();
   const isHero = variant === 'hero';
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    name: string;
+    email: string;
+    website: string;
+    budget: BudgetBracket;
+    serviceInterest: string;
+    message: string;
+  }>({
     name: '',
     email: '',
     website: '',
@@ -186,7 +195,12 @@ export default function ContactInquiryForm({
                 <select
                   className={`w-full bg-surface-container-low border-none rounded-xl px-3 ${fieldY} focus:ring-2 focus:ring-primary-container transition-all appearance-none text-sm`}
                   value={formData.budget}
-                  onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      budget: e.target.value as BudgetBracket,
+                    })
+                  }
                 >
                   {BUDGET_OPTIONS.map((opt) => (
                     <option key={opt} value={opt}>
