@@ -1,198 +1,288 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getWhatsAppChatUrl } from '@/lib/whatsapp';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Caudate Tech, our engineering team, and our mission to provide scalable digital growth strategies.',
+  description:
+    'Learn about Caudate Tech, founded by father-and-son team Ajay and Suraj Kanwar. Uniting enterprise ERP bedrock with algorithmic growth engineering.',
 };
 
 export default function AboutPage() {
+  const whatsappUrl = getWhatsAppChatUrl();
+
   return (
-    <>
-      {/* Hero Section */}
-      <section className="relative px-8 py-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="z-10">
-            <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-4 block">ESTABLISHED 2018</span>
-            <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-on-surface mb-8 leading-[0.9]">
-              Architecting <span className="text-primary">Growth</span> Through Tech.
+    <div className="bg-surface text-on-surface">
+      {/* Editorial Header / Hero */}
+      <section className="relative px-8 pt-20 pb-24 md:pt-28 md:pb-32 border-b border-outline-variant/15">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl">
+            <span className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-bold tracking-[0.2em] text-primary uppercase bg-primary-container/10 border border-primary/20 rounded-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              Generational Stewardship &bull; Enterprise Rigor
+            </span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-on-surface leading-[0.95] mb-8">
+              Enterprise Bedrock.<br />
+              <span className="text-primary">Next-Gen Intelligence.</span>
             </h1>
-            <p className="text-xl text-on-surface-variant max-w-lg mb-10 leading-relaxed">
-              We don't just build software; we engineer the digital foundations that allow businesses to scale with absolute confidence.
+            <p className="text-xl sm:text-2xl text-on-surface-variant font-medium leading-relaxed max-w-3xl">
+              Enterprise technology cannot afford guesswork, and modern growth cannot afford complacency. 
+              Caudate Tech was founded by father and son Ajay and Suraj Kanwar to solve a fundamental enterprise 
+              paradox: bridging the battle-tested resilience of mission-critical systems with the algorithmic 
+              precision of next-generation data science.
             </p>
-            <div className="flex gap-6">
-              <Link 
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <Link
                 href="/contact"
-                className="px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-white font-bold text-lg shadow-xl shadow-primary/10 hover:translate-y-[-2px] transition-transform"
+                className="px-8 py-4 rounded-xl bg-primary text-on-primary font-bold text-base hover:bg-primary-container transition-all shadow-lg shadow-primary/15 hover:translate-y-[-1px]"
               >
-                Work With Us
+                Initiate a Conversation
+              </Link>
+              <Link
+                href="/services"
+                className="px-8 py-4 rounded-xl bg-surface-container-low text-on-surface font-semibold text-base hover:bg-surface-container transition-all border border-outline-variant/20"
+              >
+                Explore Service Portfolio
               </Link>
             </div>
           </div>
-          <div className="relative">
-            <div className="aspect-[4/5] rounded-full overflow-hidden shadow-2xl relative z-10 border-[16px] border-surface-container-lowest">
-              <img 
-                className="w-full h-full object-cover" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9yCiJcTQycKrDrnw4n7-sEL5eO88v17kk91oWrqgFOkbPootGIER7H-hQZEq6GA85_ede9rds-_DRp3ejztjnquOVA2rmOmtVpplLFe6fRkFn1fFtJvCOWXH-Xu_QVKctSz9WX7UInJAKxtIKq4fcqSWbGuL6wTIk1QESQRsZiQGbvmtrGRpS0OfKpzV9jcK26ZLLl16gKxzcszK1eCGo2iCyBx9eQ10mq04rrpr3zJai1qvEqPfzxmN97GwMzHEwYA-qqwXKSCc" 
-              />
-            </div>
-            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-secondary-container rounded-full blur-3xl opacity-30 -z-10"></div>
-            <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary-container rounded-full blur-3xl opacity-20 -z-10"></div>
-          </div>
         </div>
       </section>
 
-      {/* Mission Statement */}
-      <section className="bg-surface-container-low py-32 px-8">
+      {/* The Core Thesis: Why Family Stewardship Matters in Enterprise */}
+      <section className="py-24 md:py-32 px-8 bg-surface-container-lowest">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
-            <div className="lg:w-1/3">
-              <h2 className="text-4xl font-black tracking-tighter text-on-surface">The Mission Statement</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+            <div className="lg:col-span-4 lg:sticky lg:top-28">
+              <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-3 block">
+                The Narrative
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-black tracking-tighter text-on-surface leading-tight">
+                Why Family Ownership Changes the Enterprise Equation.
+              </h2>
+              <div className="mt-8 pt-8 border-t border-outline-variant/20 space-y-4">
+                <div className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-primary text-xl shrink-0 mt-0.5">verified_user</span>
+                  <p className="text-sm text-on-surface-variant leading-snug">
+                    <strong className="text-on-surface">Zero Account Churn:</strong> Direct partnership with the founding architects on every engagement.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-primary text-xl shrink-0 mt-0.5">account_tree</span>
+                  <p className="text-sm text-on-surface-variant leading-snug">
+                    <strong className="text-on-surface">Unified Horizon:</strong> The stability of 20-year infrastructure married to bleeding-edge AI models.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="lg:w-2/3">
-              <p className="text-3xl md:text-4xl font-medium text-on-surface leading-snug">
-                To bridge the gap between complex technical possibilities and tangible business outcomes. We commit to transparency, precision, and the relentless pursuit of <span className="text-primary font-bold">client success</span>.
+
+            <div className="lg:col-span-8 space-y-8 text-lg text-on-surface-variant leading-relaxed">
+              <p className="text-xl text-on-surface font-medium leading-relaxed">
+                In enterprise consulting, organizations are accustomed to a predictable cycle: senior partners pitch the engagement, 
+                and the actual execution is handed down to an anonymous bench of junior associates who rotate every six months. 
+                The client inherits technical debt, lost context, and fragmented accountability.
+              </p>
+              <p>
+                At Caudate Tech, our foundation is intentionally distinct. As a father-and-son partnership, our family name, 
+                personal ethics, and long-term reputation stand directly behind every system we configure and every pipeline we deploy. 
+                There are no layers of middle management to absorb mistakes or dilute vision.
+              </p>
+              <div className="p-8 rounded-2xl bg-surface-container-low border border-outline-variant/20 my-8">
+                <blockquote className="text-on-surface text-xl font-bold tracking-tight italic">
+                  &ldquo;A company operates like a human nervous system. Your core infrastructure and ERP represent the internal spine—it must never break. 
+                  Your digital growth and marketing systems represent the external signals—they must be lightning-fast, adaptive, and mathematically tuned. 
+                  We built Caudate to govern both.&rdquo;
+                </blockquote>
+              </div>
+              <p>
+                Ajay brings decades of mission-critical systems discipline, having stewarded complex enterprise ERP (SAP) landscapes, 
+                strict regulatory compliance, and multi-tier architectures where a single hour of downtime carries enterprise-ending cost. 
+                Suraj brings next-generation data science, neural pipeline design, and algorithmic performance engineering—transforming raw 
+                technical capability into authoritative market presence and measurable revenue.
+              </p>
+              <p>
+                Together, we deliver what bloated consultancies cannot: <strong>the seasoned caution of institutional engineering paired 
+                with the high-velocity intelligence of modern digital execution.</strong>
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Bento Grid */}
-      <section className="py-32 px-8 bg-surface-container-lowest">
+      {/* Leadership: The 50/50 Principals Grid */}
+      <section className="py-24 md:py-32 px-8 bg-surface border-t border-outline-variant/15">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="md:col-span-2 p-12 bg-surface-container rounded-xl flex flex-col justify-between min-h-[400px]">
-              <span className="material-symbols-outlined text-primary text-5xl">architecture</span>
-              <div>
-                <h3 className="text-3xl font-black mb-4">Integrity First</h3>
-                <p className="text-on-surface-variant text-lg">We prioritize long-term stability over short-term hacks. Every line of code is an architectural decision that impacts your future.</p>
-              </div>
-            </div>
-            <div className="p-12 bg-primary-container text-white rounded-xl flex flex-col justify-between min-h-[400px]">
-              <span className="material-symbols-outlined text-white text-5xl">trending_up</span>
-              <div>
-                <h3 className="text-3xl font-black mb-4">Growth Driven</h3>
-                <p className="text-white/80 text-lg">If it doesn't move the needle for your business, we don't build it. Your ROI is our primary metric.</p>
-              </div>
-            </div>
-            <div className="p-12 bg-surface-container-high rounded-xl flex flex-col justify-between min-h-[400px]">
-              <span className="material-symbols-outlined text-primary text-5xl">handshake</span>
-              <div>
-                <h3 className="text-3xl font-black mb-4">Radical Trust</h3>
-                <p className="text-on-surface-variant text-lg">Partnership is more than a contract. We act as an extension of your own executive team.</p>
-              </div>
-            </div>
-            <div className="md:col-span-2 p-12 bg-inverse-surface text-inverse-on-surface rounded-xl flex flex-col justify-between min-h-[400px]">
-              <span className="material-symbols-outlined text-primary-fixed-dim text-5xl">verified</span>
-              <div>
-                <h3 className="text-3xl font-black mb-4">Expert Execution</h3>
-                <p className="text-inverse-on-surface/70 text-lg">Our team is comprised of senior architects and strategists. We don't outsource quality; we deliver it personally.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Story Timeline */}
-      <section className="py-32 px-8 bg-surface">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-black tracking-tighter text-center mb-24">The Evolution of Caudate</h2>
-          <div className="space-y-24 relative before:content-[''] before:absolute before:left-0 md:before:left-1/2 before:w-[2px] before:h-full before:bg-outline-variant/20">
-            {/* Event 1 */}
-            <div className="relative flex flex-col md:flex-row md:justify-between items-center w-full">
-              <div className="hidden md:block w-5/12"></div>
-              <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 z-10 border-4 border-surface"></div>
-              <div className="w-full md:w-5/12 bg-surface-container-lowest p-8 rounded-xl shadow-sm ml-8 md:ml-0">
-                <span className="text-primary font-bold text-sm">2018</span>
-                <h4 className="text-2xl font-black mt-2 mb-3">Foundation</h4>
-                <p className="text-on-surface-variant">Caudate Tech founded with a vision to bring enterprise-grade architecture to growing startups.</p>
-              </div>
-            </div>
-            {/* Event 2 */}
-            <div className="relative flex flex-col md:flex-row md:justify-between items-center w-full">
-              <div className="w-full md:w-5/12 bg-surface-container-lowest p-8 rounded-xl shadow-sm ml-8 md:ml-0 md:text-right">
-                <span className="text-primary font-bold text-sm">2020</span>
-                <h4 className="text-2xl font-black mt-2 mb-3">Scale Phase</h4>
-                <p className="text-on-surface-variant">Expanded to a team of 15 senior consultants, specializing in cloud-native digital transformations.</p>
-              </div>
-              <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 z-10 border-4 border-surface"></div>
-              <div className="hidden md:block w-5/12"></div>
-            </div>
-            {/* Event 3 */}
-            <div className="relative flex flex-col md:flex-row md:justify-between items-center w-full">
-              <div className="hidden md:block w-5/12"></div>
-              <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 z-10 border-4 border-surface"></div>
-              <div className="w-full md:w-5/12 bg-surface-container-lowest p-8 rounded-xl shadow-sm ml-8 md:ml-0">
-                <span className="text-primary font-bold text-sm">Present</span>
-                <h4 className="text-2xl font-black mt-2 mb-3">Market Leadership</h4>
-                <p className="text-on-surface-variant">Now a premier technical partner for global brands, focused on AI integration and sustainable growth.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-32 px-8 bg-surface-container-lowest overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-end mb-16">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
             <div>
-              <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-4 block">OUR EXPERTS</span>
-              <h2 className="text-5xl font-black tracking-tighter">The Minds Behind the Tech</h2>
+              <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-3 block">
+                The Principals
+              </span>
+              <h2 className="text-4xl sm:text-5xl font-black tracking-tighter text-on-surface">
+                Direct Ownership. No Intermediaries.
+              </h2>
+            </div>
+            <p className="text-sm font-semibold text-on-surface-variant max-w-sm sm:text-right">
+              Every client engagement is personally architected and supervised by Ajay and Suraj.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
+            {/* Ajay Kanwar */}
+            <div className="group flex flex-col justify-between p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/20 shadow-sm hover:border-primary/40 transition-all duration-300">
+              <div>
+                <div className="relative aspect-[4/5] overflow-hidden rounded-xl mb-8 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
+                  <Image
+                    src="/team/ajay-headshot.png"
+                    alt="Ajay Kanwar, CEO and Co-Founder"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-3xl font-black text-on-surface">Ajay Kanwar</h3>
+                  <span className="text-xs font-bold uppercase tracking-wider text-primary px-3 py-1 rounded-full bg-primary-container/15">
+                    Co-Founder &amp; CEO
+                  </span>
+                </div>
+                <p className="text-sm font-bold uppercase tracking-widest text-outline mb-6">
+                  Enterprise Systems &amp; ERP Architecture
+                </p>
+                <p className="text-on-surface-variant leading-relaxed text-base mb-6">
+                  Over two decades of hands-on leadership across enterprise infrastructure, third-party SAP maintenance, 
+                  compliance governance, and mission-critical reliability. Ajay safeguards the operational core of our clients, 
+                  ensuring systems are resilient, audit-proof, and liberated from predatory vendor lock-in.
+                </p>
+              </div>
+              <div className="pt-6 border-t border-outline-variant/20">
+                <p className="text-xs font-bold text-outline uppercase tracking-wider mb-3">Core Domains</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 rounded-md text-xs font-semibold bg-surface-container text-on-surface">SAP &amp; ERP Ecosystems</span>
+                  <span className="px-3 py-1 rounded-md text-xs font-semibold bg-surface-container text-on-surface">Compliance &amp; Audit Governance</span>
+                  <span className="px-3 py-1 rounded-md text-xs font-semibold bg-surface-container text-on-surface">Infrastructure Architecture</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Suraj Kanwar */}
+            <div className="group flex flex-col justify-between p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/20 shadow-sm hover:border-primary/40 transition-all duration-300">
+              <div>
+                <div className="relative aspect-[4/5] overflow-hidden rounded-xl mb-8 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
+                  <Image
+                    src="/team/suraj-headshot.png"
+                    alt="Suraj Kanwar, CTO and Co-Founder"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-3xl font-black text-on-surface">Suraj Kanwar</h3>
+                  <span className="text-xs font-bold uppercase tracking-wider text-primary px-3 py-1 rounded-full bg-primary-container/15">
+                    Co-Founder &amp; CTO
+                  </span>
+                </div>
+                <p className="text-sm font-bold uppercase tracking-widest text-outline mb-6">
+                  Data Science &amp; Growth Systems
+                </p>
+                <p className="text-on-surface-variant leading-relaxed text-base mb-6">
+                  Spearheads technical strategy, neural pipeline development, and data-driven client acquisition. 
+                  Suraj engineers the analytical architectures that power generative search optimization (GEO), 
+                  high-precision Google Ads algorithms, and programmatic outbound funnels that drive verified pipeline.
+                </p>
+              </div>
+              <div className="pt-6 border-t border-outline-variant/20">
+                <p className="text-xs font-bold text-outline uppercase tracking-wider mb-3">Core Domains</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 rounded-md text-xs font-semibold bg-surface-container text-on-surface">Data Analytics &amp; Statistical Models</span>
+                  <span className="px-3 py-1 rounded-md text-xs font-semibold bg-surface-container text-on-surface">Generative Search (GEO)</span>
+                  <span className="px-3 py-1 rounded-md text-xs font-semibold bg-surface-container text-on-surface">Algorithmic Performance Media</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
-            <div className="group">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
-                <Image
-                  src="/team/ajay-headshot.png"
-                  alt="Ajay Kanwar, CEO and Founder"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <h3 className="text-2xl font-black">Ajay Kanwar</h3>
-              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">CEO & Founder</p>
-              <p className="text-on-surface-variant leading-relaxed">
-                Sets direction for the firm and client engagements, with a focus on durable architecture and outcomes that scale.
+        </div>
+      </section>
+
+      {/* The 3 Client Commitments */}
+      <section className="py-24 px-8 bg-surface-container-lowest border-t border-outline-variant/15">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mb-16">
+            <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-3 block">
+              Our Operating Standard
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black tracking-tighter text-on-surface">
+              What Enterprises Experience Working With Us.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-xl bg-surface-container-low border border-outline-variant/15">
+              <span className="material-symbols-outlined text-primary text-4xl mb-4 block">handshake</span>
+              <h3 className="text-xl font-bold mb-3 text-on-surface">Direct Skin in the Game</h3>
+              <p className="text-on-surface-variant text-sm leading-relaxed">
+                You work directly with Ajay and Suraj. Every decision, architecture review, and sprint delivery is guided 
+                by principals whose personal reputation is on the line.
               </p>
             </div>
-            <div className="group">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
-                <Image
-                  src="/team/suraj-headshot.png"
-                  alt="Suraj Kanwar, CTO and Data Analyst"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <h3 className="text-2xl font-black">Suraj Kanwar</h3>
-              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">CTO & Data Analyst</p>
-              <p className="text-on-surface-variant leading-relaxed">
-                Owns technical strategy, systems design, and analytics so decisions are grounded in measurable signal, not guesswork.
+
+            <div className="p-8 rounded-xl bg-surface-container-low border border-outline-variant/15">
+              <span className="material-symbols-outlined text-primary text-4xl mb-4 block">hub</span>
+              <h3 className="text-xl font-bold mb-3 text-on-surface">Unified Backbone &amp; Signal</h3>
+              <p className="text-on-surface-variant text-sm leading-relaxed">
+                We eliminate the friction between IT architecture and commercial growth. Your internal ERP systems and 
+                your external revenue engines operate under one synchronized discipline.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-xl bg-surface-container-low border border-outline-variant/15">
+              <span className="material-symbols-outlined text-primary text-4xl mb-4 block">hourglass_top</span>
+              <h3 className="text-xl font-bold mb-3 text-on-surface">Generational Permanence</h3>
+              <p className="text-on-surface-variant text-sm leading-relaxed">
+                We design for 10-year durability, not quick contract billables. Our code, schemas, and campaigns are clean, 
+                fully documented, and built to stand the test of time.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="bg-on-surface text-surface py-24 px-8 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl lg:text-6xl font-black tracking-tighter mb-8">Ready to Scale Your Authority?</h2>
-          <p className="text-xl opacity-70 mb-12 max-w-2xl mx-auto">Join the ranks of market leaders who have transformed their digital trajectory with Caudate Tech.</p>
-          <Link 
-            href="/contact"
-            className="px-12 py-5 rounded-full bg-white text-primary font-black text-lg hover:shadow-2xl transition-shadow active:scale-95 inline-block"
-          >
-            Get Started
-          </Link>
+      {/* Direct Executive Contact / CTA */}
+      <section className="bg-on-surface text-surface py-20 px-8">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+          <div className="space-y-4 max-w-xl text-center md:text-left">
+            <span className="text-primary-fixed font-bold tracking-[0.2em] text-xs uppercase block">
+              Direct Access
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-black tracking-tighter leading-tight">
+              Direct Counsel. Enduring Architecture.
+            </h2>
+            <p className="text-surface/75 text-base sm:text-lg leading-relaxed">
+              Schedule a confidential discovery session directly with Ajay and Suraj to evaluate your enterprise ERP landscape or growth systems.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row md:flex-col gap-4 w-full sm:w-auto shrink-0">
+            <Link
+              href="/contact"
+              className="px-8 py-4 rounded-xl bg-primary text-white font-bold text-center hover:bg-primary-container transition-all shadow-lg active:scale-95"
+            >
+              Start an Executive Inquiry
+            </Link>
+            {whatsappUrl && (
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 rounded-xl bg-surface-container-highest/20 text-white font-semibold text-center hover:bg-surface-container-highest/30 transition-all border border-white/10"
+              >
+                Direct WhatsApp Chat
+              </a>
+            )}
+          </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
