@@ -143,7 +143,7 @@ export default function AboutPage() {
               <h2 className="text-5xl font-black tracking-tighter">The Minds Behind the Tech</h2>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
             <div className="group">
               <div className="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
                 <Image
