@@ -143,14 +143,14 @@ export default function AboutPage() {
               <h2 className="text-5xl font-black tracking-tighter">The Minds Behind the Tech</h2>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl">
             <div className="group">
               <div className="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
                 <Image
                   src="/team/ajay-headshot.png"
                   alt="Ajay Kanwar, CEO and Founder"
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -166,7 +166,7 @@ export default function AboutPage() {
                   src="/team/suraj-headshot.png"
                   alt="Suraj Kanwar, CTO and Data Analyst"
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -174,22 +174,6 @@ export default function AboutPage() {
               <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">CTO & Data Analyst</p>
               <p className="text-on-surface-variant leading-relaxed">
                 Owns technical strategy, systems design, and analytics so decisions are grounded in measurable signal, not guesswork.
-              </p>
-            </div>
-            <div className="group">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-surface-container grayscale group-hover:grayscale-0 transition-all duration-500">
-                <Image
-                  src="/team/raman-headshot.png"
-                  alt="Raman Verma, CMO and PPC Specialist"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <h3 className="text-2xl font-black">Raman Verma</h3>
-              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">CMO & PPC Specialist</p>
-              <p className="text-on-surface-variant leading-relaxed">
-                Leads brand, demand, and growth programs so positioning, creative, and media work together toward pipeline and revenue.
               </p>
             </div>
           </div>

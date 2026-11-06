@@ -21,7 +21,7 @@
 | **Home** (`/`) | Hero with value prop + **ContactInquiryForm** (hero variant); **“Tools & ecosystems we operate in”** band with monochrome brand marks (Simple Icons + Devicon); stats/value sections; CTAs to contact. |
 | **Services** (`/services`, nested service pages) | Category navigation and detail pages (SAP, digital marketing, paid media, etc.). |
 | **Case Studies** (`/case-studies`) | Portfolio / proof points. |
-| **About** (`/about`) | Mission, values bento, timeline, **team grid (3)** with local headshots. |
+| **About** (`/about`) | Mission, values bento, timeline, **team grid (2)** with local headshots. |
 | **Contact** (`/contact`) | Inquiry form + office/contact details; optional **WhatsApp** link when `NEXT_PUBLIC_WHATSAPP_NUMBER` is set. |
 | **FAQ** (`/faq`) | Accordion FAQ from [`stitch-tech-site/src/data/faq.ts`](stitch-tech-site/src/data/faq.ts). |
 | **Privacy Policy** (`/privacy-policy`) | Legal. |
@@ -40,7 +40,7 @@
 
 1. User opens **Services** from nav or home → drills into specific service URLs.
 2. User opens **FAQ** from navbar or footer.
-3. User reviews **About** for leadership: **Ajay Kanwar** (CEO & Founder), **Suraj Kanwar** (CTO & Data Analyst), **Raman Verma** (Chief Marketing Officer); images served from **`/team/*.png`** via `next/image`.
+3. User reviews **About** for leadership: **Ajay Kanwar** (CEO & Founder), **Suraj Kanwar** (CTO & Data Analyst); images served from **`/team/*.png`** via `next/image`.
 
 ---
 
@@ -115,7 +115,7 @@
 
 - **Hero:** Large headline + circular portrait (external image URL as currently coded—**not** the team grid photos).
 - **Mission, values grid, timeline** as in page.
-- **Team:** Three cards; **`next/image`** with `fill` + `aspect-[3/4]`; grayscale until hover; names and titles as specified in PRD overview.
+- **Team:** Two cards; **`next/image`** with `fill` + `aspect-[3/4]`; grayscale until hover; names and titles as specified in PRD overview.
 
 ### Contact
 
